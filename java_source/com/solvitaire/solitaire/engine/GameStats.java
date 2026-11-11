@@ -40,7 +40,7 @@ import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.JOptionPane;
 
-final class GameStats
+public final class GameStats
 extends g {
     private static double[] B = new double[]{-1.0, 16.5, 20.0, -1.0, -1.0, -1.0};
     private static double[] CHandler = new double[]{-1.0, 51.0, 48.0, 48.0, -1.0, -1.0};
@@ -1674,7 +1674,7 @@ extends g {
                                 }
                             }
                             var21_40 = var15_26;
-                            var1_1.AboutDialog;
+
                             var23_44 = var8_14.AboutDialog(var14_24, var19_34 + 2, var15_26, var8_14.yHandler.width - 2, var16_28);
                             if (var23_44 >= var15_26) {
                                 --var15_26;
@@ -1750,7 +1750,7 @@ extends g {
                             com.solvitaire.app.q.AboutDialog(this.k, (pX)var8_14, var14_24, var19_34, var15_26, var8_14.yHandler.width, var8_14.yHandler.height + 30, var16_28);
                         }
                         if (var11_30.AboutDialog((pX)var8_14)) break block161;
-                        if (var17_32) ** GOTO lbl169
+                        if (var17_32) break;
                         if (!var18_33 && this.AboutDialog(var12_21, (pX)var8_14, (pH)var11_30)) {
                             if (this.k.d <= 5) {
                                 this.k.f("Now checking whether ace needs discarding");
@@ -2904,7 +2904,7 @@ lbl169:
                 }
                 var4_6 = System.currentTimeMillis() + 4000L;
             }
-            if (!var1_1) ** GOTO lbl-1000
+            if (!var1_1) break;
             if (this.k.d <= 2) {
                 var8_9 = 2 != 0;
                 var7_8 = this.k;
@@ -2925,7 +2925,7 @@ lbl169:
                 if (this.k.d <= 6) {
                     this.k.g("Clicked on close!");
                 }
-            } else lbl-1000:
+            } else {
             // 2 sources
 
             {

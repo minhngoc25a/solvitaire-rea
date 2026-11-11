@@ -10,7 +10,7 @@ import javax.swing.event.ChangeListener;
 /*
  * Renamed from com.solvitaire.app.qA
  */
-final class qa_0
+public final class qa_0
 implements ChangeListener {
     private /* synthetic */ qzPanel AboutDialog;
 

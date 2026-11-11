@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.rY
  */
-final class ry_0Handler
+public final class ry_0Handler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

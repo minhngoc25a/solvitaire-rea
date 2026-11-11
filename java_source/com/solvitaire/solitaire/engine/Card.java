@@ -13,7 +13,7 @@ import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 import java.util.LinkedList;
 
-final class Card {
+public final class Card {
     SolitaireGameEngine AboutDialog;
     CardStack b;
     int c;

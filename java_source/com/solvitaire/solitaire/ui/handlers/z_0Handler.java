@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 /*
  * Renamed from com.solvitaire.app.Z
  */
-final class z_0Handler
+public final class z_0Handler
 implements ActionListener {
     private /* synthetic */ w_0Frame AboutDialog;
     private final /* synthetic */ JFrame b;

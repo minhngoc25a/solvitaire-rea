@@ -8,7 +8,7 @@ import com.solvitaire.solitaire.util.qp_0;
 /*
  * Renamed from com.solvitaire.app.qq
  */
-final class qq_0 {
+public final class qq_0 {
     int AboutDialog;
     private int c;
     private double d;

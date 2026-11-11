@@ -10,7 +10,7 @@ import javax.swing.filechooser.FileFilter;
 /*
  * Renamed from com.solvitaire.app.qC
  */
-final class qc_0
+public final class qc_0
 extends FileFilter {
     private /* synthetic */ MainWindow AboutDialog;
 

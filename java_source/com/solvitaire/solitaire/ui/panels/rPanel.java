@@ -9,7 +9,7 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
-final class rPanel
+public final class rPanel
 extends JPanel {
     pLPanel AboutDialog;
     SolitaireGameEngine b;

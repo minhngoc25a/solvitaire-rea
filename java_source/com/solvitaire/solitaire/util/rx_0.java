@@ -8,7 +8,7 @@ import com.solvitaire.solitaire.ui.MainWindow;
 /*
  * Renamed from com.solvitaire.app.rX
  */
-final class rx_0
+public final class rx_0
 implements Runnable {
     private /* synthetic */ MainWindow AboutDialog;
 

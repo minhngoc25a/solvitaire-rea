@@ -12,7 +12,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JPanel;
 
-final class pQPanel
+public final class pQPanel
 extends MouseAdapter {
     private /* synthetic */ pLPanel AboutDialog;
     private final /* synthetic */ SolitaireGameEngine b;

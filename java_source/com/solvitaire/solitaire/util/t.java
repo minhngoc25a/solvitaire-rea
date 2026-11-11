@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 import com.solvitaire.solitaire.solver.SolitaireSolver;
 import java.io.File;
 
-final class t {
+public final class t {
     private static String[] t = new String[]{"unknown", "unused", "boards", "ncards", "spcfic", "stacks", "target"};
     private SolitaireGameEngine uPanel;
     boolean AboutDialog;

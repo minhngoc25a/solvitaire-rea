@@ -11,7 +11,7 @@ import java.util.Arrays;
 /*
  * Renamed from com.solvitaire.app.qm
  */
-final class CardRun {
+public final class CardRun {
     public int AboutDialog = 0;
     boolean b;
     CardImage[] c = new CardImage[13];

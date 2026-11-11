@@ -18,7 +18,7 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 
-final class pBSolver
+public final class pBSolver
 extends SolitaireSolver {
     private static int LHandler = 10;
     private int MHandler = 0;

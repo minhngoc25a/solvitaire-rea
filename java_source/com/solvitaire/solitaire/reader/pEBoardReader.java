@@ -15,7 +15,7 @@ import com.solvitaire.solitaire.util.qw_0;
 import java.io.Serializable;
 import java.util.Vector;
 
-final class pEBoardReader
+public final class pEBoardReader
 extends BoardReader {
     static final double[] p = new double[]{882.0, 882.0};
     private pDSolver q;
@@ -733,7 +733,7 @@ extends BoardReader {
                         v8 = -1;
                         break block70;
                     }
-                    if (var5_19 == null) ** GOTO lbl-1000
+                    if (var5_19 == null) break;
                     switch (var5_19.e) {
                         case 1: {
                             v8 = 400 + var5_19.f;
@@ -751,7 +751,7 @@ extends BoardReader {
                             v8 = 100 + var5_19.f;
                             break;
                         }
-                        default: lbl-1000:
+                        default:
                         // 2 sources
 
                         {

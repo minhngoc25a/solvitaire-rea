@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.util.g;
 import com.solvitaire.solitaire.engine.GameStats;
 import java.awt.Rectangle;
 
-final class j {
+public final class j {
     Rectangle AboutDialog = new Rectangle();
     private /* synthetic */ g b;
 

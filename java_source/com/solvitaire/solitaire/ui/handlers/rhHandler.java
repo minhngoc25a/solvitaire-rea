@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.MainWindow;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class rhHandler
+public final class rhHandler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

@@ -11,7 +11,7 @@ import javax.swing.JRadioButton;
 /*
  * Renamed from com.solvitaire.app.X
  */
-final class x_0Handler
+public final class x_0Handler
 implements ActionListener {
     private /* synthetic */ w_0Frame AboutDialog;
 

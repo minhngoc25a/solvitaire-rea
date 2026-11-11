@@ -8,7 +8,7 @@ import com.solvitaire.solitaire.reader.BoardReader;
 /*
  * Renamed from com.solvitaire.app.f
  */
-final class f_0 {
+public final class f_0 {
     int AboutDialog;
     int b;
     private /* synthetic */ BoardReader c;

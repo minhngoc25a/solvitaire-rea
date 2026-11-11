@@ -17,7 +17,7 @@ import com.solvitaire.solitaire.engine.CardStack;
 import com.solvitaire.solitaire.util.qw_0;
 import com.solvitaire.solitaire.util.s_0;
 
-final class pCBoardReader
+public final class pCBoardReader
 extends BoardReader {
     static final double[] p = new double[]{841.5, 841.5};
     private pBSolver rPanel;

@@ -15,7 +15,7 @@ import com.solvitaire.solitaire.engine.CardStack;
 import java.io.File;
 import java.util.HashMap;
 
-final class pDSolver
+public final class pDSolver
 extends SolitaireSolver {
     private int b;
     private boolean c;

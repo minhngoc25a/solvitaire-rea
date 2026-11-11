@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.m
  */
-final class m_0Handler
+public final class m_0Handler
 implements ActionListener {
     private /* synthetic */ k_0Panel AboutDialog;
 

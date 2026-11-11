@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.ac
  */
-final class ac_0Handler
+public final class ac_0Handler
 implements ActionListener {
     private /* synthetic */ w_0Frame AboutDialog;
 

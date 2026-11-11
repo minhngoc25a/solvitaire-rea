@@ -13,7 +13,7 @@ import com.solvitaire.solitaire.engine.CardStack;
 import com.solvitaire.solitaire.util.qw_0;
 import java.util.Arrays;
 
-final class SpiderBoardReader
+public final class SpiderBoardReader
 extends BoardReader {
     static final double[] p = new double[]{841.0, 841.0};
     private SpiderSolver q;
@@ -302,8 +302,8 @@ extends BoardReader {
                 } else if (this.f.d <= 5) {
                     this.f.g("Main stack overlaps deal stackset so no more deal cards, tryReversed?" + this.g.n);
                 }
-                if (var6_7) ** GOTO lbl267
-                if (var4_43 != 0) ** GOTO lbl264
+                if (var6_7) break;
+                if (var4_43 != 0) break;
                 if (this.g.n && !this.g.c()) {
                     this.g.AboutDialog(true);
                     this.f.FPanel.b(-10, true);
@@ -676,7 +676,7 @@ lbl267:
                                     this.f.g("Add delay for suit removal when exposed card is unknown");
                                 }
                                 this.f.AboutDialog(1500L, "Suit removal expose");
-                                ** GOTO lbl201
+                                break;
                             }
                             if (var9_12 != var2_4) break block76;
                             if (var5_7 != 0 && this.f.Z == this.f.Y - 1) break block74;
@@ -684,7 +684,7 @@ lbl267:
                                 this.f.g("Add delay for suit removal when exposed card is an ace of same suit");
                             }
                             this.f.AboutDialog(1500L, "Suit removal when exposed is an ace");
-                            ** GOTO lbl201
+                            break;
                         }
                         if (this.f.d <= 5) {
                             this.f.g("Regular suit removal delay (1 sec but exit if see Ace on dest)");

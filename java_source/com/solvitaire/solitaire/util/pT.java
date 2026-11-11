@@ -9,7 +9,7 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-final class pT
+public final class pT
 extends KeyAdapter {
     private /* synthetic */ pLPanel AboutDialog;
     private final /* synthetic */ SolitaireGameEngine b;

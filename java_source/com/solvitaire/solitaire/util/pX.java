@@ -556,7 +556,7 @@ public final class pX {
                     if (var8_18.AboutDialog.d <= 2) {
                         com.solvitaire.app.q.AboutDialog(var8_18.AboutDialog, var8_18, var13_16 /* !! */ , var17_21, var12_17.e);
                     }
-                    ** GOTO lbl126
+                    break;
                 }
                 var21_28 = 3;
                 var22_29 = var8_18.z;
@@ -1776,7 +1776,7 @@ lbl126:
         if (this.AboutDialog.d <= 2) {
             this.AboutDialog.f("Scanning up from " + var3_3 + " to 0, xHandler range from " + var2_2 + " width " + var4_4);
         }
-        if (var3_3 != 0) ** GOTO lbl11
+        if (var3_3 != 0) break;
         return -1;
         while (this.AboutDialog(var6_7, var1_1, var2_2, var3_3, var4_4, var7_8, var5_6, 1) >= 0 && !this.b(var6_7, var1_1, var2_2, var3_3, var4_4, var7_8, var8_9, 5)) {
             --var3_3;

@@ -8,7 +8,7 @@ import com.solvitaire.solitaire.util.ApiErrorCodes;
 /*
  * Renamed from com.solvitaire.app.d
  */
-final class d_0 {
+public final class d_0 {
     private String[] b;
     String[] AboutDialog;
     private /* synthetic */ ApiErrorCodes c;

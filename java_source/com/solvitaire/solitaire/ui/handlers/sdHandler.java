@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.Enumeration;
 import javax.swing.AbstractButton;
 
-final class sdHandler
+public final class sdHandler
 implements ActionListener {
     private /* synthetic */ sc AboutDialog;
 

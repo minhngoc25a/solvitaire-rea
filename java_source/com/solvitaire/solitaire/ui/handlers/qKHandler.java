@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.MainWindow;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class qKHandler
+public final class qKHandler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

@@ -5,7 +5,7 @@ package com.solvitaire.solitaire.util;
 
 import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 
-final class pI
+public final class pI
 implements Runnable {
     private final /* synthetic */ SolitaireGameEngine AboutDialog;
 

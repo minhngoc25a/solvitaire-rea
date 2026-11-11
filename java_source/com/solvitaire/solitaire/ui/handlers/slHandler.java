@@ -11,7 +11,7 @@ import java.awt.datatransfer.Transferable;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class slHandler
+public final class slHandler
 implements ActionListener {
     private /* synthetic */ si AboutDialog;
 

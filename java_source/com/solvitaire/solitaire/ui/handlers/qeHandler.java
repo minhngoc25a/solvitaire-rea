@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.qbFrame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class qeHandler
+public final class qeHandler
 implements ActionListener {
     private /* synthetic */ qbFrame AboutDialog;
 

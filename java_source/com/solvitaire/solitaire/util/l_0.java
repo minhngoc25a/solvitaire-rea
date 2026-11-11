@@ -18,7 +18,7 @@ import java.util.Iterator;
 /*
  * Renamed from com.solvitaire.app.l
  */
-final class l_0
+public final class l_0
 extends MouseAdapter {
     private /* synthetic */ k_0Panel AboutDialog;
 

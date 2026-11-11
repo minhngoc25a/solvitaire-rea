@@ -24,7 +24,7 @@ import javax.swing.JOptionPane;
 /*
  * Renamed from com.solvitaire.app.e
  */
-abstract class BoardReader {
+public abstract class BoardReader {
     private int p;
     private double q;
     int AboutDialog = -1;
@@ -626,7 +626,7 @@ abstract class BoardReader {
                     }
                     break block127;
                 }
-                if (var16_18 != var4_4 && (var16_18 != -2 && var16_18 <= 0 || var4_4 != 0)) ** GOTO lbl309
+                if (var16_18 != var4_4 && (var16_18 != -2 && var16_18 <= 0 || var4_4 != 0)) break;
                 if (var4_4 == 0) {
                     this.f.aD.AboutDialog();
                     v4 = var17_29 = 100 + var9_9 * 20;
@@ -2848,16 +2848,16 @@ lbl309:
                             break block35;
                         }
                         var12_28 = var12_28.c[0];
-                        if (var12_28 == null) ** GOTO lbl-1000
+                        if (var12_28 == null) break;
                         var9_22 = var9_22.c[var9_22.AboutDialog - 1];
                         if (!var8_24.g) break block37;
-                        if (var9_22.f != var12_28.f + 1 || !CardRun.AboutDialog((CardImage)var12_28, (CardImage)var9_22)) ** GOTO lbl-1000
+                        if (var9_22.f != var12_28.f + 1 || !CardRun.AboutDialog((CardImage)var12_28, (CardImage)var9_22)) break;
                         v3 = true;
                         break block35;
                     }
                     if (var9_22.g == var12_28.g + 1) {
                         v3 = true;
-                    } else lbl-1000:
+                    } else {
                     // 3 sources
 
                     {
@@ -2886,9 +2886,5 @@ lbl309:
         }
         this.f.aq.o();
     }
-
-    boolean AboutDialog(int[] nArray, int n2, int n3, int n4, String string) {
-        return this.AboutDialog(n3, 2000, string);
-    }
 }
-
+}

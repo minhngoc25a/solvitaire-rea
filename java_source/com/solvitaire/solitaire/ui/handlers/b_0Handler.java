@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.B
  */
-final class b_0Handler
+public final class b_0Handler
 implements ActionListener {
     private /* synthetic */ uPanel AboutDialog;
 

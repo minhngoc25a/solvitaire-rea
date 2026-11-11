@@ -8,7 +8,7 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class pPHandler
+public final class pPHandler
 implements ActionListener {
     private /* synthetic */ pLPanel AboutDialog;
     private final /* synthetic */ SolitaireGameEngine b;

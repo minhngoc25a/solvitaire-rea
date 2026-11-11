@@ -12,7 +12,7 @@ import java.awt.Graphics2D;
 import java.awt.Insets;
 import javax.swing.JPanel;
 
-final class sfPanel
+public final class sfPanel
 extends JPanel {
     private Component c;
     private int d;

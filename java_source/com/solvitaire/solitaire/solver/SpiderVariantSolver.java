@@ -15,7 +15,7 @@ import com.solvitaire.solitaire.reader.sqBoardReader;
 import java.io.File;
 import java.util.HashMap;
 
-final class SpiderVariantSolver
+public final class SpiderVariantSolver
 extends SolitaireSolver {
     private int AboutDialog;
     private int b;

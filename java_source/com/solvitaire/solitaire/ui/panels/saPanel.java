@@ -9,7 +9,7 @@ import java.awt.Dimension;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
-final class saPanel
+public final class saPanel
 extends JPanel {
     private int AboutDialog;
     private /* synthetic */ MainWindow b;

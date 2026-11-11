@@ -6,7 +6,7 @@ package com.solvitaire.solitaire.util;
 /*
  * Renamed from com.solvitaire.app.U
  */
-final class u_0 {
+public final class u_0 {
     int AboutDialog;
     int b;
     int c;

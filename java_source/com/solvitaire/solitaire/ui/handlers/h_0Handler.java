@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.H
  */
-final class h_0Handler
+public final class h_0Handler
 implements ActionListener {
     private /* synthetic */ ModeSelector AboutDialog;
 

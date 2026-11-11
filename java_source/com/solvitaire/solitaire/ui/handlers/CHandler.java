@@ -8,7 +8,7 @@ import com.solvitaire.solitaire.ui.panels.uPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class CHandler
+public final class CHandler
 implements ActionListener {
     private /* synthetic */ uPanel AboutDialog;
 

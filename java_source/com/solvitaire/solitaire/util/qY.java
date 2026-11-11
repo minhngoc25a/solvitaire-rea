@@ -5,7 +5,7 @@ package com.solvitaire.solitaire.util;
 
 import com.solvitaire.solitaire.ui.MainWindow;
 
-final class qY
+public final class qY
 extends Thread {
     private /* synthetic */ MainWindow AboutDialog;
 

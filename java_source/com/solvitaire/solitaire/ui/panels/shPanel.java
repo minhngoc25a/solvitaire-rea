@@ -6,7 +6,7 @@ package com.solvitaire.solitaire.ui.panels;
 import com.solvitaire.solitaire.ui.MainWindow;
 import javax.swing.JPanel;
 
-final class shPanel
+public final class shPanel
 extends JPanel {
     private int AboutDialog;
     private /* synthetic */ MainWindow b;

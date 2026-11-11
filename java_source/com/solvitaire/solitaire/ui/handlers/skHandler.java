@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.util.si;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class skHandler
+public final class skHandler
 implements ActionListener {
     private /* synthetic */ si AboutDialog;
 

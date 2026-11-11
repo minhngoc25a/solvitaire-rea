@@ -10,7 +10,7 @@ import java.awt.Rectangle;
 /*
  * Renamed from com.solvitaire.app.qw
  */
-final class qw_0 {
+public final class qw_0 {
     private Card d;
     Rectangle AboutDialog;
     s_0[] b;

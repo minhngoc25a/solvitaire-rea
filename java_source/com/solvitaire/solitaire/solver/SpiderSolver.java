@@ -19,7 +19,7 @@ import java.util.Set;
 /*
  * Renamed from com.solvitaire.app.qs
  */
-final class SpiderSolver
+public final class SpiderSolver
 extends SolitaireSolver {
     private int[] b;
     private int[] c = new int[]{30, 60, 30, 30, 30, 30, 30};
@@ -552,35 +552,32 @@ extends SolitaireSolver {
                             switch (var1_1) {
                                 case 1: {
                                     var13_13 = 1;
-                                    ** GOTO lbl47
+                                    break;
                                 }
                                 case 8: {
                                     if (((CardRun)var5_8.e.get((int)(var9_9 - 2))).c[0].g != 0) break;
                                     var13_13 = 1;
-                                    ** GOTO lbl47
+                                    break;
                                 }
                                 case 3: {
                                     if (var14_15.d != null || var5_8.d.c[0].f != 13) break;
                                     var13_13 = 2;
-                                    ** GOTO lbl47
+                                    break;
                                 }
                                 case 2: {
                                     if (var14_15.d != null || var5_8.d.c[0].f == 13) break;
                                     var13_13 = 2;
-                                    ** GOTO lbl47
+                                    break;
                                 }
                                 case 10: {
                                     if (var14_15.d != null) break;
                                     var13_13 = 6;
-                                    ** GOTO lbl47
+                                    break;
                                 }
                                 case 11: {
                                     if (var14_15.d != null) break;
                                     var13_13 = 2;
                                 }
-lbl47:
-                                // 7 sources
-
                                 default: {
                                     var18_20 = var14_15.AboutDialog(var5_8, var13_13, false);
                                     if (var18_20 >= 0 && var14_15.d != null && var5_8.d.c[var5_8.d.AboutDialog - 1].f == 1) {

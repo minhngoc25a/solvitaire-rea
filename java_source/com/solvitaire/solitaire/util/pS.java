@@ -8,7 +8,7 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
-final class pS
+public final class pS
 extends FocusAdapter {
     private /* synthetic */ pLPanel AboutDialog;
     private final /* synthetic */ SolitaireGameEngine b;

@@ -9,7 +9,7 @@ import com.solvitaire.solitaire.util.u_0;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class EHandler
+public final class EHandler
 implements ActionListener {
     private /* synthetic */ uPanel AboutDialog;
 

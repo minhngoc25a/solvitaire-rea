@@ -12,7 +12,7 @@ import java.lang.management.MemoryUsage;
 /*
  * Renamed from com.solvitaire.app.qZ
  */
-final class qz_0Handler
+public final class qz_0Handler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

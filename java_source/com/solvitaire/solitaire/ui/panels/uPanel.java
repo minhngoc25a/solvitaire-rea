@@ -238,7 +238,7 @@ public final class uPanel {
         if (var1_1 /* !! */  != null) {
             var4_4 /* !! */  = var1_1 /* !! */ [var2_2];
         }
-        if (var4_4 /* !! */  == null) ** GOTO lbl-1000
+        if (var4_4 /* !! */  == null) break;
         this.d.i = var2_2;
         v0 = this.c;
         v0.getClass();
@@ -259,7 +259,7 @@ public final class uPanel {
         }
         if (!this.AboutDialog("Already Exists", (String)var4_4 /* !! */ )) {
             this.d.AboutDialog(var2_2);
-        } else lbl-1000:
+        } else {
         // 2 sources
 
         {
@@ -339,14 +339,14 @@ public final class uPanel {
         String string2 = this.AboutDialog.as + string + "Fonts" + string;
         SolitaireGameEngine.e(string2);
         string2 = string2 + "Font" + this.c.b + ".txt";
-        stringBuffer.append(String.format("package com.solvitaire.app;\rPanel\nimport java.awt.Rectangle;\rPanel\nimport com.solvitaire.app.ColorMatch.RGB;\rPanel\npublic class Font%s\rPanel\n{\rPanel\n", this.c.b));
+        stringBuffer.append(String.format("package com.solvitaire.app;\rPanel\nimport java.awt.Rectangle;\rPanel\nimport com.solvitaire.app.ColorMatch.RGB;\rPanel\npublic public class Font%s\rPanel\n{\rPanel\n", this.c.b));
         stringBuffer.append(String.format("       static final String name = \"%s\";\rPanel\n       static final double matchRatio = %4.3f;\rPanel\n       static final int matchBase = %d;\rPanel\n       static final double suitMatchRatio = %4.3f;\rPanel\n       static final Rectangle rect = new Rectangle(%d, %d, %d, %d);\rPanel\n       static final int suitWidth = %d;\rPanel\n       static final int suitHeight = %d;\rPanel\n       static final int blackMode = %d;\rPanel\n       static final int blackTop = %d;\rPanel\n       static final int blackBot = %d;\rPanel\n       static final double blackRatio = %4.3f;\rPanel\n       static final int redSuitWidth = %d;\rPanel\n       static final double grabRatioWidth = %4.3f;\rPanel\n       static final double grabRatioHeight = %4.3f;\rPanel\n       static final int testBoxXOffset = %d;\rPanel\n       static final int testBoxYOffset = %d;\rPanel\n       static final RGB redColorPure = new RGB(%s);\rPanel\n       static final RGB redColorBlended = new RGB(%s);\rPanel\n       static final RGB redColorDefinite = new RGB(%s);\rPanel\n       static final RGB blackColorPure = new RGB(%s);\rPanel\n       static final RGB blackColorBlended = new RGB(%s);\rPanel\n       static final RGB blackColorDefinite = new RGB(%s);\rPanel\n       static final RGB bgColorBlended = new RGB(%s);\rPanel\n       static final RGB bgColorPure = new RGB(%s);\rPanel\n       static final RGB blackColorSuitSelect = null;\rPanel\n       static final RGB bgColorSelect = new RGB(%s);\rPanel\n       static final int bgColorSelectVar = %d;\rPanel\n", this.c.b, this.c.G, this.c.H, this.c.I, this.c.c.xHandler, this.c.c.yHandler, this.c.c.width, this.c.c.height, this.c.v, this.c.wHandler, this.c.z, this.c.A, this.c.B, this.c.CHandler, this.c.DHandler, this.c.EHandler, this.c.FPanel, this.c.n, this.c.o, this.c.f, this.c.g, this.c.h, this.c.i, this.c.j, this.c.k, this.c.d, this.c.e, this.c.l, this.c.m));
         int n2 = 0;
         while (n2 < 52) {
             if (this.c.q[n2] == null) {
-                stringBuffer.append(String.format("       static class raw%d {static final int data[][] = null;}\rPanel\n", n2));
+                stringBuffer.append(String.format("       static public class raw%d {static final int data[][] = null;}\rPanel\n", n2));
             } else {
-                String string3 = "       static class raw%d {static final int data[][] = {\rPanel\n%s\rPanel\n};}\rPanel\n";
+                String string3 = "       static public class raw%d {static final int data[][] = {\rPanel\n%s\rPanel\n};}\rPanel\n";
                 int n3 = n2;
                 int[][] nArray = this.c.q[n2];
                 StringBuffer stringBuffer2 = stringBuffer;

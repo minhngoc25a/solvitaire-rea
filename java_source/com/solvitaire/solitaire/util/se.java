@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.MainWindow;
 import com.solvitaire.solitaire.util.sc;
 import javax.swing.JRadioButtonMenuItem;
 
-final class se
+public final class se
 extends JRadioButtonMenuItem {
     int AboutDialog;
     private /* synthetic */ MainWindow b;

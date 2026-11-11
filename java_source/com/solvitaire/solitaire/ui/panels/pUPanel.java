@@ -11,7 +11,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
-final class pUPanel
+public final class pUPanel
 extends JPanel
 implements Runnable {
     private pLPanel b;

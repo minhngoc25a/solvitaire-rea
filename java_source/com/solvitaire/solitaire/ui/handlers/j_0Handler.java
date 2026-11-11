@@ -12,7 +12,7 @@ import javax.swing.JButton;
 /*
  * Renamed from com.solvitaire.app.J
  */
-final class j_0Handler
+public final class j_0Handler
 implements ActionListener {
     private /* synthetic */ ModeSelector AboutDialog;
 

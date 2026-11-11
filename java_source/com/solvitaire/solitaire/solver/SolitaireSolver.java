@@ -125,7 +125,6 @@ public abstract class SolitaireSolver {
         var1_3 = new boolean[501];
         Arrays.fill(var1_3, true);
         var2_6 = 2;
-        if (true) ** GOTO lbl36
         do {
             if (var1_3[var2_6]) {
                 var3_7 = var2_6 << 1;
@@ -134,27 +133,17 @@ public abstract class SolitaireSolver {
                     var3_7 += var2_6;
                 }
             }
-lbl36:
-            // 4 sources
-
-            v0 = ++var2_6;
-        } while (v0 * v0 <= 500);
+            ++var2_6;
+        } while (var2_6 * var2_6 <= 500);
         var2_6 = 3;
         var3_7 = 1;
         while (var3_7 < 5) {
             var4_8 = 1;
-            ** GOTO lbl48
-            {
-                ++var2_6;
-                do {
-                    if (!var1_3[var2_6]) continue block3;
-                    this.Q[var3_7 * 100 + var4_8] = var2_6++;
-                    ++var4_8;
-lbl48:
-                    // 2 sources
-
-                } while (var4_8 < 14);
-            }
+            do {
+                if (!var1_3[var2_6]) continue block3;
+                this.Q[var3_7 * 100 + var4_8] = var2_6++;
+                ++var4_8;
+            } while (var4_8 < 14);
             ++var3_7;
         }
         while (!var1_3[var2_6]) {

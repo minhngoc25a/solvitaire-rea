@@ -3,7 +3,7 @@
  */
 package com.solvitaire.solitaire.util;
 
-final class kt {
+public final class kt {
     static final int[][] AboutDialog;
 
     static {

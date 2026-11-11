@@ -12,7 +12,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JFileChooser;
 
-final class qWHandler
+public final class qWHandler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

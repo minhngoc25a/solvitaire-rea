@@ -30,7 +30,7 @@ import javax.swing.KeyStroke;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 
-final class qbFrame {
+public final class qbFrame {
     SolitaireGameEngine AboutDialog;
     JDialog b;
     private JPanel i;

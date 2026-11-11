@@ -11,7 +11,7 @@ import java.util.Properties;
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 
-final class sc
+public final class sc
 extends ButtonGroup {
     sdHandler AboutDialog;
     String b;

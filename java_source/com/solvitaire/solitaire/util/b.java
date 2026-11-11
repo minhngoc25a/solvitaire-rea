@@ -8,7 +8,7 @@ import java.net.URL;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
 
-final class b
+public final class b
 implements HyperlinkListener {
     private /* synthetic */ AboutDialog AboutDialog;
 

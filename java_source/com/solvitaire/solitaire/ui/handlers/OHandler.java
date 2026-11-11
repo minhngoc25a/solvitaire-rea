@@ -10,7 +10,7 @@ import com.solvitaire.solitaire.util.qy_0;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class OHandler
+public final class OHandler
 implements ActionListener {
     private /* synthetic */ ModeSelector AboutDialog;
 

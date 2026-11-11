@@ -10,7 +10,7 @@ import java.awt.event.InputEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-final class z
+public final class z
 extends MouseAdapter {
     private /* synthetic */ uPanel AboutDialog;
 

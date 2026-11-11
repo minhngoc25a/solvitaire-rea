@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.ai
  */
-final class ai_0Handler
+public final class ai_0Handler
 implements ActionListener {
     private /* synthetic */ ah_0Panel AboutDialog;
 

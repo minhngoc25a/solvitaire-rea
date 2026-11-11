@@ -4,7 +4,7 @@
 package com.solvitaire.solitaire.engine;
 
 import com.solvitaire.solitaire.api.ApiCommandProcessor;
-import com.solvitaire.solitaire.native.WinUser32;
+import com.solvitaire.solitaire.util.WinUser32;
 import com.solvitaire.solitaire.api.DesktopDuplication;
 import com.solvitaire.solitaire.config.GameConfig;
 import com.solvitaire.solitaire.util.ErrorDialog;
@@ -435,10 +435,6 @@ public final class SolitaireGameEngine {
             }
         }
         switch (c2) {
-            case 'AboutDialog': {
-                ++n2;
-                break;
-            }
             case 'j': {
                 n2 += 11;
                 break;

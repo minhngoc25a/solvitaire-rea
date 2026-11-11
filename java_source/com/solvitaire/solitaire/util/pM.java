@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.panels.pLPanel;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 
-final class pM
+public final class pM
 extends FocusAdapter {
     private /* synthetic */ pLPanel AboutDialog;
 

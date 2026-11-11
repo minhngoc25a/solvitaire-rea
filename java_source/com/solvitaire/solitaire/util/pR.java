@@ -9,7 +9,7 @@ import java.awt.Component;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-final class pR
+public final class pR
 extends KeyAdapter {
     private /* synthetic */ pLPanel AboutDialog;
 

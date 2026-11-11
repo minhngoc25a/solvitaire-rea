@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.ModeSelector;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-final class NHandler
+public final class NHandler
 implements ActionListener {
     private /* synthetic */ ModeSelector AboutDialog;
 

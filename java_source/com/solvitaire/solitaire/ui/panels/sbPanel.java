@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 
-final class sbPanel {
+public final class sbPanel {
     private int AboutDialog;
     private JPanel b;
     private sfPanel c;

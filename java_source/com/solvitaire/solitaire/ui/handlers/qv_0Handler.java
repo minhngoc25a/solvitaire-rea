@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.qV
  */
-final class qv_0Handler
+public final class qv_0Handler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

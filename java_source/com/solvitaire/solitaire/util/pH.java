@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.engine.GameStats;
 import com.solvitaire.solitaire.util.pX;
 import com.solvitaire.solitaire.util.u_0;
 
-final class pH {
+public final class pH {
     int AboutDialog;
     int b;
     int c;

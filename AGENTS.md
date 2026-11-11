@@ -1,7 +1,13 @@
 # AGENTS.md — solvitaire-rea reverse engineering project
 
 ## Project goal
-Turn `solvitaire_installv5.3.3.exe` into source code. The binary is an InstallForge installer wrapping a Launch4j-wrapped Java solitaire game. Full Java source has been recovered.
+Turn `solvitaire_installv5.3.3.exe` into source code. The binary is an InstallForge installer wrapping a Launch4j-wrapped Java solitaire game. Full Java source has been recovered and refactored into `java_source/com/solvitaire/solitaire/`.
+
+## Immediate next steps (current goal)
+
+1. **Add README.md** — User-facing documentation: how to build and run, API command list, project structure.
+2. **Fix CFR decompiler artifacts in Java source** — ~100 `** GOTO` / `** break` markers prevent compilation. Clean these up in affected files.
+3. *(Saved for later)* Run the game via API mode to verify behavior.
 
 ## Repo layout
 

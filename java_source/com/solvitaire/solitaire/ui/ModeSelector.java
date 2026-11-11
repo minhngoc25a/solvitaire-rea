@@ -243,52 +243,52 @@ public final class ModeSelector {
                     switch (var4_4.hashCode()) {
                         case -1537898034: {
                             if (!var4_4.equals("freecell")) {
-                                ** break;
+break;
                             }
                             break block13;
                         }
                         case -895953179: {
                             if (var4_4.equals("spider")) break;
-                            ** break;
+break;
                         }
                         case -106396336: {
                             if (!var4_4.equals("pyramid")) {
-                                ** break;
+break;
                             }
                             break block14;
                         }
                         case 1511341225: {
                             if (!var4_4.equals("tripeaks")) {
-                                ** break;
+break;
                             }
                             break block15;
                         }
                         case 2145768351: {
-                            if (!var4_4.equals("klondike")) ** break;
+                            if (!var4_4.equals("klondike")) break;
                             if (var2_2.d == 1) {
                                 var3_3 = "Klondike 1 card deal";
-                                ** break;
+break;
                             }
                             var3_3 = "Klondike 3 card deal";
-                            ** break;
+break;
                         }
                     }
                     if (var2_2.d == 1) {
                         var3_3 = "Spider 1 suit";
-                        ** break;
+break;
                     }
                     if (var2_2.d == 2) {
                         var3_3 = "Spider 2 suits";
-                        ** break;
+break;
                     }
                     var3_3 = "Spider 4 suits";
-                    ** break;
+break;
                 }
                 var3_3 = "FreeCell";
-                ** break;
+break;
             }
             var3_3 = "Pyramid";
-            ** break;
+break;
         }
         var3_3 = "TriPeaks";
 lbl47:

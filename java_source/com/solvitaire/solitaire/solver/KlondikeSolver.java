@@ -14,7 +14,7 @@ import com.solvitaire.solitaire.engine.CardStack;
 import java.io.File;
 import java.util.HashMap;
 
-final class KlondikeSolver
+public final class KlondikeSolver
 extends SolitaireSolver {
     private int AboutDialog;
 
@@ -518,9 +518,9 @@ extends SolitaireSolver {
      */
     @Override
     final int AboutDialog(qa qa2, boolean bl2, int n2, int n3) {
-        void var2_6;
-        void var4_8;
-        void var3_7;
+        int var2_6 = 0;
+        int var4_8 = 0;
+        int var3_7 = 0;
         if (bl2) {
             return 0;
         }
@@ -535,7 +535,7 @@ extends SolitaireSolver {
         while (n5 >= 0) {
             int n6 = 0;
             while (n6 < 7) {
-                void var2_4;
+                int var2_4 = 0;
                 if (n6 > n5) break;
                 Card qu2 = qa2.AboutDialog[n5].f[n6];
                 if (qu2.h() && KlondikeSolver.AboutDialog(qu2.d.c[0], (int)var3_7, (int)var4_8) && --var2_4 == false) {
@@ -546,7 +546,7 @@ extends SolitaireSolver {
             --n5;
         }
         for (CardRun qm_02 : qa2.AboutDialog[7].f[0].e) {
-            void var2_5;
+            int var2_5 = 0;
             if (!KlondikeSolver.AboutDialog(qm_02.c[0], (int)var3_7, (int)var4_8) || --var2_5 != false) continue;
             return 0;
         }

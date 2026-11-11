@@ -12,7 +12,7 @@ import com.solvitaire.solitaire.engine.CardStack;
 import com.solvitaire.solitaire.solver.SpiderVariantSolver;
 import java.util.LinkedList;
 
-final class sqBoardReader
+public final class sqBoardReader
 extends BoardReader {
     static final double[] p = new double[]{771.0, 781.5};
     private SpiderVariantSolver q;

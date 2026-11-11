@@ -9,7 +9,7 @@ import com.solvitaire.solitaire.engine.Card;
 /*
  * Renamed from com.solvitaire.app.o
  */
-final class o_0 {
+public final class o_0 {
     Card AboutDialog;
     boolean b;
     private /* synthetic */ k_0Panel c;

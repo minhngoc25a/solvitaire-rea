@@ -5,7 +5,7 @@ package com.solvitaire.solitaire.util;
 
 import com.solvitaire.solitaire.engine.CardImage;
 
-final class pW {
+public final class pW {
     private int b;
     private int c;
     private double d;

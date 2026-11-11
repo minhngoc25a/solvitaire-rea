@@ -10,7 +10,7 @@ import java.awt.event.ComponentEvent;
 /*
  * Renamed from com.solvitaire.app.rF
  */
-final class rf_0
+public final class rf_0
 extends ComponentAdapter {
     private /* synthetic */ MainWindow AboutDialog;
 

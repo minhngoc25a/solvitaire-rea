@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.rS
  */
-final class rs_0Handler
+public final class rs_0Handler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

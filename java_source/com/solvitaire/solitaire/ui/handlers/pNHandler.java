@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.panels.pLPanel;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
-final class pNHandler
+public final class pNHandler
 extends AbstractAction {
     private /* synthetic */ pLPanel AboutDialog;
 

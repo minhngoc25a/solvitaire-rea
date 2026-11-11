@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.util.si;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-final class sm
+public final class sm
 extends KeyAdapter {
     private /* synthetic */ si AboutDialog;
 

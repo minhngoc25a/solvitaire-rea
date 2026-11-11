@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 /*
  * Renamed from com.solvitaire.app.aa
  */
-final class aa_0Handler
+public final class aa_0Handler
 implements ActionListener {
     private /* synthetic */ w_0Frame AboutDialog;
 

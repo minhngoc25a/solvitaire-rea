@@ -10,7 +10,7 @@ import java.awt.Point;
 /*
  * Renamed from com.solvitaire.app.qp
  */
-final class qp_0 {
+public final class qp_0 {
     private qq_0 c = null;
     private qq_0 d = null;
     private Point e = new Point();

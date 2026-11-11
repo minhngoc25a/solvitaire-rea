@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.ui.MainWindow;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-final class ru
+public final class ru
 extends WindowAdapter {
     private /* synthetic */ MainWindow AboutDialog;
 

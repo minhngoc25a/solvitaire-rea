@@ -9,7 +9,7 @@ import com.solvitaire.solitaire.challenge.ChallengeSolver;
 /*
  * Renamed from com.solvitaire.app.qy
  */
-final class qy_0 {
+public final class qy_0 {
     int AboutDialog;
     int b;
     int c;

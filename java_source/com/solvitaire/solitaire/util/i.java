@@ -6,7 +6,7 @@ package com.solvitaire.solitaire.util;
 import com.solvitaire.solitaire.util.g;
 import com.solvitaire.solitaire.engine.GameStats;
 
-final class i {
+public final class i {
     int AboutDialog;
     private /* synthetic */ g b;
 

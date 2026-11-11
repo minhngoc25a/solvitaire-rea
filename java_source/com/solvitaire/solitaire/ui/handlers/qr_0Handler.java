@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.qR
  */
-final class qr_0Handler
+public final class qr_0Handler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

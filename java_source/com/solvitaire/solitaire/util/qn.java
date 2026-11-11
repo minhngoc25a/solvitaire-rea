@@ -16,7 +16,7 @@ import java.security.spec.DSAPublicKeySpec;
 import java.security.spec.KeySpec;
 import java.util.Arrays;
 
-final class qn {
+public final class qn {
     private SolitaireGameEngine AboutDialog;
     private String b;
     private byte[] c = null;

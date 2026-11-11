@@ -10,7 +10,7 @@ import java.awt.event.WindowEvent;
 /*
  * Renamed from com.solvitaire.app.Y
  */
-final class y_0
+public final class y_0
 extends WindowAdapter {
     private /* synthetic */ w_0Frame AboutDialog;
 

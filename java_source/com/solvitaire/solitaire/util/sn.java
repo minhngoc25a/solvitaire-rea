@@ -5,7 +5,7 @@ package com.solvitaire.solitaire.util;
 
 import com.solvitaire.solitaire.util.si;
 
-final class sn
+public final class sn
 implements Runnable {
     private /* synthetic */ si AboutDialog;
     private final /* synthetic */ int b;

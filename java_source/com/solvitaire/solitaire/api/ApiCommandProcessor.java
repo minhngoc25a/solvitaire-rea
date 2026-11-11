@@ -383,7 +383,7 @@ extends Thread {
                             while (var1_2 < 10) {
                                 var3_23 /* !! */  = var4_26.c.l.f();
                                 if (var3_23 /* !! */  == null) break;
-                                var4_26.c;
+
                                 SolitaireGameEngine.h(var4_26.c.l.p + (String)var3_23 /* !! */ );
                                 ++var1_2;
                             }
@@ -463,10 +463,10 @@ extends Thread {
                             var1_7 = this.AboutDialog(var3_23 /* !! */ [2], "challenge card");
                             var2_15 = var3_23 /* !! */ [3];
                             var4_26 = this;
-                            if ((var2_15 = var2_15.trim()).equals("s") || var2_15.equals("h") || var2_15.equals("d") || var2_15.equals("c")) ** GOTO lbl348
+                            if ((var2_15 = var2_15.trim()).equals("s") || var2_15.equals("h") || var2_15.equals("d") || var2_15.equals("c")) break;
                             var4_26.c.g("==>Bad suit " + (String)var2_15);
                             var4_26.b("ERR: Suit must be s,h,d or c not " + (String)var2_15);
-                            ** GOTO lbl371
+                            break;
 lbl348:
                             // 1 sources
 
@@ -474,38 +474,38 @@ lbl348:
                             switch (var5_29.hashCode()) {
                                 case 99: {
                                     if (!var5_29.equals("c")) {
-                                        ** break;
+break;
                                     }
-                                    ** GOTO lbl369
+                                    break;
                                 }
                                 case 100: {
                                     if (!var5_29.equals("d")) {
-                                        ** break;
+break;
                                     }
-                                    ** GOTO lbl367
+                                    break;
                                 }
                                 case 104: {
                                     if (var5_29.equals("h")) break;
-                                    ** break;
+break;
                                 }
                                 case 115: {
-                                    if (!var5_29.equals("s")) ** break;
+                                    if (!var5_29.equals("s")) break;
                                     v2 = 1;
-                                    ** GOTO lbl372
+                                    break;
                                 }
                             }
                             v2 = 2;
-                            ** GOTO lbl372
+                            break;
 lbl367:
                             // 1 sources
 
                             v2 = 3;
-                            ** GOTO lbl372
+                            break;
 lbl369:
                             // 1 sources
 
                             v2 = 4;
-                            ** GOTO lbl372
+                            break;
 lbl371:
                             // 6 sources
 
@@ -558,34 +558,34 @@ lbl372:
                         this.b("# Must be in play mode to generate AboutDialog game");
                         break;
                     }
-                    if (!(var3_23 /* !! */ .length == 2 && var3_23 /* !! */ [1].equals("freecell") != false || var3_23 /* !! */ [1].equals("pyramid") != false || var3_23 /* !! */ [1].equals("tripeaks") != false || var3_23 /* !! */ .length == 3 && var3_23 /* !! */ [1].equals("klondike") != false) && !var3_23 /* !! */ [1].equals("spider")) ** GOTO lbl457
+                    if (!(var3_23 /* !! */ .length == 2 && var3_23 /* !! */ [1].equals("freecell") != false || var3_23 /* !! */ [1].equals("pyramid") != false || var3_23 /* !! */ [1].equals("tripeaks") != false || var3_23 /* !! */ .length == 3 && var3_23 /* !! */ [1].equals("klondike") != false) && !var3_23 /* !! */ [1].equals("spider")) break;
                     var1_1 = this.c.aq.DHandler;
                     var2_15 = var3_23 /* !! */ [1];
                     switch (var2_15.hashCode()) {
                         case -1537898034: {
                             if (!var2_15.equals("freecell")) {
-                                ** break;
+break;
                             }
-                            ** GOTO lbl444
+                            break;
                         }
                         case -895953179: {
                             if (var2_15.equals("spider")) break;
-                            ** break;
+break;
                         }
                         case -106396336: {
                             if (!var2_15.equals("pyramid")) {
-                                ** break;
+break;
                             }
-                            ** GOTO lbl448
+                            break;
                         }
                         case 1511341225: {
                             if (!var2_15.equals("tripeaks")) {
-                                ** break;
+break;
                             }
-                            ** GOTO lbl452
+                            break;
                         }
                         case 2145768351: {
-                            if (!var2_15.equals("klondike")) ** break;
+                            if (!var2_15.equals("klondike")) break;
                             this.c.bj = "Klondike";
                             try {
                                 this.c.bn = Integer.parseInt(var3_23 /* !! */ [2]);
@@ -593,7 +593,7 @@ lbl372:
                             catch (Exception v3) {}
                             v4 = var1_1;
                             v4.AboutDialog(v4.k, "Klondike");
-                            ** break;
+break;
                         }
                     }
                     this.c.bj = "Spider";
@@ -603,21 +603,21 @@ lbl372:
                     catch (Exception v5) {}
                     v6 = var1_1;
                     v6.AboutDialog(v6.l, "Spider");
-                    ** break;
+break;
 lbl444:
                     // 1 sources
 
                     this.c.bj = "FreeCell";
                     v7 = var1_1;
                     v7.AboutDialog(v7.m, "FreeCell");
-                    ** break;
+break;
 lbl448:
                     // 1 sources
 
                     this.c.bj = "Pyramid";
                     v8 = var1_1;
                     v8.AboutDialog(v8.n, "Pyramid");
-                    ** break;
+break;
 lbl452:
                     // 1 sources
 
@@ -640,7 +640,7 @@ lbl457:
                         this.b("# Must be in play mode to generate AboutDialog game");
                         break;
                     }
-                    if ((var3_23 /* !! */ .length != 2 || !var3_23 /* !! */ [1].equals("easy")) && !var3_23 /* !! */ [1].equals("moderate") && !var3_23 /* !! */ [1].equals("hard") && (var3_23 /* !! */ .length != 3 || !var3_23 /* !! */ [1].equals("seed"))) ** GOTO lbl516
+                    if ((var3_23 /* !! */ .length != 2 || !var3_23 /* !! */ [1].equals("easy")) && !var3_23 /* !! */ [1].equals("moderate") && !var3_23 /* !! */ [1].equals("hard") && (var3_23 /* !! */ .length != 3 || !var3_23 /* !! */ [1].equals("seed"))) break;
                     var1_1 = this.c.aq.DHandler;
                     var2_15 = var3_23 /* !! */ [1];
                     tmp = -1;
@@ -949,7 +949,7 @@ lbl516:
                         this.AboutDialog();
                     }
                     var2_22 = 0;
-                    if (var3_23 /* !! */ .length != 3) ** GOTO lbl762
+                    if (var3_23 /* !! */ .length != 3) break;
                     var4_26 = var3_23 /* !! */ [2].trim();
                     var5_32 = var3_23 /* !! */ [1].trim();
                     tmp = -1;
@@ -991,7 +991,7 @@ lbl516:
                             break;
                         }
                     }
-                    ** GOTO lbl763
+                    break;
 lbl762:
                     // 1 sources
 

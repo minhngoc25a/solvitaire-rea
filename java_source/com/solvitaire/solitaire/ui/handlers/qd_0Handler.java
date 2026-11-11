@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 /*
  * Renamed from com.solvitaire.app.qD
  */
-final class qd_0Handler
+public final class qd_0Handler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 

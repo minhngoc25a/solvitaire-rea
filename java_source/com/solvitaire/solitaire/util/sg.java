@@ -6,7 +6,7 @@ package com.solvitaire.solitaire.util;
 import com.solvitaire.solitaire.ui.MainWindow;
 import javax.swing.JButton;
 
-final class sg
+public final class sg
 extends JButton {
     private /* synthetic */ MainWindow AboutDialog;
 

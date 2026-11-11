@@ -18,7 +18,7 @@ import java.awt.Rectangle;
 /*
  * Renamed from com.solvitaire.app.qi
  */
-final class qi_0BoardReader
+public final class qi_0BoardReader
 extends BoardReader {
     static final double[] p = new double[]{771.0, 781.0};
     private KlondikeSolver q;
@@ -331,13 +331,13 @@ extends BoardReader {
                                     var5_10 = 100;
                                     var12_23 = var13_25;
                                     var5_11 = var2_3;
-                                    if (var12_23.b.AboutDialog != var5_11.h && var12_23.b.AboutDialog != var5_11.i) ** GOTO lbl-1000
+                                    if (var12_23.b.AboutDialog != var5_11.h && var12_23.b.AboutDialog != var5_11.i) break;
                                     if (var5_11.f.d <= 4) {
                                         var5_11.f.g("Using stable click on feed/pile:" + String.valueOf(var12_23));
                                     }
                                     if (!var5_11.AboutDialog(var12_23, var13_26 = var12_23.AboutDialog().g, 100)) {
                                         v4 = false;
-                                    } else lbl-1000:
+                                    } else {
                                     // 2 sources
 
                                     {

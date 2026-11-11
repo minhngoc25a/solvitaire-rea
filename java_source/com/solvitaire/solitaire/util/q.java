@@ -75,8 +75,8 @@ public final class q {
      */
     final void AboutDialog(ErrorDialog object, int n2, int n3, boolean bl2, int n4, int n5, int n6) {
         int n7;
-        void var5_8;
-        void var6_9;
+        int var5_8 = 0;
+        int var6_9 = 0;
         int[][] nArray = ((ErrorDialog)object).AboutDialog();
         if (this.g.wHandler) {
             if (n2 == 0) {

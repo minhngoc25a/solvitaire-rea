@@ -11,7 +11,7 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 import com.solvitaire.solitaire.engine.Card;
 import com.solvitaire.solitaire.engine.CardStack;
 
-class g {
+public class g {
     j AboutDialog;
     double b;
     int c;

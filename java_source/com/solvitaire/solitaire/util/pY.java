@@ -6,7 +6,7 @@ package com.solvitaire.solitaire.util;
 import com.solvitaire.solitaire.util.pX;
 import com.solvitaire.solitaire.util.s_0;
 
-final class pY {
+public final class pY {
     s_0 AboutDialog;
     s_0[] b = new s_0[52];
     int c;

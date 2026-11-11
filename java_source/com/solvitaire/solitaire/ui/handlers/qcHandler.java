@@ -10,7 +10,7 @@ import java.io.File;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 
-final class qcHandler
+public final class qcHandler
 implements ActionListener {
     private /* synthetic */ qbFrame AboutDialog;
     private final /* synthetic */ JFrame b;

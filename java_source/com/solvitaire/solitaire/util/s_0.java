@@ -9,7 +9,7 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 /*
  * Renamed from com.solvitaire.app.s
  */
-final class s_0 {
+public final class s_0 {
     private SolitaireGameEngine p;
     private pX q;
     int AboutDialog;

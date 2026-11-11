@@ -11,7 +11,7 @@ import javax.swing.JCheckBoxMenuItem;
 /*
  * Renamed from com.solvitaire.app.rR
  */
-final class rr_0Handler
+public final class rr_0Handler
 implements ActionListener {
     private /* synthetic */ MainWindow AboutDialog;
 
