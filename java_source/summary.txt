@@ -1,0 +1,107 @@
+Summary for C:/sgame/solvitaire_game_from_pe.jar
+Decompiled with CFR 0.152
+
+
+com.solvitaire.app.pF
+----------------------------
+
+a(com.solvitaire.app.qw_0 com.solvitaire.app.qu boolean int int boolean boolean )
+  Unable to fully structure code
+  Could not resolve type clashes
+a(boolean boolean )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.solvitaire.app.qr
+----------------------------
+
+<init>(com.solvitaire.app.qo_0 int )
+  Unable to fully structure code
+
+
+com.solvitaire.app.qt
+----------------------------
+
+a()
+  Unable to fully structure code
+a(com.solvitaire.app.pJ int[] int int boolean )
+  Unable to fully structure code
+
+
+com.solvitaire.app.g_0
+----------------------------
+
+d()
+  Unable to fully structure code
+
+
+com.solvitaire.app.CommandLine
+----------------------------
+
+run()
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.solvitaire.app.pX
+----------------------------
+
+a(int[][] com.solvitaire.app.pY int int int int int )
+  Unable to fully structure code
+  Could not resolve type clashes
+a(int[][] int int int boolean )
+  Unable to fully structure code
+
+
+com.solvitaire.app.u
+----------------------------
+
+a(byte[][][] int )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.solvitaire.app.al_0
+----------------------------
+
+a(com.solvitaire.app.al_0 )
+  Handled impossible loop by duplicating code
+
+
+com.solvitaire.app.pE
+----------------------------
+
+a(com.solvitaire.app.pJ int[] int int boolean )
+  Unable to fully structure code
+  Could not resolve type clashes
+
+
+com.solvitaire.app.qs_0
+----------------------------
+
+a(int java.lang.String int int )
+  Unable to fully structure code
+
+
+com.solvitaire.app.e_0
+----------------------------
+
+a(com.solvitaire.app.pJ int int int boolean boolean )
+  Unable to fully structure code
+a(com.solvitaire.app.qu int )
+  Unable to fully structure code
+
+
+com.solvitaire.app.qi_0
+----------------------------
+
+a(com.solvitaire.app.pJ int[] int int boolean )
+  Unable to fully structure code
+
+
+org.knowm.xchart.CSVExporter
+----------------------------
+
+a(org.knowm.xchart.XYChart java.lang.String )
+  Loose catch block

@@ -1,0 +1,42 @@
+# === Large binaries (do not upload) ===
+*.exe
+*.dll
+*.jar
+
+# === Ghidra project directories (do not upload) ===
+ghidra_proj*/
+*.gpr
+*.rep
+*.lock
+
+# === Logs (do not upload) ===
+*.log
+
+# === Build artifacts ===
+build/
+*.class
+
+# === Extracted archives (large, regenerate from EXE) ===
+extracted_archive*/
+archive*.7z
+archive*.zip
+zip_from_938553.zip
+solvitaire_game.jar
+solvitaire_game_from_pe.jar
+
+# === Runnable staging directories ===
+game_run/
+jar_extracted/
+C:/sgame/
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Temporary analysis scripts ===
+decompile_all.py
+decompile_all.groovy
+
+# === Python artifacts ===
+__pycache__/
+*.pyc

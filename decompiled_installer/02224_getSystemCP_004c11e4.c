@@ -1,0 +1,40 @@
+// Function: getSystemCP
+// Entry: 004c11e4
+// Size: 113 bytes
+// Thunk: false
+// External: false
+
+
+/* Library Function - Single Match
+    int __cdecl getSystemCP(int)
+   
+   Library: Visual Studio 2019 Release */
+
+int __cdecl getSystemCP(int param_1)
+
+{
+  int local_14;
+  int local_10;
+  char local_8;
+  
+  FUN_00425544(&local_14,(int *)0x0);
+  DAT_00544a98 = 0;
+  if (param_1 == -2) {
+    DAT_00544a98 = 1;
+    param_1 = GetOEMCP();
+  }
+  else if (param_1 == -3) {
+    DAT_00544a98 = 1;
+    param_1 = GetACP();
+  }
+  else if (param_1 == -4) {
+    DAT_00544a98 = 1;
+    param_1 = *(UINT *)(local_10 + 8);
+  }
+  if (local_8 != '\0') {
+    *(uint *)(local_14 + 0x350) = *(uint *)(local_14 + 0x350) & 0xfffffffd;
+  }
+  return param_1;
+}
+
+

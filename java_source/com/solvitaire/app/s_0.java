@@ -1,0 +1,102 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.solvitaire.app;
+
+import com.solvitaire.app.pX;
+import com.solvitaire.app.qo_0;
+
+/*
+ * Renamed from com.solvitaire.app.s
+ */
+final class s_0 {
+    private qo_0 p;
+    private pX q;
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+    int f;
+    int g;
+    int h;
+    int[][] i;
+    int j;
+    int k;
+    int l;
+    int m;
+    int n;
+    boolean o;
+
+    s_0(qo_0 qo_02, pX pX2, int n2) {
+        this.p = qo_02;
+        this.q = pX2;
+        if (n2 == -1) {
+            this.a = -1;
+            this.b = 0;
+            this.c = 0;
+            this.d = 0;
+        } else {
+            this.a = n2;
+            this.b = n2 / 13 + 1;
+            this.c = n2 % 13 + 1;
+            this.d = this.b * 100 + this.c;
+        }
+        this.a();
+    }
+
+    s_0(s_0 s_02) {
+        this.p = s_02.p;
+        this.a = s_02.a;
+        this.b = s_02.b;
+        this.c = s_02.c;
+        this.d = s_02.d;
+        this.e = s_02.e;
+        this.f = s_02.f;
+        this.g = s_02.g;
+        this.h = s_02.h;
+        this.q = s_02.q;
+        this.j = s_02.j;
+        this.k = s_02.k;
+        this.l = s_02.l;
+        this.m = s_02.m;
+        this.n = s_02.n;
+        this.o = s_02.o;
+        this.i = s_02.i;
+        s_02.i = new int[this.q.c.height][this.q.c.width];
+    }
+
+    final void a(int n2, int n3) {
+        this.j = n2;
+        this.k = n3;
+    }
+
+    final void a(int n2) {
+        this.d = -2;
+        this.c = -2 % 100;
+        this.b = -2 / 100;
+    }
+
+    final void a() {
+        this.e = 0;
+        this.f = 999999;
+        this.g = 999999;
+        this.h = 999999;
+        this.i = new int[this.q.c.height][this.q.c.width];
+        this.l = 0;
+        this.m = 0;
+    }
+
+    final int b() {
+        return this.j + this.l;
+    }
+
+    final int c() {
+        return this.k + this.m;
+    }
+
+    public final String toString() {
+        return "(x=" + this.j + ",y=" + this.k + "|suit=" + this.b + ",value=" + this.c + ")";
+    }
+}
+
