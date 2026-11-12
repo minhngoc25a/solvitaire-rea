@@ -97,6 +97,11 @@ Supported API commands:
 | `tracelevel <1-9>` | Set logging verbosity |
 | `exit` | Quit |
 
+### API usage notes
+
+- Commands are sent on stdin as `<macro>^<command>` (e.g. `1^status`). A bare command without the `^` separator crashes the API input thread — the macro value itself is arbitrary (any integer works).
+- `mode play` must be issued on a fresh launch, before `version`/`difficulty`/`deal`. Sending `reset` before `mode play` crashes the game (pre-existing bug in the shipped build's mode-selector dialog) — do not reset between launch and mode selection.
+
 ## Known issues
 
 CFR 0.152 decompiler artifacts prevent clean compilation in 11 files:

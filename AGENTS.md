@@ -1,13 +1,27 @@
 # AGENTS.md — solvitaire-rea reverse engineering project
 
 ## Project goal
-Turn `solvitaire_installv5.3.3.exe` into source code. The binary is an InstallForge installer wrapping a Launch4j-wrapped Java solitaire game. Full Java source has been recovered and refactored into `java_source/com/solvitaire/solitaire/`.
+Turn `solvitaire_installv5.3.3.exe` into source code. The binary is an InstallForge installer wrapping a Launch4j-wrapped Java solitaire game. Full Java source has been recovered and refactored into `java_source/com/solvitaire/solitaire/`. Project is complete — all source code recovered and pushed to GitHub.
 
 ## Immediate next steps (current goal)
 
-1. **Add README.md** — User-facing documentation: how to build and run, API command list, project structure.
-2. **Fix CFR decompiler artifacts in Java source** — ~100 `** GOTO` / `** break` markers prevent compilation. Clean these up in affected files.
-3. *(Saved for later)* Run the game via API mode to verify behavior.
+1. **Add README.md** — User-facing documentation: how to build and run, API command list, project structure. ✅ DONE
+2. **Fix CFR decompiler artifacts in Java source** — All `** GOTO` / `** break` markers removed across 11 affected files. ✅ DONE
+3. **Run the game via API mode to verify behavior** — ✅ DONE (2026-11-12): game launches in API mode (`javaw -Djava.library.path=C:/sgame -jar ...solvitaire_game_from_pe.jar api`) on Java 25; flow verified end to end: `1^mode play` → `1^version klondike 1` → `1^difficulty easy` → `1^deal` → `1^status` (STARTSOLVE) → `1^solve` → `1^wait` → `1^list` (84-move solution printed) → `1^step 3` → `1^status` (SOLVED) → `1^exit` clean. Caveats: commands need `<macro>^<command>` prefix (bare command crashes the API thread); `reset` before `mode play` crashes the shipped build's mode-selector dialog (pre-existing bug).
+4. **GitHub repo** — https://github.com/minhngoc25a/solvitaire-rea — pushed with full source code.
+
+## Project status
+
+**Complete.** All immediate next steps are done (README, CFR-artifact cleanup, API-mode verification, GitHub push). The game was verified end-to-end via API mode on 2026-11-12 (fresh launch → `mode play` → `version klondike 1` → `difficulty easy` → `deal` → `status` STARTSOLVE → `solve` → `wait` → `list` (84-move solution) → `step 3` → `status` SOLVED → `exit`).
+
+Pre-existing shipped-build bugs (not fixed, documented in `CHANGELOG/2026-11-12.md`):
+- `reset` before `mode play` crashes the mode-selector dialog.
+- Bare API commands (no `<macro>^<command>` prefix) crash the API input thread.
+
+## Changelog file convention
+
+One changelog file per day, named `CHANGELOG/YYYY-MM-DD.md`. Do **not** rename a previous day's file; create a new file for the current day. `CHANGELOG/2026-11-12.md` was created for today rather than renaming `CHANGELOG/2026-11-11.md`.
+
 
 ## Repo layout
 
