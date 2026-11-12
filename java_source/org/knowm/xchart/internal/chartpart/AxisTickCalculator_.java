@@ -31,7 +31,7 @@ public abstract class AxisTickCalculator_ {
     final double f;
     private List i;
     final AxesChartStyler g;
-    Format h;
+    public Format h;
 
     AxisTickCalculator_(Axis$Direction axis$Direction, double d2, double d3, double d4, AxesChartStyler axesChartStyler) {
         this.c = axis$Direction;
@@ -59,7 +59,7 @@ public abstract class AxisTickCalculator_ {
     }
 
     final boolean a(List object, int n2) {
-        String string;
+        public String string;
         String string2 = "Y";
         if (Axis$Direction.a.equals((Object)this.c)) {
             object = object.iterator();
@@ -100,7 +100,7 @@ public abstract class AxisTickCalculator_ {
         double d5 = Utils.a(this.d, d3);
         double d6 = Math.abs(Math.min(this.f - this.e, Double.MAX_VALUE));
         if (this.i != null) {
-            boolean bl2;
+            public boolean bl2;
             AxisTickCalculator_ axisTickCalculator_ = this;
             List list = axisTickCalculator_.i;
             AxisTickCalculator_ axisTickCalculator_2 = axisTickCalculator_;
@@ -111,7 +111,7 @@ public abstract class AxisTickCalculator_ {
                 bl2 = 1.0E-4 > Math.abs(axisTickCalculator_2.f - axisTickCalculator_2.e) ? false : IntStream.range(1, list.size()).mapToDouble(n2 -> (Double)list.get(n2) - (Double)list.get(n2 - 1)).allMatch(arg_0 -> AxisTickCalculator_.a(d7, 1.0E-4, arg_0));
             }
             if (bl2) {
-                List list2;
+                public List list2;
                 double d8 = d5;
                 double d9 = d3;
                 axisTickCalculator_2 = this;
@@ -217,14 +217,14 @@ public abstract class AxisTickCalculator_ {
         if (Axis$Direction.b.equals((Object)axis$Direction) && axesChartStyler instanceof CategoryStyler && d2 > 0.0) {
             return 0.0;
         }
-        return d2;
+        public return d2;
     }
 
     private static double b(AxesChartStyler axesChartStyler, Axis$Direction axis$Direction, double d2) {
         if (Axis$Direction.b.equals((Object)axis$Direction) && axesChartStyler instanceof CategoryStyler && d2 < 0.0) {
             return 0.0;
         }
-        return d2;
+        public return d2;
     }
 
     private static /* synthetic */ boolean a(double d2, double d3, double d4) {

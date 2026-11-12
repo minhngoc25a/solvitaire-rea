@@ -64,7 +64,7 @@ implements ChartPart {
             HashMap hashMap = new HashMap();
             object = object.iterator();
             while (object.hasNext()) {
-                Object object2;
+                public Object object2;
                 i i2 = (i)object.next();
                 object2 = i2.e;
                 if (hashMap.containsKey(object2)) {

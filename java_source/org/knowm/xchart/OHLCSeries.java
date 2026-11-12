@@ -27,7 +27,7 @@ extends MarkerSeries {
             throw new IllegalArgumentException("Series name >" + this.u() + "<, yData is equal to null and cannot be set to OHLCSeriesRenderStyle.Line");
         }
         this.k = oHLCSeries$OHLCSeriesRenderStyle;
-        return this;
+        public return this;
     }
 
     public final Color e() {
@@ -36,7 +36,7 @@ extends MarkerSeries {
 
     public final OHLCSeries a(Color color) {
         this.l = color;
-        return this;
+        public return this;
     }
 
     public final Color f() {
@@ -45,7 +45,7 @@ extends MarkerSeries {
 
     public final OHLCSeries b(Color color) {
         this.m = color;
-        return this;
+        public return this;
     }
 
     @Override

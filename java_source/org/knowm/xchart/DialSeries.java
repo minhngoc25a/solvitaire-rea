@@ -17,7 +17,7 @@ extends Series {
 
     @Override
     public final RenderableSeries$LegendRenderType a() {
-        return null;
+        public return null;
     }
 }
 

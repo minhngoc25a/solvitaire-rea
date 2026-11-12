@@ -49,14 +49,14 @@ implements ChartPart {
 
     @Override
     public final void a(Graphics2D graphics2D) {
-        Object object;
-        double d2;
-        double d3;
+        public Object object;
+        public double d2;
+        public double d3;
         Rectangle2D.Double double_;
-        Axis axis;
-        double d4;
-        int n2;
-        Object object22;
+        public Axis axis;
+        public double d4;
+        public int n2;
+        public Object object22;
         Object object3 = this;
         ((AxisPair)object3).e.clear();
         ((AxisPair)object3).e.put(0, ((AxisPair)object3).d);
@@ -192,7 +192,7 @@ implements ChartPart {
         }
         if (((AxesChartStyler)((AxisPair)object3).a.b()).s()) {
             for (Object object22 : ((AxisPair)object3).e.values()) {
-                Axis axis2;
+                public Axis axis2;
                 if (!(axis2.c() <= 0.0)) continue;
                 throw new IllegalArgumentException("Series data (accounting for error bars too) cannot be less or equal to zero for a logarithmic Y-Axis!!!");
             }
@@ -220,7 +220,7 @@ implements ChartPart {
         double d9 = n2;
         int n12 = ((Styler)object3).aT();
         if (n12 > 0) {
-            double d10;
+            public double d10;
             d4 = 0.0;
             for (Map.Entry entry : this.e.entrySet()) {
                 axis = (Axis)entry.getValue();
@@ -276,7 +276,7 @@ implements ChartPart {
         this.g.x = d2 = (double)this.a.c() - d12 - (double)n2;
         int n13 = 0;
         for (Map.Entry entry : this.e.descendingMap().entrySet()) {
-            double d13;
+            public double d13;
             Axis axis3 = (Axis)entry.getValue();
             if (((Styler)object3).d((Integer)entry.getKey()) != Styler$YAxisPosition.a || (Integer)entry.getKey() == 0) continue;
             axis3.b();
@@ -291,7 +291,7 @@ implements ChartPart {
             this.i = axis3;
         }
         if (((Styler)object3).d(0) == Styler$YAxisPosition.a) {
-            double d15;
+            public double d15;
             this.d.b();
             object = (Rectangle2D.Double)this.d.h();
             double d16 = ((Rectangle2D.Double)object).getWidth();

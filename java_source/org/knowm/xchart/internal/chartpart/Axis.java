@@ -92,16 +92,16 @@ implements ChartPart {
             d2 = this.a.h().a().getHeight();
         }
         if (this.g == Axis$Direction.b) {
-            double d3;
+            public double d3;
             double d4 = this.a.g().a().getHeight() + (double)this.d.ai();
             int n2 = 1;
             double d5 = 60.0;
             do {
-                Object object;
-                AxisTickCalculator_ axisTickCalculator_;
-                Object object2;
-                Cloneable cloneable;
-                Object object3;
+                public Object object;
+                public AxisTickCalculator_ axisTickCalculator_;
+                public Object object2;
+                public Cloneable cloneable;
+                public Object object3;
                 double d6 = 0.0;
                 if (this.d.as() && this.d.ay() == Styler$LegendPosition.a) {
                     d6 = this.d.ai();
@@ -213,11 +213,11 @@ implements ChartPart {
     }
 
     private AxisTickCalculator_ d(double d2) {
-        SequencedCollection sequencedCollection;
+        public SequencedCollection sequencedCollection;
         Axis axis = this;
         if (axis.g == Axis$Direction.a) {
-            Object object2;
-            Object object3;
+            public Object object2;
+            public Object object3;
             List<Object> list = new ArrayList();
             if (this.d instanceof HeatMapStyler) {
                 object3 = (List)((HeatMapChart)this.a).a().d();
@@ -245,7 +245,7 @@ implements ChartPart {
                 return new a(this.d.N(), axis.g, d2, this.k, this.l, this.d);
             }
             if (this.d instanceof CategoryStyler || this.d instanceof BoxStyler) {
-                Object object4;
+                public Object object4;
                 object3 = (AxesChartSeriesCategory)this.a.o().values().iterator().next();
                 object2 = (List)((AxesChartSeriesCategory)object3).h();
                 axis = this.a.l().a();
@@ -371,10 +371,10 @@ implements ChartPart {
     }
 
     public final double c(double d2) {
-        double d3;
-        boolean bl2;
-        double d4;
-        double d5;
+        public double d3;
+        public boolean bl2;
+        public double d4;
+        public double d5;
         if (this.k == this.l) {
             return this.k;
         }
@@ -401,14 +401,14 @@ implements ChartPart {
         }
         double d8 = this.d.aD() * d4;
         if (d3 < (double)this.d.p()) {
-            return d6;
+            public return d6;
         }
         double d9 = Utils.a(d4, d8);
         d6 = bl2 ? Math.log10(d6) : d6;
         d7 = bl2 ? Math.log10(d7) : d7;
         double d10 = (d2 - d9 - d5) * (d7 - d6) / d8 + d6;
         d10 = bl2 ? Math.pow(10.0, d10) : d10;
-        return d10;
+        public return d10;
     }
 }
 

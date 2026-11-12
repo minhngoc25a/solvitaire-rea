@@ -61,7 +61,7 @@ extends AxesChartStyler {
 
     public final CategoryStyler c(boolean bl2) {
         this.d = true;
-        return this;
+        public return this;
     }
 
     public final boolean Y() {

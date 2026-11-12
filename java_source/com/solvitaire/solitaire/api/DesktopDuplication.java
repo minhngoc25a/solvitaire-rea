@@ -12,8 +12,8 @@ implements Runnable {
     private SolitaireGameEngine d;
     private boolean e;
     private Thread f;
-    int AboutDialog = 1920;
-    int b = 1080;
+    public int AboutDialog = 1920;
+    public int b = 1080;
     private boolean g;
 
     DesktopDuplication(SolitaireGameEngine qo_02) {

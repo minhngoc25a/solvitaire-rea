@@ -25,7 +25,7 @@ extends AxesChartSeries {
 
     @Override
     public final RenderableSeries$LegendRenderType a() {
-        return null;
+        public return null;
     }
 
     public final Collection d() {

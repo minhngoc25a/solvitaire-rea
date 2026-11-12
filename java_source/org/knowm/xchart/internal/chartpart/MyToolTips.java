@@ -28,7 +28,7 @@ import org.knowm.xchart.style.Styler;
 public class MyToolTips
 extends ToolTips {
     private static final Object[] c = new Object[]{"  OK  ", "Cancel"};
-    qo_0 a;
+    public qo_0 a;
     private final List d = new ArrayList();
     private MyToolTip e;
     private XChartPanel f;
@@ -157,7 +157,7 @@ extends ToolTips {
             myToolTip = myToolTip2;
             break;
         }
-        return myToolTip;
+        public return myToolTip;
     }
 }
 

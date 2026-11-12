@@ -104,11 +104,11 @@ Supported API commands:
 
 ## Known issues
 
-CFR 0.152 decompiler artifacts prevent clean compilation in 11 files:
-- Markers like `** GOTO` and `** break` appear in control-flow-heavy functions
-- Affected files: `ApiCommandProcessor.java`, `GameStats.java`, `BoardReader.java`, `SpiderBoardReader.java`, `pEBoardReader.java`, `qi_0BoardReader.java`, `SolitaireSolver.java`, `SpiderSolver.java`, `ModeSelector.java`, `uPanel.java`, `pX.java`
+CFR decompiler artifacts (`** GOTO`, `** break`) have been removed from the refactored `com.solvitaire.solitaire` package (grep returns no matches there). The parallel `com.solvitaire.app/` package is the raw obfuscated CFR output kept for reference; it still contains artifacts and is **not** part of the refactored build.
 
-These need manual cleanup before the project compiles cleanly.
+Two pre-existing bugs in the shipped build (documented, not fixed):
+- `reset` before `mode play` crashes the mode-selector dialog (native UI code, `com.solvitaire.app.G.g`).
+- A bare API command without the `<macro>^` prefix crashes the API input thread (`CommandLine.run`, `ArrayIndexOutOfBoundsException`).
 
 ## Related decompiled output
 

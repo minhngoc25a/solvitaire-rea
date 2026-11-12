@@ -19,7 +19,7 @@ implements Runnable {
     private Thread c;
     private /* synthetic */ pLPanel d;
 
-    pUPanel(pLPanel pL2, pLPanel pL3) {
+    public pUPanel(pLPanel pL2, pLPanel pL3) {
         this.d = pL2;
         this.b = pL3;
         this.c = new Thread(this);

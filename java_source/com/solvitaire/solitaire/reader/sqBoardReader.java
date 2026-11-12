@@ -14,7 +14,7 @@ import java.util.LinkedList;
 
 public final class sqBoardReader
 extends BoardReader {
-    static final double[] p = new double[]{771.0, 781.5};
+    public static final double[] p = new double[]{771.0, 781.5};
     private SpiderVariantSolver q;
     private LinkedList rPanel = new LinkedList();
     private CardStack[] s;

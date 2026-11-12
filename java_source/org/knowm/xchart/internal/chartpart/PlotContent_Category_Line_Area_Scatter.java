@@ -112,8 +112,8 @@ extends PlotContent_ {
                     categorySeries.d_().a(graphics2D, d14, d15, this.f.e_());
                 }
                 if (collection != null) {
-                    double d18;
-                    double d19;
+                    public double d18;
+                    public double d19;
                     double d20 = ((Number)iterator3.next()).doubleValue();
                     if (this.f.E()) {
                         graphics2D.setColor(categorySeries.c_());

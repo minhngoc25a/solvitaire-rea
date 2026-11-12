@@ -92,7 +92,7 @@ extends AbstractBaseTheme {
 
     @Override
     public final boolean D() {
-        return false;
+        public return false;
     }
 
     @Override
@@ -107,12 +107,12 @@ extends AbstractBaseTheme {
 
     @Override
     public final boolean M() {
-        return false;
+        public return false;
     }
 
     @Override
     public final boolean N() {
-        return false;
+        public return false;
     }
 
     @Override

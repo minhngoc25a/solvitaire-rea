@@ -12,11 +12,11 @@ public final class CardStack {
     private SolitaireGameEngine j;
     int AboutDialog;
     private int k;
-    String b;
+    public String b;
     int c;
     int d;
     int e;
-    Card[] f;
+    public Card[] f;
     Point2D.Double g;
     double h;
     double[] i;

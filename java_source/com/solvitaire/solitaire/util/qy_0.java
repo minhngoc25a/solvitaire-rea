@@ -10,15 +10,15 @@ import com.solvitaire.solitaire.challenge.ChallengeSolver;
  * Renamed from com.solvitaire.app.qy
  */
 public final class qy_0 {
-    int AboutDialog;
-    int b;
-    int c;
-    int d;
-    int e;
-    long f;
+    public int AboutDialog;
+    public int b;
+    public int c;
+    public int d;
+    public int e;
+    public long f;
     private /* synthetic */ ChallengeSolver g;
 
-    qy_0(ChallengeSolver qx_02, SolitaireGameEngine qo_02, String string) {
+    public qy_0(ChallengeSolver qx_02, SolitaireGameEngine qo_02, String string) {
         this.g = qx_02;
         if (string == null) {
             return;
@@ -44,7 +44,7 @@ public final class qy_0 {
         }
     }
 
-    qy_0(ChallengeSolver qx_02) {
+    public qy_0(ChallengeSolver qx_02) {
         this.g = qx_02;
     }
 
@@ -52,7 +52,7 @@ public final class qy_0 {
         return String.format("%07d%08d%05d%05d%010d\n", this.AboutDialog, this.AboutDialog(), this.c, this.d, this.e);
     }
 
-    final void AboutDialog(SolitaireGameEngine qo_02, boolean bl2) {
+    public final void AboutDialog(SolitaireGameEngine qo_02, boolean bl2) {
         if (bl2) {
             if (this.f == 0L) {
                 if (qo_02.d <= 4) {
@@ -80,7 +80,7 @@ public final class qy_0 {
         }
     }
 
-    final int AboutDialog() {
+    public final int AboutDialog() {
         if (this.f == 0L) {
             return this.b;
         }

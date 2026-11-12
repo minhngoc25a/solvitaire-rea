@@ -31,8 +31,8 @@ extends AxisTickCalculator_ {
 
     @Override
     protected final void a() {
-        int n2;
-        double d2;
+        public int n2;
+        public double d2;
         double d3 = this.g.aD() * this.d;
         if (d2 < (double)this.g.p()) {
             return;

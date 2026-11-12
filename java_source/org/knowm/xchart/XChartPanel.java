@@ -147,31 +147,31 @@ extends JPanel {
                 try {
                     if (jFileChooser.getFileFilter() == null) {
                         BitmapEncoder.a(serializable.a, ((File)object).getCanonicalPath(), BitmapEncoder$BitmapFormat.a);
-                        break block15;
+                        public break block15;
                     }
                     if (jFileChooser.getFileFilter().getDescription().equals("*.jpg,*.JPG")) {
                         BitmapEncoder.a(serializable.a, BitmapEncoder.a(((File)object).getCanonicalPath(), BitmapEncoder$BitmapFormat.b), 1.0f);
-                        break block15;
+                        public break block15;
                     }
                     if (jFileChooser.getFileFilter().getDescription().equals("*.png,*.PNG")) {
                         BitmapEncoder.a(serializable.a, ((File)object).getCanonicalPath(), BitmapEncoder$BitmapFormat.a);
-                        break block15;
+                        public break block15;
                     }
                     if (jFileChooser.getFileFilter().getDescription().equals("*.bmp,*.BMP")) {
                         BitmapEncoder.a(serializable.a, ((File)object).getCanonicalPath(), BitmapEncoder$BitmapFormat.c);
-                        break block15;
+                        public break block15;
                     }
                     if (jFileChooser.getFileFilter().getDescription().equals("*.gif,*.GIF")) {
                         BitmapEncoder.a(serializable.a, ((File)object).getCanonicalPath(), BitmapEncoder$BitmapFormat.d);
-                        break block15;
+                        public break block15;
                     }
                     if (jFileChooser.getFileFilter().getDescription().equals("*.svg,*.SVG")) {
                         VectorGraphicsEncoder.saveVectorGraphic((Chart)serializable.a, (String)((File)object).getCanonicalPath(), (VectorGraphicsEncoder.VectorGraphicsFormat)VectorGraphicsEncoder.VectorGraphicsFormat.SVG);
-                        break block15;
+                        public break block15;
                     }
                     if (jFileChooser.getFileFilter().getDescription().equals("*.eps,*.EPS")) {
                         VectorGraphicsEncoder.saveVectorGraphic((Chart)serializable.a, (String)((File)object).getCanonicalPath(), (VectorGraphicsEncoder.VectorGraphicsFormat)VectorGraphicsEncoder.VectorGraphicsFormat.EPS);
-                        break block15;
+                        public break block15;
                     }
                     if (jFileChooser.getFileFilter().getDescription().equals("*.pdf,*.PDF")) {
                         VectorGraphicsEncoder.saveVectorGraphic((Chart)serializable.a, (String)((File)object).getCanonicalPath(), (VectorGraphicsEncoder.VectorGraphicsFormat)VectorGraphicsEncoder.VectorGraphicsFormat.PDF);

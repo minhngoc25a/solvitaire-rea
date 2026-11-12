@@ -36,7 +36,7 @@ implements ChartPart {
 
     @Override
     public void a(Graphics2D graphics2D) {
-        Plot_ plot_;
+        public Plot_ plot_;
         if (!this.a.b().as()) {
             return;
         }
@@ -197,7 +197,7 @@ implements ChartPart {
             object = object.getBounds2D();
             linkedHashMap.put(string, object);
         }
-        return linkedHashMap;
+        public return linkedHashMap;
     }
 
     static float a(Map object, int n2) {
@@ -207,7 +207,7 @@ implements ChartPart {
         }
         f2 -= 3.0f;
         f2 = Math.max(f2, (float)n2);
-        return f2;
+        public return f2;
     }
 
     final float b(Map object, int n2) {

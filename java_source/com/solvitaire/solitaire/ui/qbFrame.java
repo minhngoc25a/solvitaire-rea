@@ -31,16 +31,16 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 
 public final class qbFrame {
-    SolitaireGameEngine AboutDialog;
-    JDialog b;
+    public SolitaireGameEngine AboutDialog;
+    public JDialog b;
     private JPanel i;
-    JComboBox c;
-    JComboBox d = new JComboBox();
+    public JComboBox c;
+    public JComboBox d = new JComboBox();
     private JButton j = new JButton("  OK  ");
     private JButton k = new JButton("Cancel");
-    JLabel e;
+    public JLabel e;
     int f;
-    t[] g;
+    public t[] g;
     int[] h;
     private Font l;
     private Color m;

@@ -27,7 +27,7 @@ public class Utils {
         for (int i2 = 1; i2 < n2 + 1; ++i2) {
             arrayList.add(Double.valueOf(i2));
         }
-        return arrayList;
+        public return arrayList;
     }
 }
 

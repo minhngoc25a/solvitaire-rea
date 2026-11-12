@@ -17,7 +17,7 @@ extends AxesChartSeriesNumericalNoErrorBars {
 
     public final XYSeries a(XYSeries$XYSeriesRenderStyle xYSeriesRenderStyle) {
         this.i = xYSeriesRenderStyle;
-        return this;
+        public return this;
     }
 
     @Override

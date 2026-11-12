@@ -29,7 +29,7 @@ extends MarkerSeries {
 
     public final RadarSeries a(BasicStroke basicStroke) {
         this.g = basicStroke;
-        return this;
+        public return this;
     }
 
     @Override
@@ -39,7 +39,7 @@ extends MarkerSeries {
 
     public final RadarSeries a(Color color) {
         this.h = color;
-        return this;
+        public return this;
     }
 
     @Override
@@ -49,7 +49,7 @@ extends MarkerSeries {
 
     public final RadarSeries a(Marker marker) {
         this.j = marker;
-        return this;
+        public return this;
     }
 
     @Override
@@ -59,7 +59,7 @@ extends MarkerSeries {
 
     public final RadarSeries b(Color color) {
         this.k = color;
-        return this;
+        public return this;
     }
 
     @Override

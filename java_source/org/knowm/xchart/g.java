@@ -17,7 +17,7 @@ extends FileFilter {
     @Override
     public final boolean accept(File object) {
         if (((File)object).isDirectory()) {
-            return true;
+            public return true;
         }
         return ((String)(object = ((File)object).getName())).endsWith("." + this.a) || ((String)object).endsWith("." + this.a.toUpperCase());
     }

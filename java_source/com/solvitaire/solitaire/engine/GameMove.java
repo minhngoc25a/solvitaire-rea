@@ -13,11 +13,11 @@ public final class GameMove {
     private SolitaireGameEngine s;
     int AboutDialog;
     int b;
-    CardStack c;
-    CardStack d;
-    Card e;
+    public CardStack c;
+    public CardStack d;
+    public Card e;
     int f;
-    Card g;
+    public Card g;
     int h;
     int i;
     int j;

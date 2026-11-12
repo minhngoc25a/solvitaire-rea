@@ -17,15 +17,15 @@ import java.awt.Rectangle;
 public final class q {
     private SolitaireGameEngine g;
     static pX[] AboutDialog = new pX[]{pZ.AboutDialog, pZ.b, pZ.c, pZ.d, pZ.e, pZ.f, pZ.g, pZ.h, pZ.i, pZ.j, pZ.k, pZ.l, pZ.m, pZ.n, pZ.o};
-    pY b;
+    public pY b;
     private boolean h;
     private int i;
-    pX c;
+    public pX c;
     int d;
-    double e = -10000.0;
-    double f = 10000.0;
+    public double e = -10000.0;
+    public double f = 10000.0;
 
-    q(SolitaireGameEngine qo_02) {
+    public q(SolitaireGameEngine qo_02) {
         this.g = qo_02;
         int n2 = 0;
         while (n2 < AboutDialog.length) {

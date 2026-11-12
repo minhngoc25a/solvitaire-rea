@@ -207,7 +207,7 @@ public abstract class Styler {
 
     public Styler a(Styler$LegendPosition styler$LegendPosition) {
         this.u = styler$LegendPosition;
-        return this;
+        public return this;
     }
 
     public final Styler$LegendLayout az() {
@@ -260,7 +260,7 @@ public abstract class Styler {
 
     public final Styler d(boolean bl2) {
         this.P = true;
-        return this;
+        public return this;
     }
 
     public final boolean aL() {
@@ -273,7 +273,7 @@ public abstract class Styler {
 
     public final Styler a(Styler$ToolTipType styler$ToolTipType) {
         this.R = styler$ToolTipType;
-        return this;
+        public return this;
     }
 
     public final Color aN() {
@@ -317,7 +317,7 @@ public abstract class Styler {
         if (color == null) {
             return this.ac;
         }
-        return color;
+        public return color;
     }
 
     public int e_() {

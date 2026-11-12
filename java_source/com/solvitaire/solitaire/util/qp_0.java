@@ -16,7 +16,7 @@ public final class qp_0 {
     private Point e = new Point();
     private Point f = null;
     private boolean g = false;
-    boolean AboutDialog = false;
+    public boolean AboutDialog = false;
     private int h;
     final /* synthetic */ SolitaireGameEngine b;
 

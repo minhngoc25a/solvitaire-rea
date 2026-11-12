@@ -17,12 +17,12 @@ extends Series {
 
     public final PieSeries a(PieSeries$PieSeriesRenderStyle pieSeries$PieSeriesRenderStyle) {
         this.a = pieSeries$PieSeriesRenderStyle;
-        return this;
+        public return this;
     }
 
     @Override
     public final RenderableSeries$LegendRenderType a() {
-        return null;
+        public return null;
     }
 }
 

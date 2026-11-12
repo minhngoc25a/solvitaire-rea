@@ -23,7 +23,7 @@ extends AxesChartSeries {
 
     public MarkerSeries b(Marker marker) {
         this.g = marker;
-        return this;
+        public return this;
     }
 
     public Color g() {
@@ -32,7 +32,7 @@ extends AxesChartSeries {
 
     public MarkerSeries c(Color color) {
         this.h = color;
-        return this;
+        public return this;
     }
 }
 

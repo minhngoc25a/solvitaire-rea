@@ -23,7 +23,7 @@ import javax.swing.text.html.HTMLEditorKit;
 
 public final class AboutDialog
 extends JPanel {
-    SolitaireGameEngine AboutDialog;
+    public SolitaireGameEngine AboutDialog;
     private JFrame b;
 
     public AboutDialog(SolitaireGameEngine qo_02) {

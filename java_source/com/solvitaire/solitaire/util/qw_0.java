@@ -12,11 +12,11 @@ import java.awt.Rectangle;
  */
 public final class qw_0 {
     private Card d;
-    Rectangle AboutDialog;
-    s_0[] b;
-    boolean c = true;
+    public Rectangle AboutDialog;
+    public s_0[] b;
+    public boolean c = true;
 
-    qw_0(Card qu2) {
+    public qw_0(Card qu2) {
         this.d = qu2;
         this.AboutDialog = qu2.m();
     }

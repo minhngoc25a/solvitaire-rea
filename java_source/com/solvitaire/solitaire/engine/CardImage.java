@@ -17,7 +17,7 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 
 public final class CardImage {
-    boolean AboutDialog = false;
+    public boolean AboutDialog = false;
     static int b = 80;
     static int c = 110;
     private static final Color rPanel = new Color(0xFFFF00);
@@ -25,14 +25,14 @@ public final class CardImage {
     private static final Color t = new Color(6861055);
     private static final Color uPanel = new Color(0xC0C0C0);
     private static final Color v = new Color(0xE00800);
-    SolitaireGameEngine d;
+    public SolitaireGameEngine d;
     int e;
     int f;
     int g;
-    Point h = new Point();
+    public Point h = new Point();
     private Point wHandler = new Point();
-    pW i = null;
-    pW j = null;
+    public pW i = null;
+    public pW j = null;
     private long xHandler;
     boolean k;
     boolean l;
@@ -41,8 +41,8 @@ public final class CardImage {
     private boolean z;
     private boolean A;
     boolean n;
-    Card o;
-    CardRun p;
+    public Card o;
+    public CardRun p;
     int q;
 
     static {

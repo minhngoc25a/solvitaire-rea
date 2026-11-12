@@ -13,7 +13,7 @@ public final class ApiErrorCodes {
     static final String[] AboutDialog = new String[]{"SUCCESS", "BADLY FORMATTED REQUEST", "NO ACCOUNT FOR THIS EMAIL ADDRESS", "MISSING OR INVALID PC ID", "MISSING OR INVALID REQUEST SIGNATURE", "INVALID PINCODE", "DATABASE LOOKUP ERROR'", "UNEXPECTED ERROR", "SOCKET TIMEOUT"};
     private SolitaireGameEngine e;
     int b;
-    String c;
+    public String c;
     private String f;
     boolean d;
     private String g;

@@ -31,7 +31,7 @@ extends Legend_ {
 
     @Override
     public final void a(Graphics2D graphics2D) {
-        Plot_ plot_;
+        public Plot_ plot_;
         if (!((HeatMapStyler)this.a.b()).as()) {
             return;
         }
@@ -137,8 +137,8 @@ extends Legend_ {
         AffineTransform affineTransform = graphics2D.getTransform();
         BiFunction<Double, Double, String> biFunction = ((HeatMapStyler)this.a.b()).ac() ? (d2, d3) -> this.e.format(d2) + " ~ " + this.e.format(d3) : (d2, d3) -> this.e.format(d2);
         for (int i2 = 0; i2 < n2; ++i2) {
-            double d9;
-            Color color;
+            public double d9;
+            public Color color;
             double d10 = (double)i2 / (double)n2 * (double)colorArray.length;
             if (i2 == 0) {
                 object = biFunction.apply(d6, d6 + d8);
@@ -185,11 +185,11 @@ extends Legend_ {
     }
 
     private void b(Graphics2D graphics2D, double d2, double d3, Color[] object, HeatMapSeries object2) {
-        double d4;
-        double d5;
+        public double d4;
+        public double d5;
         Rectangle2D.Double double_;
         Point2D.Double double_2;
-        Cloneable cloneable;
+        public Cloneable cloneable;
         TextLayout textLayout = new TextLayout(((HeatMapSeries)object2).f() + "", ((HeatMapStyler)this.a.b()).av(), new FontRenderContext(null, true, false));
         if (((HeatMapStyler)this.a.b()).az() == Styler$LegendLayout.a) {
             cloneable = new Point2D.Double(d2, d3 + (double)((HeatMapStyler)this.a.b()).Z());

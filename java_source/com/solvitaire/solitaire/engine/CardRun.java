@@ -15,24 +15,24 @@ public final class CardRun {
     public int AboutDialog = 0;
     boolean b;
     CardImage[] c = new CardImage[13];
-    Card d;
+    public Card d;
 
     CardRun() {
         this.AboutDialog = 0;
     }
 
-    CardRun(CardImage pV2) {
+    public CardRun(CardImage pV2) {
         this.c[0] = pV2;
         this.AboutDialog = 1;
     }
 
-    CardRun(CardRun qm_02) {
+    public CardRun(CardRun qm_02) {
         this.AboutDialog = qm_02.AboutDialog;
         this.b = qm_02.b;
         this.c = Arrays.copyOf(qm_02.c, 13);
     }
 
-    final void AboutDialog(int n2) {
+    public final void AboutDialog(int n2) {
         if (this.AboutDialog != 1 || n2 <= 0 || this.c[0].g != 0 && this.c[0].g != n2) {
             String string = "setCardValue called on run existing length " + this.AboutDialog + " existing card " + this.c[0].g + " new value " + n2;
             SolitaireGameEngine qo_02 = this.d.AboutDialog;
@@ -41,7 +41,7 @@ public final class CardRun {
         this.c[0].AboutDialog(n2);
     }
 
-    static boolean AboutDialog(CardImage pV2, CardImage pV3) {
+    public static boolean AboutDialog(CardImage pV2, CardImage pV3) {
         return CardRun.AboutDialog(pV2) ^ CardRun.AboutDialog(pV3);
     }
 

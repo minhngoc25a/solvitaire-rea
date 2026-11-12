@@ -14,23 +14,23 @@ import java.awt.geom.Rectangle2D;
 import java.util.LinkedList;
 
 public final class Card {
-    SolitaireGameEngine AboutDialog;
-    CardStack b;
+    public SolitaireGameEngine AboutDialog;
+    public CardStack b;
     int c;
-    CardRun d = null;
-    LinkedList e = new LinkedList();
+    public CardRun d = null;
+    public LinkedList e = new LinkedList();
     int f;
     boolean g;
     protected boolean h;
     private boolean q;
-    boolean i = false;
-    boolean j = false;
+    public boolean i = false;
+    public boolean j = false;
     long k;
     long l;
     double m;
     boolean n;
     boolean o;
-    qw_0 p;
+    public qw_0 p;
 
     Card(SolitaireGameEngine qo_02, CardStack qv2, int n2, boolean bl2) {
         this.AboutDialog = qo_02;

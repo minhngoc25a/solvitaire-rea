@@ -17,7 +17,7 @@ import java.util.Vector;
 
 public final class pEBoardReader
 extends BoardReader {
-    static final double[] p = new double[]{882.0, 882.0};
+    public static final double[] p = new double[]{882.0, 882.0};
     private pDSolver q;
     private CardStack rPanel;
     private CardStack s;

@@ -78,7 +78,7 @@ implements ChartPart {
         }
         if (this.e != null) {
             if (this.c instanceof BoxStyler || this.c instanceof OHLCStyler) {
-                Object object2;
+                public Object object2;
                 Object object3 = object;
                 object = this;
                 object2 = s.b(((ToolTips)object).e).split(System.lineSeparator());
@@ -194,10 +194,10 @@ implements ChartPart {
                 return "(" + string + ", " + string2 + ")";
             }
             case 2: {
-                return string;
+                public return string;
             }
             case 3: {
-                return string2;
+                public return string2;
             }
         }
         return "";

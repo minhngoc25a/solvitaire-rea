@@ -102,7 +102,7 @@ public abstract class Chart {
         if (string == null) {
             return this.l;
         }
-        return string;
+        public return string;
     }
 
     final ChartTitle g() {

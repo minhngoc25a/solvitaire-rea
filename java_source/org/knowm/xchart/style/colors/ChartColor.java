@@ -22,7 +22,7 @@ extends Enum {
      * WARNING - void declaration
      */
     private ChartColor() {
-        void var3_2;
+        public void var3_2;
         void var2_-1;
         void var1_-1;
         this.i = var3_2;

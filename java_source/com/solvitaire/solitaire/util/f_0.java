@@ -13,7 +13,7 @@ public final class f_0 {
     int b;
     private /* synthetic */ BoardReader c;
 
-    f_0(BoardReader e_02) {
+    public f_0(BoardReader e_02) {
         this.c = e_02;
     }
 }

@@ -54,7 +54,7 @@ import com.solvitaire.solitaire.data.dk;
 import com.solvitaire.solitaire.data.dl;
 import com.solvitaire.solitaire.data.dm;
 import com.solvitaire.solitaire.data.dn;
-import com.solvitaire.solitaire.data.do;
+import com.solvitaire.solitaire.data.do_0;
 import com.solvitaire.solitaire.util.u_0;
 import java.awt.Rectangle;
 
@@ -72,6 +72,6 @@ public final class co_0 {
     static final u_0 h = new u_0(183, 154, 149);
     static final u_0 i = new u_0(255, 255, 254);
     static final u_0 j = new u_0(239, 240, 203);
-    static final int[][][] k = new int[][][]{cp.AboutDialog, cq.AboutDialog, cb_0.AboutDialog, cm_0.AboutDialog, cx_0.AboutDialog, di.AboutDialog, dl.AboutDialog, dm.AboutDialog, dn.AboutDialog, do.AboutDialog, cr.AboutDialog, cs.AboutDialog, ct.AboutDialog, cu.AboutDialog, cv.AboutDialog, cw.AboutDialog, cx.AboutDialog, cy.AboutDialog, cz.AboutDialog, ca_0.AboutDialog, cc_0.AboutDialog, cd_0.AboutDialog, ce_0.AboutDialog, cf_0.AboutDialog, cg_0.AboutDialog, ch_0.AboutDialog, ci_0.AboutDialog, cj_0.AboutDialog, ck_0.AboutDialog, cl_0.AboutDialog, cn_0.AboutDialog, cO.AboutDialog, cp_0.AboutDialog, cq_0.AboutDialog, cr_0.AboutDialog, cs_0.AboutDialog, ct_0.AboutDialog, cu_0.AboutDialog, cv_0.AboutDialog, cw_0.AboutDialog, cy_0.AboutDialog, cz_0.AboutDialog, da.AboutDialog, db.AboutDialog, dc.AboutDialog, dd.AboutDialog, de.AboutDialog, df.AboutDialog, dg.AboutDialog, dh.AboutDialog, dj.AboutDialog, dk.AboutDialog};
+    static final int[][][] k = new int[][][]{cp.AboutDialog, cq.AboutDialog, cb_0.AboutDialog, cm_0.AboutDialog, cx_0.AboutDialog, di.AboutDialog, dl.AboutDialog, dm.AboutDialog, dn.AboutDialog, do_0.AboutDialog, cr.AboutDialog, cs.AboutDialog, ct.AboutDialog, cu.AboutDialog, cv.AboutDialog, cw.AboutDialog, cx.AboutDialog, cy.AboutDialog, cz.AboutDialog, ca_0.AboutDialog, cc_0.AboutDialog, cd_0.AboutDialog, ce_0.AboutDialog, cf_0.AboutDialog, cg_0.AboutDialog, ch_0.AboutDialog, ci_0.AboutDialog, cj_0.AboutDialog, ck_0.AboutDialog, cl_0.AboutDialog, cn_0.AboutDialog, cO.AboutDialog, cp_0.AboutDialog, cq_0.AboutDialog, cr_0.AboutDialog, cs_0.AboutDialog, ct_0.AboutDialog, cu_0.AboutDialog, cv_0.AboutDialog, cw_0.AboutDialog, cy_0.AboutDialog, cz_0.AboutDialog, da.AboutDialog, db.AboutDialog, dc.AboutDialog, dd.AboutDialog, de.AboutDialog, df.AboutDialog, dg.AboutDialog, dh.AboutDialog, dj.AboutDialog, dk.AboutDialog};
 }
 

@@ -73,11 +73,11 @@ extends PlotContent_ {
             ArrayList<Point2D.Double> arrayList2 = null;
             int n5 = 0;
             block6: while (iterator2.hasNext()) {
-                double d11;
-                double d12;
-                double d13;
-                double d14;
-                double d15;
+                public double d11;
+                public double d12;
+                public double d13;
+                public double d14;
+                public double d15;
                 Number number = (Number)iterator2.next();
                 if (number == null) {
                     d9 = -1.7976931348623157E308;
@@ -94,7 +94,7 @@ extends PlotContent_ {
                     case 1: {
                         if (d17 < d5) {
                             ++n5;
-                            continue block6;
+                            public continue block6;
                         }
                         d18 = d17;
                         d19 = d5;
@@ -106,7 +106,7 @@ extends PlotContent_ {
                     case -1: {
                         if (d17 > d6) {
                             ++n5;
-                            continue block6;
+                            public continue block6;
                         }
                         d18 = d6;
                         d19 = d17;
@@ -274,7 +274,7 @@ extends PlotContent_ {
     }
 
     private void a(Graphics2D graphics2D, CategorySeries categorySeries, ArrayList cloneable, ArrayList arrayList) {
-        Object object;
+        public Object object;
         Collections.reverse(arrayList);
         ArrayList arrayList2 = arrayList;
         arrayList2.remove(arrayList2.size() - 1);
@@ -300,8 +300,8 @@ extends PlotContent_ {
     }
 
     private void a(Graphics2D graphics2D, Number number, double d2, double d3, double d4, double d5, boolean bl2, Color color) {
-        double d6;
-        double d7;
+        public double d6;
+        public double d7;
         Object object = this.a.n().format(number);
         object = new TextLayout((String)object, this.f.ab(), new FontRenderContext(null, true, false));
         Object object2 = AffineTransform.getRotateInstance(-1.0 * Math.toRadians(this.f.ad()), 0.0, 0.0);

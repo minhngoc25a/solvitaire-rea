@@ -30,8 +30,8 @@ extends AxisTickCalculator_ {
 
     @Override
     protected final void a() {
-        boolean bl2;
-        double d2;
+        public boolean bl2;
+        public double d2;
         if (this.e == this.f) {
             this.b.add(this.i.format(BigDecimal.valueOf(this.f).doubleValue()));
             this.a.add(this.d / 2.0);

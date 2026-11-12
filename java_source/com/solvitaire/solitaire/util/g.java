@@ -12,7 +12,7 @@ import com.solvitaire.solitaire.engine.Card;
 import com.solvitaire.solitaire.engine.CardStack;
 
 public class g {
-    j AboutDialog;
+    public j AboutDialog;
     double b;
     int c;
     int d;
@@ -22,10 +22,10 @@ public class g {
     int h;
     int i;
     int j;
-    SolitaireGameEngine k;
+    public SolitaireGameEngine k;
     int l;
     protected boolean m = false;
-    boolean n = true;
+    public boolean n = true;
 
     final void AboutDialog() {
         this.n = true;

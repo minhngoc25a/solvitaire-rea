@@ -13,7 +13,7 @@ public final class so {
     private ErrorDialog b;
     private boolean c;
 
-    so(SolitaireGameEngine qo_02) {
+    public so(SolitaireGameEngine qo_02) {
         this.AboutDialog = qo_02;
         this.c = true;
     }

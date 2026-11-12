@@ -65,7 +65,7 @@ extends Chart {
         }
         object = new CategorySeries(string, (List)object, list, null, CategoryChart.a((List)object));
         this.c.put(string, object);
-        return object;
+        public return object;
     }
 
     private static Series$DataType a(List object) {
@@ -79,7 +79,7 @@ extends Chart {
         } else {
             throw new IllegalArgumentException("Series data must be either Number, Date or String type!!!");
         }
-        return object;
+        public return object;
     }
 
     private void b(String string, List list, List list2, List list3) {

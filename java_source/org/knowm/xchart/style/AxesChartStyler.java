@@ -117,7 +117,7 @@ extends Styler {
 
     public final AxesChartStyler a(boolean bl2) {
         this.b = false;
-        return this;
+        public return this;
     }
 
     public final boolean c() {
@@ -223,7 +223,7 @@ extends Styler {
     public final AxesChartStyler b(boolean bl2) {
         this.z = false;
         this.A = false;
-        return this;
+        public return this;
     }
 
     public final boolean y() {
@@ -313,7 +313,7 @@ extends Styler {
             Color cfr_ignored_0 = ((AxesChartStyler)object).R;
             object = ((AxesChartStyler)object).l;
         }
-        return object;
+        public return object;
     }
 
     public final Color c(int n2) {
@@ -323,7 +323,7 @@ extends Styler {
             Color cfr_ignored_0 = ((AxesChartStyler)object).T;
             object = ((AxesChartStyler)object).j;
         }
-        return object;
+        public return object;
     }
 
     public final AxesChartStyler$TextAlignment R() {

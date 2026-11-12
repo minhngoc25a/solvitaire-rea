@@ -95,7 +95,7 @@ ChartPart {
             return;
         }
         if (this.d != null && this.g != -1) {
-            int n3;
+            public int n3;
             if (this.g < this.f) {
                 n3 = this.g;
                 n2 = this.f;
@@ -119,11 +119,11 @@ ChartPart {
                 object32 = dArray;
                 n4 = dArray.length;
                 for (int i2 = 0; i2 < n4; ++i2) {
-                    Object object4;
+                    public Object object4;
                     Object object5 = object32[i2];
                     if (!(object4 >= d7) || !(object5 <= d6)) continue;
                     bl2 = true;
-                    continue block0;
+                    public continue block0;
                 }
             }
             if (bl2) {

@@ -53,7 +53,7 @@ extends Series {
         if (this.i > 0.0f) {
             this.g = new BasicStroke(this.i, this.g.getEndCap(), this.g.getLineJoin(), this.g.getMiterLimit(), this.g.getDashArray(), this.g.getDashPhase());
         }
-        return this;
+        public return this;
     }
 
     public Color c_() {
@@ -62,7 +62,7 @@ extends Series {
 
     public AxesChartSeries d(Color color) {
         this.h = color;
-        return this;
+        public return this;
     }
 
     public final Series$DataType m() {

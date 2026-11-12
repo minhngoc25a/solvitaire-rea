@@ -28,12 +28,12 @@ import javax.swing.border.EmptyBorder;
 
 public final class si {
     private JDialog f;
-    Container AboutDialog;
-    SolitaireGameEngine b;
-    JList c;
+    public Container AboutDialog;
+    public SolitaireGameEngine b;
+    public JList c;
     int[] d;
     private int g;
-    int e = 0;
+    public int e = 0;
     private Point h = new Point();
 
     si(SolitaireGameEngine qo_02) {

@@ -18,7 +18,7 @@ implements ActionListener {
     private /* synthetic */ w_0Frame AboutDialog;
     private final /* synthetic */ JFrame b;
 
-    z_0Handler(w_0Frame w_02, JFrame jFrame) {
+    public z_0Handler(w_0Frame w_02, JFrame jFrame) {
         this.AboutDialog = w_02;
         this.b = jFrame;
     }

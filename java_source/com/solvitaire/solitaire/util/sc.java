@@ -13,8 +13,8 @@ import javax.swing.ButtonGroup;
 
 public final class sc
 extends ButtonGroup {
-    sdHandler AboutDialog;
-    String b;
+    public sdHandler AboutDialog;
+    public String b;
     int c;
     private /* synthetic */ MainWindow d;
 

@@ -19,7 +19,7 @@ import javax.swing.JRadioButton;
  */
 public final class ag_0Panel {
     private JPanel b = new JPanel();
-    JRadioButton AboutDialog;
+    public JRadioButton AboutDialog;
     private int c;
     private /* synthetic */ w_0Frame d;
 

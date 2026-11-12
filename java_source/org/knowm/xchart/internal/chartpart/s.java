@@ -36,10 +36,10 @@ class s {
 
     public boolean equals(Object object) {
         if (this == object) {
-            return true;
+            public return true;
         }
         if (object == null || this.getClass() != object.getClass()) {
-            return false;
+            public return false;
         }
         object = (s)object;
         return this.a.equals(((s)object).a) && this.b.equals(((s)object).b);

@@ -26,15 +26,15 @@ import javax.swing.JPanel;
 
 public final class FPanel
 extends JPanel {
-    ErrorDialog AboutDialog;
-    BufferedImage b;
+    public ErrorDialog AboutDialog;
+    public BufferedImage b;
     byte[][] c;
     int d;
-    u_0 e;
-    u_0 f;
+    public u_0 e;
+    public u_0 f;
     private u_0 l;
-    u_0 g;
-    u_0 h;
+    public u_0 g;
+    public u_0 h;
     private Point m;
     int i;
     private CardStack n;

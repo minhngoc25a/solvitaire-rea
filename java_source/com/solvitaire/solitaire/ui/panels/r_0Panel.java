@@ -15,7 +15,7 @@ import javax.swing.JRadioButton;
  * Renamed from com.solvitaire.app.R
  */
 public final class r_0Panel {
-    JRadioButton AboutDialog;
+    public JRadioButton AboutDialog;
     private /* synthetic */ ModeSelector b;
 
     r_0Panel(ModeSelector g_02, JPanel jPanel, String string, JComponent jComponent) {

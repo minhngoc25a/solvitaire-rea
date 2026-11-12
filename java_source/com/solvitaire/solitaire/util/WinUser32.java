@@ -1,23 +1,23 @@
 package com.solvitaire.solitaire.util;
 
 public class WinUser32 {
-    static final int GW_HWNDNEXT = 2;
-    static final int SW_MAXIMIZE = 3;
-    static final int SW_SHOW = 1;
-    static final int SW_SHOWNOACTIVATE = 4;
-    static final int SW_RESTORE = 9;
-    static final int SWP_NOMOVE = 2;
-    static final int SWP_NOSIZE = 1;
-    static final int SWP_SHOWWINDOW = 64;
-    static final int GWL_EXSTYLE = -20;
-    static final int WS_EX_LAYERED = 524288;
-    static final int LWA_COLORKEY = 1;
-    static final int LWA_ALPHA = 2;
-    static final int SPI_GETWORKAREA = 48;
-    static final int MOUSEEVENTF_ABSOLUTE = 32769;
-    static final int SM_CXSCREEN = 0;
-    static final int SM_CYSCREEN = 1;
-    static final int SM_CYSIZE = 31;
+    public static final int GW_HWNDNEXT = 2;
+    public static final int SW_MAXIMIZE = 3;
+    public static final int SW_SHOW = 1;
+    public static final int SW_SHOWNOACTIVATE = 4;
+    public static final int SW_RESTORE = 9;
+    public static final int SWP_NOMOVE = 2;
+    public static final int SWP_NOSIZE = 1;
+    public static final int SWP_SHOWWINDOW = 64;
+    public static final int GWL_EXSTYLE = -20;
+    public static final int WS_EX_LAYERED = 524288;
+    public static final int LWA_COLORKEY = 1;
+    public static final int LWA_ALPHA = 2;
+    public static final int SPI_GETWORKAREA = 48;
+    public static final int MOUSEEVENTF_ABSOLUTE = 32769;
+    public static final int SM_CXSCREEN = 0;
+    public static final int SM_CYSCREEN = 1;
+    public static final int SM_CYSIZE = 31;
 
     public native boolean SystemParametersInfoA(int var1, int var2, int[] var3, int var4);
     public native int GetForegroundWindow();

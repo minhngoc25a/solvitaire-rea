@@ -16,7 +16,7 @@ implements RenderableSeries {
      * WARNING - void declaration
      */
     private BubbleSeries$BubbleSeriesRenderStyle() {
-        void var3_2;
+        public void var3_2;
         void var1_-1;
         this.b = var3_2;
     }

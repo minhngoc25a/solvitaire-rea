@@ -31,7 +31,7 @@ public abstract class Series {
 
     public final Series e(Color color) {
         this.c = color;
-        return this;
+        public return this;
     }
 
     public final String u() {

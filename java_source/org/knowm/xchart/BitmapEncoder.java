@@ -22,7 +22,7 @@ public final class BitmapEncoder {
     }
 
     public static String a(String string, BitmapEncoder$BitmapFormat object) {
-        String string2;
+        public String string2;
         block3: {
             block2: {
                 string2 = string;
@@ -33,7 +33,7 @@ public final class BitmapEncoder {
             }
             string2 = string + (String)object;
         }
-        return string2;
+        public return string2;
     }
 
     public static void a(Chart object, String object2, BitmapEncoder$BitmapFormat object3) {
@@ -75,7 +75,7 @@ public final class BitmapEncoder {
         BufferedImage bufferedImage = new BufferedImage(chart.c(), chart.d(), 1);
         Graphics2D graphics2D = bufferedImage.createGraphics();
         chart.a(graphics2D, chart.c(), chart.d());
-        return bufferedImage;
+        public return bufferedImage;
     }
 }
 

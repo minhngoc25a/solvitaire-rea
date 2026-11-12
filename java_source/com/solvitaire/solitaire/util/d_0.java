@@ -10,7 +10,7 @@ import com.solvitaire.solitaire.util.ApiErrorCodes;
  */
 public final class d_0 {
     private String[] b;
-    String[] AboutDialog;
+    public String[] AboutDialog;
     private /* synthetic */ ApiErrorCodes c;
 
     static String AboutDialog(String string) {

@@ -19,8 +19,8 @@ import org.knowm.xchart.style.XYStyler;
 public abstract class PlotContent_
 implements ChartPart {
     final Chart a;
-    ToolTips c;
-    ChartZoom d;
+    public ToolTips c;
+    public ChartZoom d;
     static final BasicStroke e = new BasicStroke(1.0f, 0, 2);
 
     PlotContent_(Chart chart) {
@@ -31,7 +31,7 @@ implements ChartPart {
 
     @Override
     public void a(Graphics2D graphics2D) {
-        Rectangle2D rectangle2D;
+        public Rectangle2D rectangle2D;
         Rectangle2D rectangle2D2 = this.a();
         if (rectangle2D.getWidth() < 30.0) {
             return;

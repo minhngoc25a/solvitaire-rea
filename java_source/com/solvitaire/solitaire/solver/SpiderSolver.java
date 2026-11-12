@@ -76,12 +76,12 @@ extends SolitaireSolver {
     }
 
     @Override
-    final String AboutDialog() {
+    public final String AboutDialog() {
         return "Spider";
     }
 
     @Override
-    final boolean b() {
+    public final boolean b() {
         this.g = new int[50][this.f];
         this.h = new int[this.f];
         this.i = new int[this.f];
@@ -323,7 +323,7 @@ extends SolitaireSolver {
     }
 
     @Override
-    final long c() {
+    public final long c() {
         long l2 = 0L;
         Card[] quArray = this.d.aZ.AboutDialog[0].f;
         int n2 = this.d.aZ.AboutDialog[0].f.length;
@@ -338,7 +338,7 @@ extends SolitaireSolver {
     }
 
     @Override
-    final int[] d() {
+    public final int[] d() {
         HashMap hashMap = new HashMap(104);
         this.b(hashMap);
         return this.b(hashMap, 2);
@@ -887,7 +887,7 @@ extends SolitaireSolver {
     }
 
     @Override
-    final void AboutDialog(int n2, boolean bl2) {
+    public final void AboutDialog(int n2, boolean bl2) {
         if (this.d.d <= n2) {
             this.b(n2);
             this.AboutDialog(n2, this.d.aZ.AboutDialog[0]);
@@ -1087,7 +1087,7 @@ extends SolitaireSolver {
         }
     }
 
-    final int AboutDialog(CardStack qv2, Card qu2, CardStack qv3) {
+    public final int AboutDialog(CardStack qv2, Card qu2, CardStack qv3) {
         int n2 = 0;
         int n3 = 0;
         while (n3 < qv2.f.length) {

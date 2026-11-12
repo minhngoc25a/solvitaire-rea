@@ -13,7 +13,7 @@ extends ChartBuilder {
 
     public final CategoryChartBuilder a(String string) {
         this.b = string;
-        return this;
+        public return this;
     }
 
     public CategoryChart a() {

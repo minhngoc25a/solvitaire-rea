@@ -40,9 +40,9 @@ implements ChartPart {
         AxesChartStyler axesChartStyler = (AxesChartStyler)this.a.b();
         graphics2D.setFont(axesChartStyler.g());
         if (this.c == Axis$Direction.b && axesChartStyler.f()) {
-            Object object;
-            double d2;
-            double d3;
+            public Object object;
+            public double d2;
+            public double d3;
             graphics2D.setColor(axesChartStyler.b(this.d.i()));
             boolean bl2 = axesChartStyler.d(this.d.i()) == Styler$YAxisPosition.a;
             if (bl2) {
@@ -65,7 +65,7 @@ implements ChartPart {
                 double d6 = (Double)((AxisTickCalculator_)object).a.get(n2);
                 double d7 = d2 + d4 - d6;
                 if (string != null && d7 > d2 && d7 < d2 + d4) {
-                    double d8;
+                    public double d8;
                     FontRenderContext fontRenderContext = graphics2D.getFontRenderContext();
                     TextLayout textLayout = new TextLayout(string, axesChartStyler.g(), fontRenderContext);
                     Rectangle2D d18 = textLayout.getBounds();
@@ -78,7 +78,7 @@ implements ChartPart {
                 ++n2;
             }
             for (Map.Entry d19 : hashMap.entrySet()) {
-                double d10;
+                public double d10;
                 object = (Double)d19.getKey();
                 TextLayout textLayout = (TextLayout)d19.getValue();
                 Shape shape = textLayout.getOutline(null);
@@ -109,13 +109,13 @@ implements ChartPart {
             return;
         }
         if (this.c == Axis$Direction.a && axesChartStyler.e()) {
-            Rectangle2D rectangle2D;
-            AffineTransform affineTransform;
-            TextLayout textLayout;
-            FontRenderContext fontRenderContext;
-            double d13;
-            String string;
-            AxisTickCalculator_ axisTickCalculator_;
+            public Rectangle2D rectangle2D;
+            public AffineTransform affineTransform;
+            public TextLayout textLayout;
+            public FontRenderContext fontRenderContext;
+            public double d13;
+            public String string;
+            public AxisTickCalculator_ axisTickCalculator_;
             graphics2D.setColor(axesChartStyler.P());
             double d14 = this.a.j().h().getX();
             double d15 = this.a.j().f().a().getY();
@@ -153,8 +153,8 @@ implements ChartPart {
                 double d19 = (Double)axisTickCalculator_.a.get(n4);
                 d13 = d14 + d19;
                 if (string != null && d13 > d14 && d13 < d14 + d16) {
-                    double d20;
-                    int n3;
+                    public double d20;
+                    public int n3;
                     fontRenderContext = graphics2D.getFontRenderContext();
                     textLayout = new TextLayout(string, axesChartStyler.g(), fontRenderContext);
                     affineTransform = AffineTransform.getRotateInstance(-1.0 * Math.toRadians(axesChartStyler.U()), 0.0, 0.0);

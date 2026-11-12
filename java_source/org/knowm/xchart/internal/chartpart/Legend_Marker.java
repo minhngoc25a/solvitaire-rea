@@ -38,8 +38,8 @@ extends Legend_ {
         graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         Map map = this.a.o();
         for (MarkerSeries markerSeries : map.values()) {
-            double d4;
-            Shape shape;
+            public double d4;
+            public Shape shape;
             if (!markerSeries.v() || !markerSeries.w()) continue;
             Map map2 = this.b(markerSeries);
             float f2 = Legend_Marker.a(map2, markerSeries.a() == RenderableSeries$LegendRenderType.a || markerSeries.a() == RenderableSeries$LegendRenderType.b ? this.e.e_() : 20);

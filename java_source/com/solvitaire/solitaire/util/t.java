@@ -16,7 +16,7 @@ public final class t {
     private boolean v = false;
     int d;
     int e;
-    int f = 1;
+    public int f = 1;
     int g;
     int h;
     int i;
@@ -26,8 +26,8 @@ public final class t {
     int m;
     int n;
     int o;
-    String p;
-    String q;
+    public String p;
+    public String q;
     private String wHandler;
     private int xHandler;
     boolean rPanel;

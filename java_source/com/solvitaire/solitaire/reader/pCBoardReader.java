@@ -19,7 +19,7 @@ import com.solvitaire.solitaire.util.s_0;
 
 public final class pCBoardReader
 extends BoardReader {
-    static final double[] p = new double[]{841.5, 841.5};
+    public static final double[] p = new double[]{841.5, 841.5};
     private pBSolver rPanel;
     s_0[] q = new s_0[20];
     private CardStack s;

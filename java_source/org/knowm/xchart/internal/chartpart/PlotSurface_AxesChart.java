@@ -24,10 +24,10 @@ extends PlotSurface_ {
 
     @Override
     public final void a(Graphics2D graphics2D) {
-        Shape shape;
-        double d2;
-        Object object;
-        Iterator iterator;
+        public Shape shape;
+        public double d2;
+        public Object object;
+        public Iterator iterator;
         Rectangle2D rectangle2D = this.a();
         Rectangle2D.Double double_ = new Rectangle2D.Double(rectangle2D.getX(), rectangle2D.getY(), rectangle2D.getWidth(), rectangle2D.getHeight());
         graphics2D.setColor(this.c.aA());
@@ -37,7 +37,7 @@ extends PlotSurface_ {
             iterator = ((AxisTickCalculator_)((Object)iterator)).a;
             iterator = iterator.iterator();
             while (iterator.hasNext()) {
-                double d3;
+                public double d3;
                 object = (Double)iterator.next();
                 d2 = rectangle2D.getY() + rectangle2D.getHeight() - (Double)object;
                 if (!(d3 > rectangle2D.getY()) || !(d2 < rectangle2D.getY() + rectangle2D.getHeight())) continue;
@@ -52,7 +52,7 @@ extends PlotSurface_ {
             iterator = ((AxisTickCalculator_)((Object)iterator)).a;
             iterator = iterator.iterator();
             while (iterator.hasNext()) {
-                double d4;
+                public double d4;
                 object = (Double)iterator.next();
                 d2 = rectangle2D.getY() + rectangle2D.getHeight() - (Double)object;
                 if (!(d4 > rectangle2D.getY()) || !(d2 < rectangle2D.getY() + rectangle2D.getHeight())) continue;
@@ -65,7 +65,7 @@ extends PlotSurface_ {
             iterator = ((AxisTickCalculator_)((Object)iterator)).a;
             iterator = iterator.iterator();
             while (iterator.hasNext()) {
-                double d5;
+                public double d5;
                 object = (Double)iterator.next();
                 d2 = rectangle2D.getY() + rectangle2D.getHeight() - (Double)object;
                 if (!(d5 > rectangle2D.getY()) || !(d2 < rectangle2D.getY() + rectangle2D.getHeight())) continue;
@@ -80,7 +80,7 @@ extends PlotSurface_ {
             iterator = ((AxisTickCalculator_)((Object)iterator)).a;
             iterator = iterator.iterator();
             while (iterator.hasNext()) {
-                double d6;
+                public double d6;
                 object = (Double)iterator.next();
                 d2 = (Double)object;
                 double d7 = rectangle2D.getX() + d2;

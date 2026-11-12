@@ -31,7 +31,7 @@ public final class qn {
     private static String l = "00:ea:0c:8a:a3:84:2d:5c:c9:b0:5b:26:ef:4a:ca:b5:94:3d:4f:41:93";
     private static String m = "21:7d:ae:d8:24:ad:24:3c:47:92:58:9c:8f:1c:67:d7:b9:06:d3:5e:d6:c7:35:40:4f:9d:0a:f7:84:1a:47:0d";
 
-    qn(SolitaireGameEngine object) {
+    public qn(SolitaireGameEngine object) {
         this.AboutDialog = object;
         object = this;
         byte[] byArray = new byte[128];

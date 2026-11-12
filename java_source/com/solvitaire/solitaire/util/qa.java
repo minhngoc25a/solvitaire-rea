@@ -18,7 +18,7 @@ public final class qa {
     int h;
     int i;
 
-    qa() {
+    public qa() {
         this.d = new int[350];
         this.e = new int[350];
         this.f = new int[350];
@@ -26,7 +26,7 @@ public final class qa {
         this.g = new int[350];
     }
 
-    qa(qa qa2, boolean bl2) {
+    public qa(qa qa2, boolean bl2) {
         int n2 = 0;
         while (n2 < 10) {
             if (qa2.AboutDialog[n2] != null) {

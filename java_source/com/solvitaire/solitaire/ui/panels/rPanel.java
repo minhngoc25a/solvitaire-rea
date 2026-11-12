@@ -11,10 +11,10 @@ import javax.swing.JPanel;
 
 public final class rPanel
 extends JPanel {
-    pLPanel AboutDialog;
-    SolitaireGameEngine b;
-    CardImage[][] c;
-    CardImage d;
+    public pLPanel AboutDialog;
+    public SolitaireGameEngine b;
+    public CardImage[][] c;
+    public CardImage d;
     private boolean e;
 
     rPanel(SolitaireGameEngine qo_02, pLPanel pL2) {

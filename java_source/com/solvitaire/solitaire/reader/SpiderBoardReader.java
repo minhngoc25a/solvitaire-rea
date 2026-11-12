@@ -15,7 +15,7 @@ import java.util.Arrays;
 
 public final class SpiderBoardReader
 extends BoardReader {
-    static final double[] p = new double[]{841.0, 841.0};
+    public static final double[] p = new double[]{841.0, 841.0};
     private SpiderSolver q;
     private qa rPanel;
 

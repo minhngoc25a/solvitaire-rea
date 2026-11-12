@@ -60,7 +60,7 @@ public class CSVExporter {
                         }
                         catch (IOException iOException) {}
                     }
-                    throw throwable;
+                    public throw throwable;
                 }
                 try {
                     writer.flush();

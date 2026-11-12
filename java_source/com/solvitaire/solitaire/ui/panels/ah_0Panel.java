@@ -20,7 +20,7 @@ import javax.swing.JPanel;
  */
 public final class ah_0Panel {
     private JPanel c = new JPanel();
-    JCheckBox AboutDialog;
+    public JCheckBox AboutDialog;
     final /* synthetic */ w_0Frame b;
 
     ah_0Panel(w_0Frame w_02, String object) {

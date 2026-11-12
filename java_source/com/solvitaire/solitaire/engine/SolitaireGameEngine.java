@@ -3,9 +3,7 @@
  */
 package com.solvitaire.solitaire.engine;
 
-import com.solvitaire.solitaire.api.ApiCommandProcessor;
 import com.solvitaire.solitaire.util.WinUser32;
-import com.solvitaire.solitaire.api.DesktopDuplication;
 import com.solvitaire.solitaire.config.GameConfig;
 import com.solvitaire.solitaire.util.ErrorDialog;
 import com.solvitaire.solitaire.util.ApiErrorCodes;
@@ -85,7 +83,7 @@ public final class SolitaireGameEngine {
     boolean h = false;
     int i = 0;
     static final String[] j = new String[]{"undefined", "klondike", "spider", "freecell", "pyramid", "tripeaks"};
-    public ApiCommandProcessor k;
+    public Thread k = null;
     t l = new t(this, 0);
     private Point by = new Point();
     private long bz;

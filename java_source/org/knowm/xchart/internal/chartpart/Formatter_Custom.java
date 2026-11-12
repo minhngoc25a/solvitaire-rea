@@ -20,12 +20,12 @@ extends Format {
     public StringBuffer format(Object object, StringBuffer stringBuffer, FieldPosition fieldPosition) {
         object = (Number)object;
         stringBuffer.append((String)this.a.apply(((Number)object).doubleValue()));
-        return stringBuffer;
+        public return stringBuffer;
     }
 
     @Override
     public Object parseObject(String string, ParsePosition parsePosition) {
-        return null;
+        public return null;
     }
 }
 

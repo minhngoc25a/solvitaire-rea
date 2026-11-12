@@ -23,7 +23,7 @@ extends AxesChartSeriesCategory {
 
     public final CategorySeries a(CategorySeries$CategorySeriesRenderStyle categorySeries$CategorySeriesRenderStyle) {
         this.g = categorySeries$CategorySeriesRenderStyle;
-        return this;
+        public return this;
     }
 
     @Override

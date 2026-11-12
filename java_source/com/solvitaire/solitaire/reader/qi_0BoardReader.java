@@ -20,7 +20,7 @@ import java.awt.Rectangle;
  */
 public final class qi_0BoardReader
 extends BoardReader {
-    static final double[] p = new double[]{771.0, 781.0};
+    public static final double[] p = new double[]{771.0, 781.0};
     private KlondikeSolver q;
     private CardStack[] rPanel;
     private CardStack s;
@@ -443,6 +443,7 @@ extends BoardReader {
             }
             KlondikeSolver.c(var1_1.e);
         }
+    }
     }
 
     @Override

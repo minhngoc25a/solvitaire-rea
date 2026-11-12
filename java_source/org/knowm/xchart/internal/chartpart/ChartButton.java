@@ -26,7 +26,7 @@ implements ChartPart {
     private final Styler c;
     private Rectangle d;
     private String e;
-    boolean a;
+    public boolean a;
     private ActionEvent f;
     private final EventListenerList g;
     private double h;
@@ -55,8 +55,8 @@ implements ChartPart {
 
     @Override
     public final void a(Graphics2D graphics2D) {
-        Cloneable cloneable;
-        double d2;
+        public Cloneable cloneable;
+        public double d2;
         if (!this.a) {
             return;
         }

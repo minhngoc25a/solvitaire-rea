@@ -39,7 +39,7 @@ extends MarkerSeries {
         object = object.iterator();
         object2 = object2.iterator();
         while (object.hasNext()) {
-            double d4;
+            public double d4;
             double d5 = ((Number)object.next()).doubleValue();
             if (d5 - (d4 = ((Number)object2.next()).doubleValue()) < d2) {
                 d2 = d5 - d4;

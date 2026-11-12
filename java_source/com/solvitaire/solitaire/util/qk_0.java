@@ -28,7 +28,7 @@ extends Thread {
     private int d = 0;
     private int e;
 
-    qk_0(SolitaireGameEngine qo_02) {
+    public qk_0(SolitaireGameEngine qo_02) {
         this.AboutDialog = qo_02;
         this.c = 0L;
         this.e = 2026;

@@ -33,7 +33,7 @@ extends AbstractBaseTheme {
 
     @Override
     public final boolean h() {
-        return false;
+        public return false;
     }
 
     @Override
@@ -64,12 +64,12 @@ extends AbstractBaseTheme {
 
     @Override
     public final boolean D() {
-        return false;
+        public return false;
     }
 
     @Override
     public final boolean E() {
-        return false;
+        public return false;
     }
 
     @Override

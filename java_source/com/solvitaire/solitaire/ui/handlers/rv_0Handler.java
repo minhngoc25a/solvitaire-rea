@@ -21,7 +21,6 @@ implements ActionListener {
 
     @Override
     public final void actionPerformed(ActionEvent actionEvent) {
-        this.AboutDialog.xHandler = new AboutDialog(this.AboutDialog.d);
     }
 }
 

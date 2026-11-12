@@ -10,7 +10,7 @@ public class BoxSeries
 extends AxesChartSeriesCategory {
     @Override
     public final RenderableSeries$LegendRenderType a() {
-        return null;
+        public return null;
     }
 }
 

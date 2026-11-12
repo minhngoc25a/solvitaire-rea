@@ -38,12 +38,12 @@ extends Format {
         object2 = (DecimalFormat)this.c;
         ((DecimalFormat)object2).applyPattern((String)object);
         stringBuffer.append(((NumberFormat)object2).format(d2));
-        return stringBuffer;
+        public return stringBuffer;
     }
 
     @Override
     public final Object parseObject(String string, ParsePosition parsePosition) {
-        return null;
+        public return null;
     }
 }
 

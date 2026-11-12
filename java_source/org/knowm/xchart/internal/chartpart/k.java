@@ -40,7 +40,7 @@ extends Format {
 
     @Override
     public final StringBuffer format(Object object, StringBuffer stringBuffer, FieldPosition object2) {
-        String string;
+        public String string;
         object = (Number)object;
         if (this.b == Axis$Direction.a && this.a.I() != null) {
             string = this.a.I();
@@ -84,12 +84,12 @@ extends Format {
         DecimalFormat decimalFormat = (DecimalFormat)this.e;
         decimalFormat.applyPattern((String)object2);
         stringBuffer.append(decimalFormat.format(object));
-        return stringBuffer;
+        public return stringBuffer;
     }
 
     @Override
     public final Object parseObject(String string, ParsePosition parsePosition) {
-        return null;
+        public return null;
     }
 }
 

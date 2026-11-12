@@ -48,22 +48,22 @@ extends g {
     private int DHandler;
     private double EHandler;
     private double FPanel;
-    Point p;
+    public Point p;
     private boolean G = false;
     private boolean H = false;
     private Graphics I;
-    BufferedImage q;
-    j rPanel;
-    i s;
-    i t;
+    public BufferedImage q;
+    public j rPanel;
+    public i s;
+    public i t;
     private i J;
     private h KHandler;
-    h uPanel;
+    public h uPanel;
     private h LHandler;
     private h MHandler;
     private boolean NHandler = false;
     private long OHandler;
-    boolean v = false;
+    public boolean v = false;
     private int PPanel;
     private int Q = 100;
     private int R = 100;
@@ -73,7 +73,7 @@ extends g {
     private int V = 5;
     private int W = -1;
     private int X = -1;
-    double wHandler = 0.0;
+    public double wHandler = 0.0;
     boolean xHandler;
     boolean yHandler;
     boolean z;
@@ -83,7 +83,7 @@ extends g {
     private int ab;
     private int ac = 0;
     private int ad = 0;
-    Rectangle A;
+    public Rectangle A;
     private ErrorDialog ae = null;
     private int[][][] af;
     private int[][][] ag;
@@ -2980,6 +2980,7 @@ lbl169:
             var1_2 = this.k;
             var1_2.AboutDialog(var2_4, false);
         }
+    }
     }
 
     final boolean AboutDialog(ErrorDialog al_02) {

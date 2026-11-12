@@ -1,27 +1,20 @@
 # AGENTS.md — solvitaire-rea reverse engineering project
 
+## Language matching: respond in the user's language
+
+Always answer in English by default. Only respond in Vietnamese if the user explicitly writes in Vietnamese and asks for a Vietnamese response. Detect the language from the user's message and match it. This applies to all responses, clarifications, and actions.
+
+## Python / uv
+
+Prefer installing Python packages and running Python through uv commands. Manage everything Python-related through uv.
+
 ## Project goal
+
 Turn `solvitaire_installv5.3.3.exe` into source code. The binary is an InstallForge installer wrapping a Launch4j-wrapped Java solitaire game. Full Java source has been recovered and refactored into `java_source/com/solvitaire/solitaire/`. Project is complete — all source code recovered and pushed to GitHub.
 
-## Immediate next steps (current goal)
+## Project status — see PROJECT_STATUS.md
 
-1. **Add README.md** — User-facing documentation: how to build and run, API command list, project structure. ✅ DONE
-2. **Fix CFR decompiler artifacts in Java source** — All `** GOTO` / `** break` markers removed across 11 affected files. ✅ DONE
-3. **Run the game via API mode to verify behavior** — ✅ DONE (2026-11-12): game launches in API mode (`javaw -Djava.library.path=C:/sgame -jar ...solvitaire_game_from_pe.jar api`) on Java 25; flow verified end to end: `1^mode play` → `1^version klondike 1` → `1^difficulty easy` → `1^deal` → `1^status` (STARTSOLVE) → `1^solve` → `1^wait` → `1^list` (84-move solution printed) → `1^step 3` → `1^status` (SOLVED) → `1^exit` clean. Caveats: commands need `<macro>^<command>` prefix (bare command crashes the API thread); `reset` before `mode play` crashes the shipped build's mode-selector dialog (pre-existing bug).
-4. **GitHub repo** — https://github.com/minhngoc25a/solvitaire-rea — pushed with full source code.
-
-## Project status
-
-**Complete.** All immediate next steps are done (README, CFR-artifact cleanup, API-mode verification, GitHub push). The game was verified end-to-end via API mode on 2026-11-12 (fresh launch → `mode play` → `version klondike 1` → `difficulty easy` → `deal` → `status` STARTSOLVE → `solve` → `wait` → `list` (84-move solution) → `step 3` → `status` SOLVED → `exit`).
-
-Pre-existing shipped-build bugs (not fixed, documented in `CHANGELOG/2026-11-12.md`):
-- `reset` before `mode play` crashes the mode-selector dialog.
-- Bare API commands (no `<macro>^<command>` prefix) crash the API input thread.
-
-## Changelog file convention
-
-One changelog file per day, named `CHANGELOG/YYYY-MM-DD.md`. Do **not** rename a previous day's file; create a new file for the current day. `CHANGELOG/2026-11-12.md` was created for today rather than renaming `CHANGELOG/2026-11-11.md`.
-
+Project status, completed items, blockers, and next steps are tracked in `PROJECT_STATUS.md`. Confer that file before planning work; keep this file limited to standing project instructions.
 
 ## Repo layout
 
@@ -142,10 +135,41 @@ CFR 0.152 downloaded from `https://www.benf.org/other/cfr/cfr-0.152.jar`. Procyo
 - SETUPCONFIGURATION resource payload offset: `1371408`
 - Second 7-Zip archive offset: `1409045`
 
+## Gradle build and linting
+
+A Gradle build (Kotlin DSL) is at the repo root. It compiles only the refactored `com.solvitaire.solitaire` package (`com.solvitaire.app` is the raw obfuscated CFR reference copy and is intentionally excluded) and runs Google-Java-rule linting via Checkstyle plus google-java-format formatting via Spotless.
+
+```
+settings.gradle.kts   # rootProject.name = "solvitaire-rea"
+build.gradle.kts      # java, checkstyle, com.diffplug.spotless plugins
+config/checkstyle/google_checks.xml   # Google Java Style checkstyle config
+```
+
+Tasks:
+| Task | Purpose |
+|------|---------|
+| `compile-java` / `compileJava` | Compile the refactored Java source |
+| `lint` | Run Checkstyle (Google Java rules) + google-java-format check |
+| `fmt` | Apply google-java-format to the Java source |
+| `checkstyleMain` | Checkstyle analysis only |
+| `spotlessJavaCheck` / `spotlessJavaApply` | Format check / apply only |
+
+Run from repo root:
+```
+gradle compile-java
+gradle lint
+gradle fmt
+```
+
+Notes:
+- Checkstyle/Spotless parse source text and therefore cannot produce useful results until the source compiles cleanly (see PROJECT_STATUS.md for the current blocker: CFR structure artifacts in `engine/GameStats.java` and `ui/panels/uPanel.java`).
+- Spotless's `googleJavaFormat` step uses the JDK's internal `com.sun.tools.javac` API, which is incompatible with JDK 25. If `spotlessJavaCheck`/`spotlessApply` fail with `DeferredDiagnosticHandler`, run on JDK 17/21 or drop the Spotless step and rely on Checkstyle alone.
+- `native/WinUser32.java` had its package renamed `com.solvitaire.solitaire.native` → `com.solvitaire.solitaire.jni` because `native` is a Java keyword and illegal as a package segment.
+
 ## Lessons learned / gotchas
 
 - The `strings -e l` output showing a Sysinternals EULA could not be correlated to any findable bytes in the file (exhaustive UTF-16LE/ASCII searches for "Russinovich"/"Sysinternals"/"Mark" returned 0). Treat as an unresolved tool anomaly, not confirmed content.
 - PowerShell mangles `-Djava...` flags and forward-slash paths. Use `cmd /c "..."` or a `.bat` file to launch the game.
 - VS Code `code` wrapper is broken (`./Code.exe` not found). Launch `Code.exe` directly if needed.
 - Windows paths use backslashes.
-- Do not use `cygpath` or `pyenv.bat` — both are broken on this system (pyenv.bat calls cygpath which is missing). Use direct Windows paths and the venv Python at `C:/Users/admin/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe`.
+- Do not use `cygpath` or `pyenv.bat` — both are broken on this system (pyenv.bat calls cygpath which is missing). Use direct Windows paths.

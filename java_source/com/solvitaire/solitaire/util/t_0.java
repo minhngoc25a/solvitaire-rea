@@ -22,7 +22,7 @@ public final class t_0 {
     private float[] g;
     static final u_0 d = new u_0(255, 255, 255);
 
-    t_0(SolitaireGameEngine qo_02) {
+    public t_0(SolitaireGameEngine qo_02) {
         this.e = qo_02;
     }
 

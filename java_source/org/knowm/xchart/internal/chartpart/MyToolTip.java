@@ -8,11 +8,11 @@ import org.knowm.xchart.internal.chartpart.s;
 
 public class MyToolTip
 extends s {
-    int a;
-    String b;
-    Shape c;
-    double d;
-    double e;
+    public int a;
+    public String b;
+    public Shape c;
+    public double d;
+    public double e;
 
     MyToolTip(Shape shape, double d2, double d3, double d4, String string, int n2) {
         super(shape, d2, d3, d4, string);

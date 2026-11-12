@@ -44,10 +44,10 @@ import javax.swing.JToggleButton;
 public final class uPanel {
     private JDialog j;
     private JPanel k;
-    SolitaireGameEngine AboutDialog;
-    GameStats b;
-    pX c;
-    FPanel d;
+    public SolitaireGameEngine AboutDialog;
+    public GameStats b;
+    public pX c;
+    public FPanel d;
     private JToggleButton l = new JToggleButton("Show mask");
     private JToggleButton m = new JToggleButton("Show match");
     private JButton n = new JButton("Generate mask");
@@ -73,9 +73,9 @@ public final class uPanel {
     private JTextArea FPanel = new JTextArea(" No score yet ");
     private JLabel G;
     private boolean H = true;
-    pY g = null;
-    s_0 h = null;
-    int i = 10;
+    public pY g = null;
+    public s_0 h = null;
+    public int i = 10;
     private boolean I;
     private v_0Handler J = new v_0Handler(this);
     private xHandler KHandler = new xHandler(this);
@@ -268,6 +268,7 @@ public final class uPanel {
         this.b();
         this.d.repaint();
         return var3_3;
+    }
     }
 
     final void b() {

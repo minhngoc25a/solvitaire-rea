@@ -14,11 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import org.knowm.xchart.CategoryChart;
 import org.knowm.xchart.CategoryChartBuilder;
-import org.knowm.xchart.MyCategoryChart;
-import org.knowm.xchart.MyCategoryChartBuilder;
 import org.knowm.xchart.XChartPanel;
 import org.knowm.xchart.internal.chartpart.Chart;
-import org.knowm.xchart.internal.chartpart.MyToolTips;
 import org.knowm.xchart.style.AxesChartStyler;
 import org.knowm.xchart.style.CategoryStyler;
 import org.knowm.xchart.style.Styler;
@@ -27,8 +24,8 @@ import org.knowm.xchart.style.Styler$ToolTipType;
 
 public final class qzPanel
 extends JPanel {
-    SolitaireGameEngine AboutDialog;
-    JTabbedPane b;
+    public SolitaireGameEngine AboutDialog;
+    public JTabbedPane b;
     private JPanel c;
     private JPanel d;
     private JPanel e;

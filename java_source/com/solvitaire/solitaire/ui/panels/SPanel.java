@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 
 public final class SPanel {
-    JRadioButton AboutDialog;
+    public JRadioButton AboutDialog;
     private /* synthetic */ ModeSelector b;
 
     SPanel(ModeSelector g_02, JPanel jPanel, String string, JComboBox jComboBox) {

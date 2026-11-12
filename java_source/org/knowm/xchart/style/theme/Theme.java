@@ -106,7 +106,7 @@ SeriesMarkers {
     }
 
     default public BasicStroke av() {
-        return j;
+        public return j;
     }
 
     default public Color aw() {
@@ -114,7 +114,7 @@ SeriesMarkers {
     }
 
     default public boolean ax() {
-        return false;
+        public return false;
     }
 
     default public Styler$ToolTipType ay() {
@@ -122,7 +122,7 @@ SeriesMarkers {
     }
 
     default public Font az() {
-        return i;
+        public return i;
     }
 
     default public Color ak() {
@@ -216,7 +216,7 @@ SeriesMarkers {
     }
 
     default public boolean aC() {
-        return true;
+        public return true;
     }
 }
 

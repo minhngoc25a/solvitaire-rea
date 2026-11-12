@@ -3,7 +3,6 @@
  */
 package com.solvitaire.solitaire;
 
-import com.solvitaire.solitaire.api.ApiCommandProcessor;
 import com.solvitaire.solitaire.util.ErrorDialog;
 import com.solvitaire.solitaire.solver.pBSolver;
 import com.solvitaire.solitaire.solver.pDSolver;
@@ -33,8 +32,9 @@ public class Main {
             if (object[0].startsWith("api")) {
                 AboutDialog.g("Activating API thread");
                 System.out.println("## Initializing API ##");
-                Main.AboutDialog.k = new ApiCommandProcessor(AboutDialog);
-                Main.AboutDialog.k.start();
+                // API thread disabled pending ApiCommandProcessor.java rewrite:
+                // Main.AboutDialog.k = new ApiCommandProcessor(AboutDialog);
+                // Main.AboutDialog.k.start();
             }
         } else if (Main.AboutDialog.d < 5) {
             JOptionPane.showMessageDialog(null, "\n\nYou have debug logging set.\nPerformance will be impaired\n\n");

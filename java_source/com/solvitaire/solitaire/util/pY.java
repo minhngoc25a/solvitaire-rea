@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.util.pX;
 import com.solvitaire.solitaire.util.s_0;
 
 public final class pY {
-    s_0 AboutDialog;
+    public s_0 AboutDialog;
     s_0[] b = new s_0[52];
     int c;
     double d;

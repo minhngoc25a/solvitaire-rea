@@ -19,7 +19,7 @@ public abstract class AbstractBaseTheme
 implements Theme {
     @Override
     public final Font b() {
-        return i;
+        public return i;
     }
 
     @Override
@@ -60,12 +60,12 @@ implements Theme {
 
     @Override
     public final boolean g() {
-        return true;
+        public return true;
     }
 
     @Override
     public boolean h() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -91,7 +91,7 @@ implements Theme {
 
     @Override
     public final boolean m() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -121,12 +121,12 @@ implements Theme {
 
     @Override
     public final boolean s() {
-        return true;
+        public return true;
     }
 
     @Override
     public final boolean t() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -137,12 +137,12 @@ implements Theme {
 
     @Override
     public final boolean v() {
-        return true;
+        public return true;
     }
 
     @Override
     public final boolean w() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -167,7 +167,7 @@ implements Theme {
 
     @Override
     public BasicStroke B() {
-        return j;
+        public return j;
     }
 
     @Override
@@ -177,12 +177,12 @@ implements Theme {
 
     @Override
     public boolean D() {
-        return true;
+        public return true;
     }
 
     @Override
     public boolean E() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -202,12 +202,12 @@ implements Theme {
 
     @Override
     public final boolean I() {
-        return true;
+        public return true;
     }
 
     @Override
     public final boolean J() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -222,12 +222,12 @@ implements Theme {
 
     @Override
     public boolean M() {
-        return true;
+        public return true;
     }
 
     @Override
     public boolean N() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -247,7 +247,7 @@ implements Theme {
 
     @Override
     public final boolean R() {
-        return false;
+        public return false;
     }
 
     @Override
@@ -282,12 +282,12 @@ implements Theme {
 
     @Override
     public final boolean Y() {
-        return false;
+        public return false;
     }
 
     @Override
     public final boolean Z() {
-        return true;
+        public return true;
     }
 
     @Override
@@ -307,7 +307,7 @@ implements Theme {
 
     @Override
     public final boolean ad() {
-        return false;
+        public return false;
     }
 
     @Override
@@ -317,7 +317,7 @@ implements Theme {
 
     @Override
     public final boolean af() {
-        return false;
+        public return false;
     }
 
     @Override
@@ -338,7 +338,7 @@ implements Theme {
 
     @Override
     public final boolean aj() {
-        return false;
+        public return false;
     }
 }
 

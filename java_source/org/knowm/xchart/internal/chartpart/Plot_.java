@@ -13,9 +13,9 @@ import org.knowm.xchart.internal.chartpart.PlotSurface_AxesChart;
 public class Plot_
 implements ChartPart {
     final Chart a;
-    Rectangle2D c;
-    PlotSurface_AxesChart d;
-    PlotContent_ e;
+    public Rectangle2D c;
+    public PlotSurface_AxesChart d;
+    public PlotContent_ e;
 
     Plot_(Chart chart) {
         this.a = chart;

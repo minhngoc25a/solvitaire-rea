@@ -22,7 +22,7 @@ implements RenderableSeries {
      * WARNING - void declaration
      */
     private XYSeries$XYSeriesRenderStyle() {
-        void var3_2;
+        public void var3_2;
         void var2_-1;
         void var1_-1;
         this.g = var3_2;

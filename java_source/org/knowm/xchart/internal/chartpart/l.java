@@ -13,12 +13,12 @@ extends Format {
     public final StringBuffer format(Object object, StringBuffer stringBuffer, FieldPosition fieldPosition) {
         object = object.toString();
         stringBuffer.append((String)object);
-        return stringBuffer;
+        public return stringBuffer;
     }
 
     @Override
     public final Object parseObject(String string, ParsePosition parsePosition) {
-        return null;
+        public return null;
     }
 }
 

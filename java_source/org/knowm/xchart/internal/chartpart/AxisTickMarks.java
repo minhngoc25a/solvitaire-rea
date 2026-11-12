@@ -32,8 +32,8 @@ implements ChartPart {
         AxesChartStyler axesChartStyler = (AxesChartStyler)this.a.b();
         graphics2D.setStroke(axesChartStyler.k());
         if (this.c == Axis$Direction.b && axesChartStyler.f()) {
-            double d2;
-            double d3;
+            public double d2;
+            public double d3;
             graphics2D.setColor(axesChartStyler.c(this.d.i()));
             int n2 = axesChartStyler.h();
             boolean bl2 = axesChartStyler.d(this.d.i()) == Styler$YAxisPosition.a;
@@ -50,7 +50,7 @@ implements ChartPart {
             if (axesChartStyler.m()) {
                 int n3 = 0;
                 while (true) {
-                    double d5;
+                    public double d5;
                     AxisTickCalculator_ axisTickCalculator_ = this.d.g();
                     if (n3 >= axisTickCalculator_.b.size()) break;
                     axisTickCalculator_ = this.d.g();
@@ -78,7 +78,7 @@ implements ChartPart {
             if (axesChartStyler.m()) {
                 int n5 = 0;
                 while (true) {
-                    double d10;
+                    public double d10;
                     AxisTickCalculator_ axisTickCalculator_ = this.a.j().g();
                     if (n5 >= axisTickCalculator_.b.size()) break;
                     axisTickCalculator_ = this.a.j().g();

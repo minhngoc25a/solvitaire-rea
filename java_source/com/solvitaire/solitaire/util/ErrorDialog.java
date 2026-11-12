@@ -106,7 +106,7 @@ public final class ErrorDialog {
         qo_02.AboutDialog(this, string);
     }
 
-    final void AboutDialog(String string, boolean bl2) {
+    public final void AboutDialog(String string, boolean bl2) {
         this.AboutDialog.AboutDialog(this.b(), string, bl2);
     }
 
@@ -193,7 +193,7 @@ public final class ErrorDialog {
         return this.e;
     }
 
-    final int d() {
+    public final int d() {
         return this.f;
     }
 

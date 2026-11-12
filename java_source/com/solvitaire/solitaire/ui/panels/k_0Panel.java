@@ -28,8 +28,8 @@ import javax.swing.JTextArea;
  * Renamed from com.solvitaire.app.k
  */
 public final class k_0Panel {
-    JDialog AboutDialog;
-    SolitaireGameEngine b;
+    public JDialog AboutDialog;
+    public SolitaireGameEngine b;
     private JButton c = new JButton("OK");
     private JButton d = new JButton("More");
     private l_0 e = new l_0(this);
