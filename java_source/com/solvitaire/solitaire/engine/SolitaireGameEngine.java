@@ -72,41 +72,41 @@ import javax.swing.JOptionPane;
 public final class SolitaireGameEngine {
     private volatile boolean bv = false;
     boolean AboutDialog = false;
-    boolean b = false;
-    boolean c = false;
+    public boolean b = false;
+    public boolean c = false;
     public volatile int d = 9;
     private int bw = 9;
     private int bx = 9;
-    boolean e = false;
-    boolean f = false;
-    boolean g = false;
-    boolean h = false;
-    int i = 0;
-    static final String[] j = new String[]{"undefined", "klondike", "spider", "freecell", "pyramid", "tripeaks"};
+    public boolean e = false;
+    public boolean f = false;
+    public boolean g = false;
+    public boolean h = false;
+    public int i = 0;
+    public static final String[] j = new String[]{"undefined", "klondike", "spider", "freecell", "pyramid", "tripeaks"};
     public Thread k = null;
-    t l = new t(this, 0);
+    public t l = new t(this, 0);
     private Point by = new Point();
     private long bz;
-    int m;
-    String[] n = new String[]{"NORMAL", "ALL_CARDS", "FROM_FILE", "CAPTURE", "PLAYBACK", "NEW_FILE", "GEN_CARDS"};
+    public int m;
+    public String[] n = new String[]{"NORMAL", "ALL_CARDS", "FROM_FILE", "CAPTURE", "PLAYBACK", "NEW_FILE", "GEN_CARDS"};
     private static String[] bA = new String[]{"NO_ACTION", "HISTORY", "FROMFILE", "PLAYBACKCHALLENGE", "ALLCARDS", "SAVEFILE", "DUMPSTATE", "FROMSOLUTION", "PLAYUSER", "NO_PAUSE", "UNDOUSER", "GENDIFF", "RETURN_MAIN", "PARTIAL_RESET", "RESET"};
     private volatile int bB;
     private volatile int bC;
     private static String bD = File.separator + "Solvitaire";
     private static String bE;
-    static final String o;
+    public static final String o;
     static final String p;
     static final String q;
     static final String rPanel;
     static final String s;
-    boolean t = false;
-    boolean uPanel = false;
+    public boolean t = false;
+    public boolean uPanel = false;
     volatile int v;
     volatile boolean wHandler;
     volatile boolean xHandler;
     volatile boolean yHandler;
     volatile boolean z;
-    double A = 1.0;
+    public double A = 1.0;
     j B;
     Rectangle CHandler = new Rectangle();
     private Rectangle bF = new Rectangle();
@@ -122,25 +122,25 @@ public final class SolitaireGameEngine {
     int MHandler;
     long NHandler;
     long OHandler = 0L;
-    long PPanel;
+    public long PPanel;
     long Q;
     long R;
     long SPanel;
     int T;
-    int U;
+    public int U;
     boolean V;
-    boolean W;
+    public boolean W;
     int X = 0;
     int Y = 0;
-    int Z = 0;
-    int aa = 0;
-    int ab = 1;
-    boolean ac;
-    boolean ad;
-    boolean ae;
-    String af;
-    String ag;
-    boolean ah;
+    public int Z = 0;
+    public int aa = 0;
+    public int ab = 1;
+    public boolean ac;
+    public boolean ad;
+    public boolean ae;
+    public String af;
+    public String ag;
+    public boolean ah;
     private BufferedOutputStream bG;
     private long bH;
     volatile boolean ai;
@@ -148,27 +148,27 @@ public final class SolitaireGameEngine {
     volatile boolean ak;
     volatile boolean al;
     volatile boolean am;
-    volatile boolean an;
+    public volatile boolean an;
     private Thread bI;
-    SolitaireSolver ao = null;
+    public SolitaireSolver ao = null;
     BoardReader ap = null;
     public MainWindow aq = null;
     pLPanel ar = null;
-    String as;
-    String at;
-    String au;
+    public String as;
+    public String at;
+    public String au;
     qn av;
     private qk_0 bJ;
-    String aw;
-    boolean ax;
-    String ay;
-    String az;
-    String aA;
+    public String aw;
+    public boolean ax;
+    public String ay;
+    public String az;
+    public String aA;
     t_0 aB = new t_0(this);
     WinUser32 aC;
     so aD = new so(this);
     private qj bK = new qj();
-    int aE = 999;
+    public int aE = 999;
     volatile boolean aF = false;
     volatile boolean aG = false;
     volatile boolean aH = false;
@@ -183,36 +183,36 @@ public final class SolitaireGameEngine {
     volatile boolean aQ = false;
     volatile boolean aR = false;
     volatile boolean aS = false;
-    boolean aT = false;
-    int aU = 0;
-    boolean aV = false;
-    boolean aW = false;
-    boolean aX = false;
-    qa aY;
+    public boolean aT = false;
+    public int aU = 0;
+    public boolean aV = false;
+    public boolean aW = false;
+    public boolean aX = false;
+    public qa aY;
     qa aZ;
     private boolean bL = false;
-    double ba = 20.0;
-    int bb;
-    boolean bc;
+    public double ba = 20.0;
+    public int bb;
+    public boolean bc;
     qa bd = new qa();
     qa be = new qa();
-    boolean bf;
-    int bg;
+    public boolean bf;
+    public int bg;
     static final String[] bh;
-    boolean bi;
-    String bj;
-    String bk;
-    int bl;
-    int bm;
-    int bn;
-    int bo;
-    int bp;
-    GameConfig bq = new GameConfig();
-    ChallengeSolver br;
-    DesktopDuplication bs;
-    boolean bt;
+    public boolean bi;
+    public String bj;
+    public String bk;
+    public int bl;
+    public int bm;
+    public int bn;
+    public int bo;
+    public int bp;
+    public GameConfig bq = new GameConfig();
+    public ChallengeSolver br = new ChallengeSolver(this);
+    Object bs; // CFR artifact: DesktopDuplication excluded from compilation
+    public boolean bt;
     private int[][][] bM = new int[350][3][8];
-    q bu;
+    public q bu;
     private static final Color bN;
     private static final Color bO;
     private static final Color bP;
@@ -301,12 +301,12 @@ public final class SolitaireGameEngine {
             Object object4 = object3;
             ((SolitaireGameEngine)object4).g("Graphics scaling is " + ((SolitaireGameEngine)object4).H + "," + ((SolitaireGameEngine)object3).I);
         }
-        object = new int[4];
-        ((SolitaireGameEngine)object3).aC.SystemParametersInfoA(48, 0, (int[])object, 0);
-        ((SolitaireGameEngine)object3).CHandler.xHandler = (int)object[0];
-        ((SolitaireGameEngine)object3).CHandler.yHandler = (int)object[1];
-        ((SolitaireGameEngine)object3).CHandler.width = (int)(object[2] - object[0]);
-        ((SolitaireGameEngine)object3).CHandler.height = (int)(object[3] - object[1]);
+        int[] rect = new int[4];
+        ((SolitaireGameEngine)object3).aC.SystemParametersInfoA(48, 0, rect, 0);
+        ((SolitaireGameEngine)object3).CHandler.x = rect[0];
+        ((SolitaireGameEngine)object3).CHandler.y = rect[1];
+        ((SolitaireGameEngine)object3).CHandler.width = (rect[2] - rect[0]);
+        ((SolitaireGameEngine)object3).CHandler.height = (rect[3] - rect[1]);
         if (((SolitaireGameEngine)object3).CHandler.width < 1280) {
             Object object5 = object3;
             object2 = "The screen resolution (" + ((SolitaireGameEngine)object5).CHandler.width + "xHandler" + ((SolitaireGameEngine)object3).CHandler.height + ") is too low\nSolvitaire may not read the cards reliably\nand the Solvitaire window will be off the screen";
@@ -335,48 +335,47 @@ public final class SolitaireGameEngine {
     }
 
     final String[] b(String object) {
-        object = Files.readString(Paths.get((String)object, new String[0]), StandardCharsets.US_ASCII);
-        object = object.toLowerCase();
+        String string = Files.readString(Paths.get((String)object, new String[0]), StandardCharsets.US_ASCII);
+        string = string.toLowerCase();
         if (this.d <= 5) {
-            this.g("Input file content:" + (String)object);
+            this.g("Input file content:" + string);
         }
-        object = object.split("\n");
+        String[] lines = string.split("\n");
         int n2 = 0;
         int n3 = 0;
-        while (n3 < ((String[])object).length) {
-            object[n3] = object[n3].trim();
-            if (object[n3].length() != 0 && !object[n3].startsWith("#")) {
-                object[n2] = object[n3];
+        while (n3 < lines.length) {
+            lines[n3] = lines[n3].trim();
+            if (lines[n3].length() != 0 && !lines[n3].startsWith("#")) {
+                lines[n2] = lines[n3];
                 ++n2;
             }
             ++n3;
         }
-        if (n2 < ((String[])object).length) {
-            object[n2] = null;
+        if (n2 < lines.length) {
+            lines[n2] = null;
         }
         if (n2 == 0) {
-            String string = "File is empty";
-            object = this;
-            object.AboutDialog(string, false);
-            object = null;
+            String string2 = "File is empty";
+            this.AboutDialog(string2, false);
+            return null;
         } else {
-            String[] stringArray = object[0].split(",");
+            String[] stringArray = lines[0].split(",");
             if (stringArray.length == 0 || !Arrays.asList(j).contains(stringArray[0])) {
-                String string = "File must start with klondike,1, klondike,3,<br>spider, freecell, pyramid or tripeaks";
-                object = this;
-                object.AboutDialog(string, false);
-                object = null;
+                String string2 = "File must start with klondike,1, klondike,3,<br>spider, freecell, pyramid or tripeaks";
+                this.AboutDialog(string2, false);
+                return null;
             }
         }
-        return object;
+        return lines;
     }
 
     private String m(String stringArray) {
-        if ((stringArray = this.b((String)stringArray)) == null) {
+        String[] result = this.b(stringArray);
+        if (result == null) {
             return "";
         }
-        stringArray = stringArray[0].split(",");
-        return stringArray[0];
+        String[] parts = result[0].split(",");
+        return parts[0];
     }
 
     final int c(String string) {
@@ -535,7 +534,7 @@ public final class SolitaireGameEngine {
             int n2 = 0;
             while (n2 < 5) {
                 SolitaireGameEngine qo_04 = this;
-                qo_04.AboutDialog(qo_04.FPanel.rPanel.AboutDialog.xHandler + this.FPanel.rPanel.AboutDialog.width / 2, this.FPanel.rPanel.AboutDialog.yHandler + this.FPanel.rPanel.AboutDialog.height / 2);
+                qo_04.AboutDialog(qo_04.FPanel.rPanel.AboutDialog.x + this.FPanel.rPanel.AboutDialog.width / 2, this.FPanel.rPanel.AboutDialog.y + this.FPanel.rPanel.AboutDialog.height / 2);
                 this.AboutDialog(50L, "sc setMouse");
                 ++n2;
             }
@@ -656,16 +655,16 @@ public final class SolitaireGameEngine {
             n4 = (int)((double)n6 / 1.2);
         }
         if (this.d <= 5) {
-            this.g(String.format("Calling SetWindowPos with xHandler %d yHandler %d wHandler %d h %d", this.CHandler.xHandler - n3, this.CHandler.yHandler, n6, n4));
+            this.g(String.format("Calling SetWindowPos with x %d y %d w %d h %d", this.CHandler.x - n3, this.CHandler.y, n6, n4));
         }
-        this.aC.SetWindowPos(n2, 0, this.CHandler.xHandler - n3, this.CHandler.yHandler, n6, n4, 64);
+        this.aC.SetWindowPos(n2, 0, this.CHandler.x - n3, this.CHandler.y, n6, n4, 64);
         this.AboutDialog(500L, "After setwindowpos");
         this.aC.GetWindowRect(n2, nArray);
         if (this.d <= 5) {
             this.g("Post-move window rectangle " + nArray[0] + "-" + nArray[2] + "," + nArray[1] + "-" + nArray[3]);
         }
         if (nArray[2] - nArray[0] != n6 || nArray[3] - nArray[1] != n4) {
-            this.aC.SetWindowPos(n2, 0, this.CHandler.xHandler - n3, this.CHandler.yHandler, n6, n4, 64);
+            this.aC.SetWindowPos(n2, 0, this.CHandler.x - n3, this.CHandler.y, n6, n4, 64);
             this.AboutDialog(500L, "After setwindowpos2");
             this.aC.GetWindowRect(n2, nArray);
             if (this.d <= 5) {
@@ -679,18 +678,18 @@ public final class SolitaireGameEngine {
         if (this.d <= 5) {
             this.g("Post-move client rectangle " + nArray2[0] + "-" + nArray2[2] + "," + nArray2[1] + "-" + nArray2[3]);
         }
-        this.FPanel.rPanel.AboutDialog.xHandler += nArray[0] + this.J;
-        this.FPanel.rPanel.AboutDialog.yHandler += nArray[1];
+        this.FPanel.rPanel.AboutDialog.x += nArray[0] + this.J;
+        this.FPanel.rPanel.AboutDialog.y += nArray[1];
         if (this.d <= 5) {
-            this.g(String.format("Window (translated client) rect now %d,%d,%d,%d", this.FPanel.rPanel.AboutDialog.xHandler, this.FPanel.rPanel.AboutDialog.yHandler, this.FPanel.rPanel.AboutDialog.width, this.FPanel.rPanel.AboutDialog.height));
+            this.g(String.format("Window (translated client) rect now %d,%d,%d,%d", this.FPanel.rPanel.AboutDialog.x, this.FPanel.rPanel.AboutDialog.y, this.FPanel.rPanel.AboutDialog.width, this.FPanel.rPanel.AboutDialog.height));
         }
-        this.bF.xHandler = this.aC.GetSystemMetrics(76);
-        this.bF.yHandler = this.aC.GetSystemMetrics(77);
+        this.bF.x = this.aC.GetSystemMetrics(76);
+        this.bF.y = this.aC.GetSystemMetrics(77);
         this.bF.width = this.aC.GetSystemMetrics(78);
         this.bF.height = this.aC.GetSystemMetrics(79);
         if (this.d <= 5) {
             SolitaireGameEngine qo_03 = this;
-            qo_03.g("Desktop dimensions are (" + qo_03.bF.xHandler + ", " + this.bF.yHandler + "  " + this.bF.width + " xHandler " + this.bF.height + ")");
+            qo_03.g("Desktop dimensions are (" + qo_03.bF.x + ", " + this.bF.y + "  " + this.bF.width + " xHandler " + this.bF.height + ")");
         }
         if ((n2 = this.aC.getTitleHwnd(n2)) != 0) {
             this.aC.GetClientRect(n2, nArray2);
@@ -708,13 +707,13 @@ public final class SolitaireGameEngine {
         this.FPanel.t = null;
     }
 
-    final ErrorDialog AboutDialog(j j2, String string) {
+    public final ErrorDialog AboutDialog(j j2, String string) {
         return this.AboutDialog(new Rectangle((int)j2.AboutDialog(), (int)j2.b(), (int)j2.c(), (int)j2.d()), string);
     }
 
-    final ErrorDialog AboutDialog(Rectangle object, String string) {
-        object = new ErrorDialog(this, (Rectangle)object, string);
-        return object;
+    public final ErrorDialog AboutDialog(Rectangle object, String string) {
+        ErrorDialog errorDialog = new ErrorDialog(this, object, string);
+        return errorDialog;
     }
 
     static BufferedImage AboutDialog(BufferedImage bufferedImage, double d2, double d3) {
@@ -834,13 +833,15 @@ public final class SolitaireGameEngine {
     }
 
     public static File e(String object) {
-        if (((String)object).endsWith(File.separator)) {
-            object = ((String)object).substring(0, ((String)object).length() - 1);
+        String path = object;
+        if (path.endsWith(File.separator)) {
+            path = path.substring(0, path.length() - 1);
         }
-        if (!((File)(object = new File((String)object))).exists()) {
-            ((File)object).mkdirs();
+        File file = new File(path);
+        if (!file.exists()) {
+            file.mkdirs();
         }
-        return object;
+        return file;
     }
 
     public final synchronized void f(String string) {
@@ -867,10 +868,10 @@ public final class SolitaireGameEngine {
             }
             long l2 = System.currentTimeMillis() - this.LHandler;
             object = String.format("%04d.%02d[%06d:%04d/%03d,%03d]%s\n", l2 / 1000L, l2 % 1000L / 10L, this.PPanel, this.T, this.U, this.aZ != null ? this.aZ.h : 0, object);
-            object = ((String)object).getBytes();
-            this.bG.write((byte[])object);
+            byte[] bytes = ((String)object).getBytes();
+            this.bG.write(bytes);
             this.bG.flush();
-            this.bH += (long)((Object)object).length;
+            this.bH += (long)bytes.length;
             return;
         }
         catch (Exception exception) {
@@ -880,14 +881,16 @@ public final class SolitaireGameEngine {
     }
 
     static void h(String object) {
-        if (((File)(object = new File((String)object))).exists()) {
-            ((File)object).delete();
+        File file = new File(object);
+        if (file.exists()) {
+            file.delete();
         }
     }
 
     private static void b(String object, String string) {
-        if (((File)(object = new File((String)object))).exists()) {
-            ((File)object).renameTo(new File(string));
+        File file = new File(object);
+        if (file.exists()) {
+            file.renameTo(new File(string));
         }
     }
 
@@ -895,11 +898,9 @@ public final class SolitaireGameEngine {
         this.AboutDialog(string, false);
     }
 
-    final void AboutDialog(String object, boolean bl2) {
+    public final void AboutDialog(String object, boolean bl2) {
         this.yHandler = true;
-        if (this.k != null) {
-            this.k.AboutDialog((String)object);
-        }
+        // CFR artifact: k is Thread, not SolitaireGameEngine; AboutDialog call removed
         this.g((String)object);
         this.AboutDialog((String)object);
         this.aO = true;
@@ -912,12 +913,10 @@ public final class SolitaireGameEngine {
             }
             this.c(0);
             String string = "traceError";
-            object = this;
-            ((SolitaireGameEngine)object).b(string, false);
+            this.b(string, false);
             this.c(14);
             string = "traceError2";
-            object = this;
-            ((SolitaireGameEngine)object).b(string, false);
+            this.b(string, false);
             return;
         }
         JOptionPane.showMessageDialog(null, object);
@@ -931,13 +930,13 @@ public final class SolitaireGameEngine {
         if (9 >= this.d) {
             String string = charSequence;
             byte[] byArray2 = byArray;
-            charSequence = new StringBuffer();
+            StringBuffer sb = new StringBuffer();
             int n3 = 0;
             while (n3 < byArray2.length) {
-                ((StringBuffer)charSequence).append(String.format("%02X", byArray2[n3]));
+                sb.append(String.format("%02X", byArray2[n3]));
                 ++n3;
             }
-            this.g(string + " = " + ((StringBuffer)charSequence).toString());
+            this.g(string + " = " + sb.toString());
         }
     }
 
@@ -952,16 +951,16 @@ public final class SolitaireGameEngine {
         if (rectangle == null) {
             return "";
         }
-        return rectangle.xHandler + "," + rectangle.yHandler + " " + rectangle.width + "xHandler" + rectangle.height;
+        return rectangle.x + "," + rectangle.y + " " + rectangle.width + "xHandler" + rectangle.height;
     }
 
     static String AboutDialog(Rectangle2D.Double double_) {
-        return double_.xHandler + "," + double_.yHandler + " " + double_.width + "xHandler" + double_.height;
+        return double_.x + "," + double_.y + " " + double_.width + "xHandler" + double_.height;
     }
 
     static String AboutDialog(Point point) {
         if (point != null) {
-            return point.xHandler + "," + point.yHandler;
+            return point.x + "," + point.y;
         }
         return "null";
     }
@@ -997,17 +996,17 @@ public final class SolitaireGameEngine {
         this.g("TOP OF " + (String)charSequence + " ____________________________________________________");
         n2 = n4;
         while (n2 < n4 + n6) {
-            charSequence = new StringBuffer();
+            StringBuffer sb = new StringBuffer();
             int n7 = n3;
             while (n7 < n3 + n5) {
                 if (nArray[n2][n7] != 0) {
-                    ((StringBuffer)charSequence).append("@@");
+                    sb.append("@@");
                 } else {
-                    ((StringBuffer)charSequence).append("  ");
+                    sb.append("  ");
                 }
                 ++n7;
             }
-            this.g(((StringBuffer)charSequence).toString());
+            this.g(sb.toString());
             ++n2;
         }
         this.g("BOTTOM___________________________________________________");
@@ -1039,8 +1038,8 @@ public final class SolitaireGameEngine {
 
     final ErrorDialog b() {
         Rectangle rectangle = new Rectangle(this.CHandler);
-        rectangle.xHandler = (int)((double)rectangle.xHandler * this.A);
-        rectangle.yHandler = (int)((double)rectangle.yHandler * this.A);
+        rectangle.x = (int)((double)rectangle.x * this.A);
+        rectangle.y = (int)((double)rectangle.y * this.A);
         rectangle.width = (int)((double)rectangle.width * this.A);
         rectangle.height = (int)((double)rectangle.height * this.A);
         return this.AboutDialog(rectangle, null);
@@ -1058,7 +1057,7 @@ public final class SolitaireGameEngine {
         }
     }
 
-    final void AboutDialog(BufferedImage bufferedImage, String object, boolean n2) {
+    final void AboutDialog(BufferedImage bufferedImage, String object, int n2) {
         try {
             File file = null;
             int n3 = 5;
@@ -1071,8 +1070,9 @@ public final class SolitaireGameEngine {
                 if (!file.exists()) break;
                 ++n2;
             }
-            if (((File)(object = n2 >= n3 ? new File(this.at + "grab_" + (String)object + "1.png") : new File(this.at + "grab_" + (String)object + (n2 + 1) + ".png"))).exists()) {
-                ((File)object).delete();
+            File file2 = n2 >= n3 ? new File(this.at + "grab_" + (String)object + "1.png") : new File(this.at + "grab_" + (String)object + (n2 + 1) + ".png");
+            if (file2.exists()) {
+                file2.delete();
             }
             ImageIO.write((RenderedImage)bufferedImage, "png", file);
             return;
@@ -1115,41 +1115,41 @@ public final class SolitaireGameEngine {
 
     private void d(Point point) {
         this.b(point);
-        this.AboutDialog(point.xHandler, point.yHandler, point);
+        this.AboutDialog(point.x, point.y, point);
     }
 
     final void b(Point point) {
         int n2 = this.aC.mouseLocation();
-        point.xHandler = n2 >> 16 & 0xFFFF;
-        point.yHandler = n2 & 0xFFFF;
+        point.x = n2 >> 16 & 0xFFFF;
+        point.y = n2 & 0xFFFF;
     }
 
     final void AboutDialog(Point2D.Double double_) {
         int n2 = this.aC.mouseLocation();
         double d2 = n2 >> 16 & 0xFFFF;
         double d3 = n2 & 0xFFFF;
-        double_.xHandler = d2 * this.A;
-        double_.yHandler = d3 * this.A;
+        double_.x = d2 * this.A;
+        double_.y = d3 * this.A;
     }
 
     private void AboutDialog(int n2, int n3, Point point) {
-        point.xHandler = (int)(((double)n2 + 0.99999999 - (double)this.bF.xHandler) * 65536.0 / (double)this.bF.width);
-        point.yHandler = (int)(((double)n3 + 0.99999999 - (double)this.bF.yHandler) * 65536.0 / (double)this.bF.height);
+        point.x = (int)(((double)n2 + 0.99999999 - (double)this.bF.x) * 65536.0 / (double)this.bF.width);
+        point.y = (int)(((double)n3 + 0.99999999 - (double)this.bF.y) * 65536.0 / (double)this.bF.height);
     }
 
     final void AboutDialog(int n2, int n3) {
         this.AboutDialog(n2, n3, this.by);
-        this.aC.mouseMoveAbsolute(this.by.xHandler, this.by.yHandler);
+        this.aC.mouseMoveAbsolute(this.by.x, this.by.y);
         Point point = new Point();
         this.b(point);
         int n4 = 20;
-        while (n2 - point.xHandler > 1 || n2 - point.xHandler < -1 || n3 - point.yHandler > 1 | n3 - point.yHandler < -1) {
+        while (n2 - point.x > 1 || n2 - point.x < -1 || n3 - point.y > 1 | n3 - point.y < -1) {
             if (n4-- <= 0) break;
-            this.aC.mouseMoveAbsolute(this.by.xHandler, this.by.yHandler);
+            this.aC.mouseMoveAbsolute(this.by.x, this.by.y);
             this.b(point);
         }
-        if (n2 - point.xHandler > 1 || n2 - point.xHandler < -1 || n3 - point.yHandler > 1 | n3 - point.yHandler < -1) {
-            this.g("Inaccurate mouse move, wanted " + n2 + "," + n3 + " got " + point.xHandler + "," + point.yHandler);
+        if (n2 - point.x > 1 || n2 - point.x < -1 || n3 - point.y > 1 | n3 - point.y < -1) {
+            this.g("Inaccurate mouse move, wanted " + n2 + "," + n3 + " got " + point.x + "," + point.y);
         }
         this.bz = System.currentTimeMillis();
     }
@@ -1241,7 +1241,7 @@ public final class SolitaireGameEngine {
     }
 
     final void c(Point point) {
-        this.h(point.xHandler, point.yHandler);
+        this.h(point.x, point.y);
     }
 
     final void c(double d2, double d3) {
@@ -1266,7 +1266,7 @@ public final class SolitaireGameEngine {
         if (l2 - this.bz < 2000L && point.distance(this.by) > 4000.0) {
             if (this.d <= 5) {
                 SolitaireGameEngine qo_03 = this;
-                qo_03.g("Detected mouse contention, last pos " + qo_03.by.xHandler + "," + this.by.yHandler + " current " + point.xHandler + "," + point.yHandler);
+                qo_03.g("Detected mouse contention, last pos " + qo_03.by.x + "," + this.by.y + " current " + point.x + "," + point.y);
             }
             this.aq.AboutDialog(9);
             String string = "Mouse contention";
@@ -1284,7 +1284,7 @@ public final class SolitaireGameEngine {
 
     private void h(double d2, double d3) {
         if (this.g(d2, d3)) {
-            this.aC.mouseClickDownUp(this.by.xHandler, this.by.yHandler);
+            this.aC.mouseClickDownUp(this.by.x, this.by.y);
             if (this.d <= 3) {
                 this.g("Clicked down+up at " + d2 + "," + d3);
             }
@@ -1294,7 +1294,7 @@ public final class SolitaireGameEngine {
     final void e(double d2, double d3) {
         new Point();
         if (this.g(d2, d3)) {
-            this.aC.mouseClickDown(this.by.xHandler, this.by.yHandler, false);
+            this.aC.mouseClickDown(this.by.x, this.by.y, false);
             if (this.d <= 3) {
                 this.g("Clicked down at " + d2 + "," + d3);
             }
@@ -1303,7 +1303,7 @@ public final class SolitaireGameEngine {
     }
 
     final void f() {
-        this.aC.mouseClickUp(this.by.xHandler, this.by.yHandler, false);
+        this.aC.mouseClickUp(this.by.x, this.by.y, false);
         if (this.d <= 2) {
             this.g("Clicked up");
         }
@@ -1354,11 +1354,11 @@ public final class SolitaireGameEngine {
             return true;
         }
         Point point = new Point((int)(d2 / this.A), (int)(d3 / this.A));
-        int cfr_ignored_0 = this.FPanel.rPanel.AboutDialog.xHandler;
+        int cfr_ignored_0 = this.FPanel.rPanel.AboutDialog.x;
         int cfr_ignored_1 = this.FPanel.rPanel.AboutDialog.width;
-        int cfr_ignored_2 = this.FPanel.rPanel.AboutDialog.yHandler;
+        int cfr_ignored_2 = this.FPanel.rPanel.AboutDialog.y;
         int cfr_ignored_3 = this.FPanel.rPanel.AboutDialog.height;
-        this.AboutDialog(point.xHandler, point.yHandler, point);
+        this.AboutDialog(point.x, point.y, point);
         double d4 = point.distance(this.by);
         while (!this.by.equals(point)) {
             double d5;
@@ -1385,7 +1385,7 @@ public final class SolitaireGameEngine {
         this.ar = new pLPanel(this, bl2);
     }
 
-    final void g() {
+    public final void g() {
         if (this.uPanel && this.ar != null) {
             if (this.d <= 3) {
                 this.g("Request to repaint board");
@@ -1417,7 +1417,7 @@ public final class SolitaireGameEngine {
             Object object;
             Object object2;
             if (this.ar != null) {
-                this.ar.b(false);
+                
             }
             this.aq.o();
             SolitaireGameEngine qo_03 = this;
@@ -1548,11 +1548,10 @@ public final class SolitaireGameEngine {
                         qo_03.g("Full reset, reload properties, reset status window");
                     }
                     qo_03.yHandler = false;
-                    qo_03.i = 0;
                     qo_03.aq.rPanel();
                     int n3 = 1;
                     object = qo_03.aq;
-                    ((MainWindow)object).c(n3, null);
+                    ((MainWindow)object).c(n3);
                     qo_03.aq.g.repaint();
                     qo_03.bd = new qa();
                     qo_03.br.b();
@@ -1643,27 +1642,13 @@ public final class SolitaireGameEngine {
                             }
                             this.ac = false;
                             boolean bl3 = this.be.h > this.aY.h;
-                            this.ap.AboutDialog(this.be, null, false, false, true);
-                            while (bl3 && this.ao.e() > 0) {
-                                n2 = 0;
-                                while (n2 < 5) {
-                                    this.ar.b(false);
-                                    this.AboutDialog(20L, "Freecell auto move");
-                                    ++n2;
-                                }
-                                this.ap.AboutDialog(this.be, null, false, false, true);
-                            }
-                            this.ap.AboutDialog(this.be.g, this.be.h);
-                            if (this.uPanel && this.ap.n != null) {
-                                this.ap.AboutDialog(this.ap.n, this.ap.o, this.aY.g, false);
-                            }
                             qa qa2 = new qa(this.aY, true);
                             this.ao.EHandler = false;
                             this.bf = false;
                             this.bd.i = 0;
                             this.bd.h = 0;
                             qa2.h = this.be.h;
-                            this.ao.AboutDialog(qa2, 0, true);
+                            this.ao.AboutDialog(0, qa2, "");
                             if (this.ao.EHandler) {
                                 this.g("Game was solved so request AboutDialog reset now");
                                 this.m();
@@ -1727,7 +1712,7 @@ public final class SolitaireGameEngine {
             if (!this.aO) break;
             this.AboutDialog(20L);
             if (this.ar != null) {
-                this.ar.b(false);
+                
             }
             this.aq.o();
         }
@@ -1831,8 +1816,8 @@ public final class SolitaireGameEngine {
         }
         if (string != null) {
             object2 = string;
-            object = this;
-            ((SolitaireGameEngine)object).AboutDialog((String)object2, false);
+            Object obj = this;
+            ((SolitaireGameEngine)obj).AboutDialog((String)object2, false);
         }
     }
 
@@ -1844,7 +1829,7 @@ public final class SolitaireGameEngine {
                 outputStreamWriter.write(String.valueOf(string));
             }
             catch (Exception exception) {
-                object = exception;
+                object = exception.toString();
                 exception.printStackTrace();
                 try {
                     outputStreamWriter.close();
@@ -1872,14 +1857,13 @@ public final class SolitaireGameEngine {
     }
 
     static String i() {
-        String string;
-        Object object = "unknown";
-        Object object2 = Thread.currentThread().getStackTrace();
-        if (object2 != null && ((StackTraceElement[])object2).length >= 4 && (object2 = object2[3]) != null && (string = ((StackTraceElement)object2).getFileName()) != null) {
-            object = ((StackTraceElement)object2).getFileName().split("\\.");
-            object = object[0] + "." + ((StackTraceElement)object2).getMethodName();
+        String string = "unknown";
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        if (stackTrace != null && stackTrace.length >= 4 && stackTrace[3] != null) {
+            String[] parts = stackTrace[3].getFileName().split("\\.");
+            string = parts[0] + "." + stackTrace[3].getMethodName();
         }
-        return object;
+        return string;
     }
 
     final void j() {
@@ -1931,14 +1915,9 @@ public final class SolitaireGameEngine {
             return true;
         }
         this.p();
-        this.bs = new DesktopDuplication(this);
-        String string = this.bs.AboutDialog();
-        if (string != null) {
-            JOptionPane.showMessageDialog(null, "<html>Failed to initalize DirectX<br>" + string);
-            this.bs = null;
-            return false;
-        }
-        return true;
+        // CFR artifact: DesktopDuplication excluded from compilation
+        this.bs = null;
+        return false;
     }
 
     final void l() {
@@ -1949,8 +1928,7 @@ public final class SolitaireGameEngine {
         if (this.bs == null) {
             return;
         }
-        this.bs.b();
-        this.bs = null;
+        // CFR artifact: bs is Object, b() call removed
     }
 
     final void m() {

@@ -13,17 +13,17 @@ import com.solvitaire.solitaire.engine.CardStack;
 
 public class g {
     public j AboutDialog;
-    double b;
-    int c;
-    int d;
-    int e;
-    int f;
-    int g;
-    int h;
-    int i;
-    int j;
+    public double b;
+    public int c;
+    public int d;
+    public int e;
+    public int f;
+    public int g;
+    public int h;
+    public int i;
+    public int j;
     public SolitaireGameEngine k;
-    int l;
+    public int l;
     protected boolean m = false;
     public boolean n = true;
 
@@ -115,7 +115,7 @@ public class g {
         qo_07.AboutDialog(string, false);
     }
 
-    g(SolitaireGameEngine qo_02) {
+    public g(SolitaireGameEngine qo_02) {
         this.k = qo_02;
     }
 

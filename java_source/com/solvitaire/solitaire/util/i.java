@@ -7,15 +7,15 @@ import com.solvitaire.solitaire.util.g;
 import com.solvitaire.solitaire.engine.GameStats;
 
 public final class i {
-    int AboutDialog;
+    public int AboutDialog;
     private /* synthetic */ g b;
 
-    i(GameStats pF2, int n2) {
+    public i(GameStats pF2, int n2) {
         this.b = pF2;
         this.AboutDialog = n2;
     }
 
-    final double AboutDialog() {
+    public final double AboutDialog() {
         return (double)this.AboutDialog * this.b.k.A;
     }
 

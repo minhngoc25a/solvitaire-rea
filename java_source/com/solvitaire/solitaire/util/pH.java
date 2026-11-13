@@ -8,16 +8,16 @@ import com.solvitaire.solitaire.util.pX;
 import com.solvitaire.solitaire.util.u_0;
 
 public final class pH {
-    int AboutDialog;
-    int b;
-    int c;
-    int d;
-    int e;
-    int f;
-    int[] g;
+    public int AboutDialog;
+    public int b;
+    public int c;
+    public int d;
+    public int e;
+    public int f;
+    public int[] g;
     private /* synthetic */ GameStats h;
 
-    pH(GameStats pF2) {
+    public pH(GameStats pF2) {
         this.h = pF2;
     }
 

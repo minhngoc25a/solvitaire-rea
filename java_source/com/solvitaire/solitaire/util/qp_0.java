@@ -20,26 +20,26 @@ public final class qp_0 {
     private int h;
     final /* synthetic */ SolitaireGameEngine b;
 
-    qp_0(SolitaireGameEngine qo_02, double d2, double d3) {
+    public qp_0(SolitaireGameEngine qo_02, double d2, double d3) {
         this.b = qo_02;
         qo_02.b(this.e);
-        this.c = new qq_0(this, d2, this.e.xHandler, "xHandler");
-        this.d = new qq_0(this, d3, this.e.yHandler, "yHandler");
+        this.c = new qq_0(this, d2, this.e.x, "x");
+        this.d = new qq_0(this, d3, this.e.y, "y");
         this.h = (int)(5.0 * qo_02.FPanel.wHandler);
     }
 
-    final boolean AboutDialog() {
+    public boolean AboutDialog() {
         int n2;
         Point point = new Point();
         this.b.b(point);
-        if (this.f != null && (Math.abs(this.f.xHandler - point.xHandler) > this.h || Math.abs(this.f.yHandler - point.yHandler) > this.h)) {
+        if (this.f != null && (Math.abs(this.f.x - point.x) > this.h || Math.abs(this.f.y - point.y) > this.h)) {
             if (!this.b.aV) {
                 this.AboutDialog = true;
             }
-            this.b.g("Detected AboutDialog mouse fight, pos " + point.xHandler + "," + point.yHandler + " last pos " + this.f.xHandler + "," + this.f.yHandler);
+            this.b.g("Detected AboutDialog mouse fight, pos " + point.x + "," + point.y + " last pos " + this.f.x + "," + this.f.y);
         }
-        int n3 = point.xHandler - this.e.xHandler;
-        int n4 = point.yHandler - this.e.yHandler;
+        int n3 = point.x - this.e.x;
+        int n4 = point.y - this.e.y;
         if (!this.g) {
             double d2;
             int n5 = n3;
@@ -49,8 +49,8 @@ public final class qp_0 {
                 this.g = true;
                 this.c.AboutDialog += n3 + this.b.bb;
                 this.d.AboutDialog += n4 + this.b.bb;
-                n2 = this.b.FPanel.rPanel.AboutDialog.xHandler + this.b.FPanel.rPanel.AboutDialog.width;
-                int n7 = this.b.FPanel.rPanel.AboutDialog.yHandler + this.b.FPanel.rPanel.AboutDialog.height;
+                n2 = this.b.FPanel.rPanel.AboutDialog.x + this.b.FPanel.rPanel.AboutDialog.width;
+                int n7 = this.b.FPanel.rPanel.AboutDialog.y + this.b.FPanel.rPanel.AboutDialog.height;
                 if (this.c.AboutDialog < 0) {
                     this.b.g("Invalid mouse target " + this.c.AboutDialog + "," + this.d.AboutDialog + " set to 0," + this.d.AboutDialog);
                     this.c.AboutDialog = 0;
@@ -73,7 +73,7 @@ public final class qp_0 {
         int n9 = this.d.AboutDialog(n4);
         this.f = new Point();
         this.b.b(this.f);
-        while (this.f.xHandler != n8 || this.f.yHandler != n9) {
+        while (this.f.x != n8 || this.f.y != n9) {
             this.b.AboutDialog(n8, n9);
             this.b.AboutDialog(2L, "Wait for move to take effect");
             this.b.b(this.f);

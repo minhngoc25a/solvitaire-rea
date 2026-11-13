@@ -10,9 +10,9 @@ import java.io.File;
 public final class t {
     private static String[] t = new String[]{"unknown", "unused", "boards", "ncards", "spcfic", "stacks", "target"};
     private SolitaireGameEngine uPanel;
-    boolean AboutDialog;
+    public boolean AboutDialog;
     boolean b;
-    int c;
+    public int c;
     private boolean v = false;
     int d;
     int e;
@@ -21,7 +21,7 @@ public final class t {
     int h;
     int i;
     int j;
-    int k;
+    public int k;
     int l;
     int m;
     int n;
@@ -30,16 +30,16 @@ public final class t {
     public String q;
     private String wHandler;
     private int xHandler;
-    boolean rPanel;
+    public boolean rPanel;
     boolean s;
 
-    t(SolitaireGameEngine qo_02, int n2) {
+    public t(SolitaireGameEngine qo_02, int n2) {
         this.uPanel = qo_02;
         qo_02.m = n2;
         this.c = 1;
     }
 
-    final void AboutDialog(String object, boolean bl2) {
+    public final void AboutDialog(String object, boolean bl2) {
         if (!((String)object).endsWith(File.separator)) {
             object = (String)object + File.separator;
         }
@@ -64,7 +64,7 @@ public final class t {
         }
     }
 
-    final void AboutDialog() {
+    public final void AboutDialog() {
         if ("".equals(this.uPanel.ag)) {
             this.uPanel.ag = this.uPanel.as + SolitaireGameEngine.s;
         }
@@ -90,7 +90,7 @@ public final class t {
         return n2;
     }
 
-    final void AboutDialog(int n2) {
+    public final void AboutDialog(int n2) {
         if (this.uPanel.d <= 5) {
             this.uPanel.g("Writing checkpoint file " + this.p + "chkpt.txt");
         }
@@ -256,7 +256,7 @@ public final class t {
         return this.xHandler;
     }
 
-    final void AboutDialog(int n2, boolean bl2) {
+    public final void AboutDialog(int n2, boolean bl2) {
         this.xHandler = n2;
         this.s = bl2;
         this.rPanel = true;
@@ -281,7 +281,7 @@ public final class t {
         return true;
     }
 
-    final String d() {
+    public String d() {
         Object object;
         if (this.rPanel) {
             object = "cards" + this.xHandler + ".txt";
@@ -408,7 +408,7 @@ public final class t {
         return string;
     }
 
-    final void l() {
+    public final void l() {
         this.v = false;
         this.d = 0;
         this.e = 0;
@@ -423,7 +423,7 @@ public final class t {
         this.k = 999;
     }
 
-    final void AboutDialog(int n2, int n3) {
+    public final void AboutDialog(int n2, int n3) {
         this.v = true;
         this.d = n2;
         this.e = n3;

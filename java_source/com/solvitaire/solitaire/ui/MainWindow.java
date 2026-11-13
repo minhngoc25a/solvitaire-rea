@@ -144,12 +144,12 @@ public final class MainWindow {
     static final Color AboutDialog = new Color(255, 165, 0);
     static final Color b = new Color(127, 127, 255);
     static final Color c = new Color(100, 200, 100);
-    SolitaireGameEngine d;
-    si e;
+    public SolitaireGameEngine d;
+    public si e;
     private Font X;
     Font f;
     private FontMetrics Y;
-    JFrame g;
+    public JFrame g;
     private String Z;
     int h;
     int i;
@@ -179,7 +179,7 @@ public final class MainWindow {
     private se au;
     JCheckBoxMenuItem m;
     JCheckBoxMenuItem n;
-    JCheckBoxMenuItem o;
+    public JCheckBoxMenuItem o;
     JCheckBoxMenuItem p;
     JCheckBoxMenuItem q;
     JCheckBoxMenuItem rPanel;
@@ -290,7 +290,7 @@ public final class MainWindow {
     JPanel z;
     JPanel A;
     JPanel B;
-    JPanel CHandler;
+    public JPanel CHandler;
     private saPanel[][] co;
     ModeSelector DHandler;
     shPanel EHandler;
@@ -305,12 +305,12 @@ public final class MainWindow {
     private JLabel cx;
     private JLabel cy;
     JButton FPanel;
-    sg G;
+    public sg G;
     JButton H;
     JButton I;
     JButton J;
-    JLabel KHandler = new JLabel(" ");
-    JLabel LHandler = new JLabel(" ");
+    public JLabel KHandler = new JLabel(" ");
+    public JLabel LHandler = new JLabel(" ");
     private JLabel cz;
     private JLabel cA;
     private ImageIcon cB;
@@ -382,7 +382,7 @@ public final class MainWindow {
         return new ImageIcon(new BaseMultiResolutionImage(imageArray));
     }
 
-    MainWindow(SolitaireGameEngine object) {
+    public MainWindow(SolitaireGameEngine object) {
         Object object2;
         Object object3;
         this.d = object;
@@ -445,7 +445,7 @@ public final class MainWindow {
         ((MainWindow)object).d.d = Integer.parseInt((String)object2);
     }
 
-    final void AboutDialog() {
+    public final void AboutDialog() {
         this.DHandler = new ModeSelector(this.d);
         this.e = new si(this.d);
         try {
@@ -953,7 +953,7 @@ public final class MainWindow {
         this.AboutDialog(5);
     }
 
-    final void AboutDialog(int n2) {
+    public final void AboutDialog(int n2) {
         if (this.d.d <= 5) {
             MainWindow qb_02 = this;
             this.d.g("Set pause mode " + cY[n2] + " from " + qb_02.d.i());
@@ -1222,7 +1222,7 @@ public final class MainWindow {
         this.B.setBackground(this.d.b(0));
     }
 
-    final void d() {
+    public final void d() {
         this.uPanel();
         this.DHandler.b();
         this.c(1);
@@ -1230,7 +1230,7 @@ public final class MainWindow {
         this.bT.setEnabled(false);
     }
 
-    final void e() {
+    public final void e() {
         this.uPanel();
         this.DHandler.c();
         this.c(4);
@@ -1238,7 +1238,7 @@ public final class MainWindow {
         this.bT.setEnabled(false);
     }
 
-    final void f() {
+    public final void f() {
         this.uPanel();
         this.e.AboutDialog = null;
         this.DHandler.AboutDialog();
@@ -1247,7 +1247,7 @@ public final class MainWindow {
         this.bT.setEnabled(false);
     }
 
-    final void g() {
+    public final void g() {
         this.uPanel();
         this.e.AboutDialog = null;
         this.c(5);
@@ -1263,7 +1263,7 @@ public final class MainWindow {
         return this.cA;
     }
 
-    final void AboutDialog(boolean bl2) {
+    public final void AboutDialog(boolean bl2) {
         Object object;
         if (this.d.d <= 5) {
             this.d.g("Into setupMSUI");
@@ -1450,7 +1450,7 @@ public final class MainWindow {
         }
     }
 
-    final void j() {
+    public final void j() {
         this.d.AboutDialog(this.db);
         this.d.aR = true;
         this.ac = true;
@@ -1676,7 +1676,7 @@ public final class MainWindow {
         return true;
     }
 
-    final void l() {
+    public final void l() {
         if (this.ac && this.db != null) {
             this.d.AboutDialog(this.db.xHandler, this.db.yHandler, true);
             this.ac = false;
@@ -1723,12 +1723,12 @@ public final class MainWindow {
         }
     }
 
-    final void n() {
+    public final void n() {
         MainWindow qb_02 = this;
         qb_02.c(qb_02.d.bg);
     }
 
-    private void c(int n2) {
+    public void c(int n2) {
         switch (n2) {
             case 2: 
             case 4: {
@@ -1936,7 +1936,7 @@ public final class MainWindow {
         }
     }
 
-    final void d(String string) {
+    public final void d(String string) {
         if (this.d.t && !this.g.isVisible()) {
             this.c(3);
             this.d.g("setError setting statusWindow visible");
@@ -1954,7 +1954,7 @@ public final class MainWindow {
         }
     }
 
-    final void o() {
+    public final void o() {
         this.wHandler();
     }
 
@@ -2301,7 +2301,7 @@ public final class MainWindow {
         }
     }
 
-    final void rPanel() {
+    public final void rPanel() {
         Properties properties = this.cn;
         synchronized (properties) {
             this.aB = new sc(this, "traceLevel", 1);
@@ -2395,7 +2395,7 @@ public final class MainWindow {
         }
     }
 
-    final void s() {
+    public final void s() {
         try {
             Object object = this.d.as + File.separator + "solvitaire.properties";
             if (this.d.d <= 5) {
@@ -2529,7 +2529,7 @@ public final class MainWindow {
         return bl2;
     }
 
-    final boolean AboutDialog(String string, String string2, String string3) {
+    public final boolean AboutDialog(String string, String string2, String string3) {
         boolean bl2 = false;
         String string4 = this.cn.getProperty(string, "false");
         if ("false".equals(string4)) {
@@ -2547,7 +2547,7 @@ public final class MainWindow {
         return bl2;
     }
 
-    final void c(String string, String string2) {
+    public final void c(String string, String string2) {
         JOptionPane.showOptionDialog(this.d.aq.g, "\n\n" + string2 + "\n\n", string, 0, 2, null, dj, dj[0]);
     }
 

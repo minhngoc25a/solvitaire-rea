@@ -19,9 +19,9 @@ public final class Card {
     int c;
     public CardRun d = null;
     public LinkedList e = new LinkedList();
-    int f;
+    public int f;
     boolean g;
-    protected boolean h;
+    public boolean h;
     private boolean q;
     public boolean i = false;
     public boolean j = false;
@@ -154,7 +154,7 @@ public final class Card {
         this.d = (CardRun)this.e.getLast();
     }
 
-    final void f() {
+    public final void f() {
         this.e = new LinkedList();
         this.d = null;
         if (this.b != null) {
@@ -167,12 +167,12 @@ public final class Card {
         this.o = false;
     }
 
-    final void g() {
+    public final void g() {
         this.h = true;
         this.q = false;
     }
 
-    final boolean h() {
+    public final boolean h() {
         return this.q;
     }
 

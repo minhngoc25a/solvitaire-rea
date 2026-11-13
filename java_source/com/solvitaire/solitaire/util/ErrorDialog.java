@@ -13,11 +13,11 @@ import java.util.Arrays;
  */
 public final class ErrorDialog {
     private SolitaireGameEngine AboutDialog;
-    private int[][] b;
-    private int c;
-    private int d;
-    private int e;
-    private int f;
+    public int[][] b;
+    public int c;
+    public int d;
+    public int e;
+    public int f;
     private boolean g;
     private boolean h;
 
@@ -29,7 +29,7 @@ public final class ErrorDialog {
         this.d = rectangle.yHandler;
     }
 
-    ErrorDialog(SolitaireGameEngine qo_02, Rectangle object, String string) {
+    public ErrorDialog(SolitaireGameEngine qo_02, Rectangle object, String string) {
         this.AboutDialog(qo_02, (Rectangle)object);
         int[] nArray = new int[((Rectangle)object).width * ((Rectangle)object).height];
         if (qo_02.bs == null || qo_02.yHandler) {
@@ -124,14 +124,14 @@ public final class ErrorDialog {
         return nArray;
     }
 
-    final int[][] AboutDialog() {
+    public final int[][] AboutDialog() {
         if (this.b == null) {
             this.AboutDialog.AboutDialog("Null pixels");
         }
         return this.b;
     }
 
-    final BufferedImage b() {
+    public final BufferedImage b() {
         ErrorDialog al_02 = this;
         return al_02.AboutDialog(al_02.b, this.e, this.f, this.h);
     }
@@ -189,7 +189,7 @@ public final class ErrorDialog {
         return true;
     }
 
-    final int c() {
+    public int c() {
         return this.e;
     }
 

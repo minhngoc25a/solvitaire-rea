@@ -28,7 +28,7 @@ public final class CardImage {
     public SolitaireGameEngine d;
     int e;
     int f;
-    int g;
+    public int g;
     public Point h = new Point();
     private Point wHandler = new Point();
     public pW i = null;
@@ -49,7 +49,7 @@ public final class CardImage {
         new Point(0, 0);
     }
 
-    CardImage(SolitaireGameEngine qo_02) {
+    public CardImage(SolitaireGameEngine qo_02) {
         this.d = qo_02;
     }
 
@@ -75,7 +75,7 @@ public final class CardImage {
         return this.A;
     }
 
-    final void AboutDialog(int n2) {
+    public final void AboutDialog(int n2) {
         this.g = n2;
         this.f = n2 % 100;
         this.e = n2 / 100;

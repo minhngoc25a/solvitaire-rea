@@ -16,7 +16,7 @@ public final class s_0 {
     int b;
     int c;
     int d;
-    int e;
+    public int e;
     int f;
     int g;
     int h;
@@ -45,7 +45,7 @@ public final class s_0 {
         this.AboutDialog();
     }
 
-    s_0(s_0 s_02) {
+    public s_0(s_0 s_02) {
         this.p = s_02.p;
         this.AboutDialog = s_02.AboutDialog;
         this.b = s_02.b;
@@ -91,7 +91,7 @@ public final class s_0 {
         return this.j + this.l;
     }
 
-    final int c() {
+    public int c() {
         return this.k + this.m;
     }
 

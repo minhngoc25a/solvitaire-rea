@@ -13,7 +13,7 @@ import java.util.List;
  * Renamed from com.solvitaire.app.qx
  */
 public final class ChallengeSolver {
-    SolitaireGameEngine AboutDialog;
+    public SolitaireGameEngine AboutDialog;
     String b;
     String c;
     int d;
@@ -23,32 +23,32 @@ public final class ChallengeSolver {
     public List g;
     public List h;
     public List i;
-    qy_0 j;
+    public qy_0 j;
     int k = 99999999;
     int l;
     int m = 99999999;
     int n;
-    String o;
-    boolean p;
+    public String o;
+    public boolean p;
 
-    ChallengeSolver(SolitaireGameEngine qo_02) {
+    public ChallengeSolver(SolitaireGameEngine qo_02) {
         this.AboutDialog = qo_02;
         this.j = new qy_0(this);
     }
 
-    final void AboutDialog(String string) {
+    public final void AboutDialog(String string) {
         this.b = string;
         this.AboutDialog();
     }
 
-    final void AboutDialog(String string, int n2, String string2) {
+    public final void AboutDialog(String string, int n2, String string2) {
         this.c = string;
         this.d = n2;
         this.b = string2;
         this.AboutDialog();
     }
 
-    final void AboutDialog() {
+    public final void AboutDialog() {
         String string;
         if (this.c == null) {
             this.c = this.AboutDialog.l.q;
@@ -57,34 +57,29 @@ public final class ChallengeSolver {
         if (!(string = this.AboutDialog.as + SolitaireGameEngine.o + this.c + String.valueOf(this.d > 0 ? Integer.valueOf(this.d) : "") + File.separator + "stats" + this.b + ".txt").equals(this.o)) {
             this.k = 99999999;
             this.m = 99999999;
-            Object object = this.AboutDialog.l(string);
-            if (object == null) {
-                object = "";
-            }
-            object = object.split("\n");
-            this.e = new ArrayList(((String[])object).length + 100);
-            this.f = new ArrayList(((String[])object).length + 100);
-            this.g = new ArrayList(((String[])object).length + 100);
-            this.h = new ArrayList(((String[])object).length + 100);
-            this.i = new ArrayList(((String[])object).length + 100);
+            String[] object = new String(java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(string))).split("\n");
+            this.e = new ArrayList(object.length + 100);
+            this.f = new ArrayList(object.length + 100);
+            this.g = new ArrayList(object.length + 100);
+            this.h = new ArrayList(object.length + 100);
+            this.i = new ArrayList(object.length + 100);
             int n2 = 0;
             this.q = 0;
             String[] stringArray = object;
-            int n3 = ((String[])object).length;
+            int n3 = object.length;
             int n4 = 0;
             while (n4 < n3) {
-                object = stringArray[n4];
-                if (object.length() != 0) {
-                    ChallengeSolver qx_02 = this;
-                    object = new qy_0(qx_02, qx_02.AboutDialog, (String)object);
-                    this.e.add(object.AboutDialog);
-                    this.f.add(object.b);
-                    this.g.add(object.c);
-                    this.h.add(object.d);
-                    this.i.add(object.e);
-                    this.AboutDialog((qy_0)object);
-                    n2 = object.AboutDialog;
-                    this.q = object.e;
+                String element = stringArray[n4];
+                if (element.length() != 0) {
+                    qy_0 qx_02 = new qy_0(this, this.AboutDialog, element);
+                    this.e.add(qx_02.AboutDialog);
+                    this.f.add(qx_02.b);
+                    this.g.add(qx_02.c);
+                    this.h.add(qx_02.d);
+                    this.i.add(qx_02.e);
+                    this.AboutDialog(qx_02);
+                    n2 = qx_02.AboutDialog;
+                    this.q = qx_02.e;
                 }
                 ++n4;
             }
@@ -104,14 +99,14 @@ public final class ChallengeSolver {
         }
     }
 
-    final void b() {
+    public final void b() {
         this.j.f = 0L;
         this.j.b = 0;
         this.j.c = 0;
         this.j.d = 0;
     }
 
-    final void AboutDialog(qy_0 qy_02) {
+    public final void AboutDialog(qy_0 qy_02) {
         int n2;
         if (qy_02.c <= this.m) {
             this.m = qy_02.c;

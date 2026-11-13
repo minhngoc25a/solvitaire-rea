@@ -15,7 +15,7 @@ public final class pX {
     private static int[] M;
     private static int[] N;
     qo_0 a;
-    String b;
+    public String b;
     Rectangle c;
     u_0 d;
     u_0 e;

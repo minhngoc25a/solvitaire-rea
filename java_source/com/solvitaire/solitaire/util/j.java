@@ -11,7 +11,7 @@ public final class j {
     public Rectangle AboutDialog = new Rectangle();
     private /* synthetic */ g b;
 
-    j(GameStats pF2, int n2, int n3, int n4, int n5) {
+    public j(GameStats pF2, int n2, int n3, int n4, int n5) {
         this.b = pF2;
         this.AboutDialog.x = n2;
         this.AboutDialog.y = n3;
@@ -27,19 +27,19 @@ public final class j {
         this.AboutDialog.height = j2.AboutDialog.height;
     }
 
-    final double AboutDialog() {
-        return (double)this.AboutDialog.xHandler * this.b.k.A;
+    public double AboutDialog() {
+        return (double)this.AboutDialog.x * this.b.k.A;
     }
 
-    final double b() {
+    public double b() {
         return (double)this.AboutDialog.yHandler * this.b.k.A;
     }
 
-    final double c() {
+    public double c() {
         return (double)this.AboutDialog.width * this.b.k.A;
     }
 
-    final double d() {
+    public double d() {
         return (double)this.AboutDialog.height * this.b.k.A;
     }
 

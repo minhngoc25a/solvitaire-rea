@@ -51,8 +51,8 @@ public abstract class BoardReader {
     int m;
     private int[] A;
     private int B;
-    Card n = null;
-    GameMove o;
+    public Card n = null;
+    public GameMove o;
 
     abstract boolean AboutDialog();
 

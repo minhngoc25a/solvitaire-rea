@@ -137,7 +137,7 @@ extends g {
     int DesktopDuplication;
     private pM aV = new pM(this);
 
-    pLPanel(SolitaireGameEngine qo_02, boolean bl2) {
+    public pLPanel(SolitaireGameEngine qo_02, boolean bl2) {
         super(qo_02);
         this.aq = this.aw - 220;
         this.aK = qo_02.aq.AboutDialog("solvitaire64.gif");

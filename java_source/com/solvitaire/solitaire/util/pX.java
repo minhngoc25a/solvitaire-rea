@@ -15,21 +15,24 @@ public final class pX {
     private static int[] MHandler;
     private static int[] NHandler;
     SolitaireGameEngine AboutDialog;
-    String b;
-    Rectangle c;
-    u_0 d;
-    u_0 e;
-    u_0 f;
-    u_0 g;
-    u_0 h;
-    u_0 i;
-    u_0 j;
-    u_0 k;
-    u_0 l;
-    int m;
+    public String b;
+    public Rectangle c;
+    public u_0 d;
+    public u_0 e;
+    public u_0 f;
+    public u_0 g;
+    public u_0 h;
+    public u_0 i;
+    public u_0 j;
+    public u_0 k;
+    public u_0 l;
+    public int m;
     private int OHandler;
-    int n;
-    int o;
+
+    public pX() {
+    }
+    public int n;
+    public int o;
     private u_0 PPanel;
     private int Q;
     byte[][][] p;
@@ -41,15 +44,15 @@ public final class pX {
     int[] uPanel;
     int v;
     int wHandler;
-    Rectangle xHandler;
-    Rectangle yHandler;
+    public Rectangle x;
+    public Rectangle y;
     int z;
     int A;
     int B;
     double CHandler;
     int DHandler = 11;
-    double EHandler;
-    double FPanel;
+    public double EHandler;
+    public double FPanel;
     double G;
     int H;
     double I;
@@ -212,7 +215,7 @@ public final class pX {
         this.t = new int[52];
         this.uPanel = new int[52];
         this.p = new byte[52][][];
-        this.J = (int)(0.6 * (double)this.yHandler.height);
+        this.J = (int)(0.6 * (double)this.y.height);
         this.R = new int[this.c.height + 2][this.c.width + 2];
         this.PPanel = new u_0();
         this.Q = 0;
@@ -227,7 +230,7 @@ public final class pX {
                 pX pX2 = this;
                 Object object = pX2.AboutDialog(pX2.q[n2], false, bl2);
                 this.p[n2] = object;
-                object = new Rectangle(0, 0, this.yHandler.width, this.yHandler.height);
+                object = new Rectangle(0, 0, this.y.width, this.y.height);
                 pX pX3 = this;
                 this.uPanel[n2] = n3 = pX3.AboutDialog(pX3.q[n2], 2, 5, object.width - 2, bl2);
                 if (this.AboutDialog.d <= 3) {
@@ -237,29 +240,29 @@ public final class pX {
                     this.AboutDialog.AboutDialog("Suspicious font offset");
                 }
                 pX pX4 = this;
-                double d2 = pX4.b(pX4.q[n2], 0, 0, this.yHandler.width, this.yHandler.height, bl2);
+                double d2 = pX4.b(pX4.q[n2], 0, 0, this.y.width, this.y.height, bl2);
                 this.s[n2] = (int)(d2 * this.G);
                 if (this.AboutDialog.d <= 1) {
                     pX pX5 = this;
-                    pX5.AboutDialog(pX5.q[n2], 0, 0, this.yHandler.width, this.yHandler.height, bl2);
+                    pX5.AboutDialog(pX5.q[n2], 0, 0, this.y.width, this.y.height, bl2);
                 }
                 int n4 = 0;
                 if (this.z != 9) {
-                    n4 = this.c.height - this.xHandler.height;
+                    n4 = this.c.height - this.x.height;
                 }
                 pX pX6 = this;
-                d2 = pX6.b(pX6.q[n2], 0, this.c.height - this.xHandler.height, this.xHandler.width, this.xHandler.height, bl2);
+                d2 = pX6.b(pX6.q[n2], 0, this.c.height - this.x.height, this.x.width, this.x.height, bl2);
                 this.t[n2] = (int)(d2 * this.I);
                 if (this.AboutDialog.d <= 2) {
                     pX pX7 = this;
-                    pX7.AboutDialog(pX7.q[n2], 0, n4, this.xHandler.width, this.xHandler.height, bl2);
+                    pX7.AboutDialog(pX7.q[n2], 0, n4, this.x.width, this.x.height, bl2);
                 }
                 pX pX8 = this;
-                d2 = pX8.b(pX8.q[n2], 0, 0, this.yHandler.width, n3 + (int)(0.6 * (double)this.yHandler.height), bl2);
+                d2 = pX8.b(pX8.q[n2], 0, 0, this.y.width, n3 + (int)(0.6 * (double)this.y.height), bl2);
                 this.rPanel[n2] = (int)(d2 * this.G);
                 if (this.AboutDialog.d <= 2) {
                     pX pX9 = this;
-                    pX9.AboutDialog(pX9.q[n2], 0, 0, this.yHandler.width, n3 + (int)(0.6 * (double)this.yHandler.height), bl2);
+                    pX9.AboutDialog(pX9.q[n2], 0, 0, this.y.width, n3 + (int)(0.6 * (double)this.y.height), bl2);
                 }
                 if (this.AboutDialog.d <= 3) {
                     this.AboutDialog.f("Card matches for " + com.solvitaire.app.q.b(n2) + " nummatch " + this.s[n2] + " partMatch " + this.rPanel[n2] + " suitMatch " + this.t[n2]);
@@ -291,7 +294,7 @@ public final class pX {
         while (n4 < this.c.height) {
             n3 = 0;
             while (n3 < this.c.width) {
-                n2 = bl2 ? nArray[n4 + this.c.yHandler][n3 + this.c.xHandler] : nArray[n4][n3];
+                n2 = bl2 ? nArray[n4 + this.c.y][n3 + this.c.x] : nArray[n4][n3];
                 u_02.c(n2);
                 byArray[n4][n3] = 0;
                 if (u_02.AboutDialog(this.d, this.e) == 0) {
@@ -337,7 +340,7 @@ public final class pX {
         while (n3 < this.c.height - 1) {
             n2 = 1;
             while (n2 < this.c.width - 1) {
-                if ((n3 < this.yHandler.height || n2 < n4 - 1 || n2 > n4 + 1) && (byArray[n3][n2] & 0xF) == 0) {
+                if ((n3 < this.y.height || n2 < n4 - 1 || n2 > n4 + 1) && (byArray[n3][n2] & 0xF) == 0) {
                     byte[] byArray8 = byArray[n3];
                     int n11 = n2;
                     byArray8[n11] = (byte)(byArray8[n11] + pX.AboutDialog(byArray, n2, n3));
@@ -425,18 +428,18 @@ public final class pX {
     }
 
     final void b() {
-        this.yHandler = new Rectangle(this.c);
-        this.xHandler = new Rectangle(this.c);
+        this.y = new Rectangle(this.c);
+        this.x = new Rectangle(this.c);
         if (this.wHandler > 0) {
-            this.xHandler.yHandler = this.c.yHandler + this.c.height - this.wHandler;
-            this.xHandler.height = this.wHandler;
-            this.yHandler.height -= this.wHandler;
+            this.x.y = this.c.y + this.c.height - this.wHandler;
+            this.x.height = this.wHandler;
+            this.y.height -= this.wHandler;
         } else {
-            this.xHandler.xHandler = this.c.xHandler + this.c.width - this.v;
-            this.xHandler.height /= 2;
-            this.yHandler.width = this.v;
+            this.x.x = this.c.x + this.c.width - this.v;
+            this.x.height /= 2;
+            this.y.width = this.v;
         }
-        this.xHandler.width = this.v;
+        this.x.width = this.v;
     }
 
     private boolean AboutDialog(int n2, boolean bl2, int n3) {
@@ -467,17 +470,17 @@ public final class pX {
     }
 
     final int AboutDialog(int[][] nArray, int n2, int n3, boolean bl2) {
-        Rectangle rectangle = new Rectangle(this.yHandler);
-        rectangle.yHandler += n3 - 2;
-        rectangle.xHandler += n2;
-        n2 = rectangle.yHandler + 4;
+        Rectangle rectangle = new Rectangle(this.y);
+        rectangle.y += n3 - 2;
+        rectangle.x += n2;
+        n2 = rectangle.y + 4;
         if (this.AboutDialog.d <= 2) {
             this.AboutDialog.f("Stack top is " + n3 + " so scan up 4 rows from " + n2);
         }
-        n2 = this.AboutDialog(nArray, rectangle.xHandler + 2, n2, rectangle.width - 2, bl2);
-        int n4 = n2 - n3 - this.yHandler.yHandler;
+        n2 = this.AboutDialog(nArray, rectangle.x + 2, n2, rectangle.width - 2, bl2);
+        int n4 = n2 - n3 - this.y.y;
         if (this.AboutDialog.d <= 3) {
-            this.AboutDialog.f("Scan for grab position with top " + n2 + " yHandler " + n3 + " numrect.yHandler " + this.yHandler.yHandler + " gives adjustment of " + n4);
+            this.AboutDialog.f("Scan for grab position with top " + n2 + " yHandler " + n3 + " numrect.y " + this.y.y + " gives adjustment of " + n4);
         }
         if (n4 < 0) {
             n4 = 0;
@@ -487,7 +490,7 @@ public final class pX {
                 this.AboutDialog.f("Top origin delta unexpectedly large:" + n4);
             }
             if (this.AboutDialog.d <= 4) {
-                com.solvitaire.app.q.AboutDialog(this.AboutDialog, this, nArray, rectangle.xHandler, rectangle.yHandler, rectangle.width, rectangle.height, bl2);
+                com.solvitaire.app.q.AboutDialog(this.AboutDialog, this, nArray, rectangle.x, rectangle.y, rectangle.width, rectangle.height, bl2);
             }
         }
         return n4;
@@ -505,7 +508,7 @@ public final class pX {
                         block64: {
                             block62: {
                                 if (var5_5 != 2) break block61;
-                                var16_10 = this.xHandler;
+                                var16_10 = this.x;
                                 var15_13 = var4_4;
                                 var14_14 = var3_3;
                                 var13_16 /* !! */  = var1_1;
@@ -513,15 +516,15 @@ public final class pX {
                                 var8_18 = this;
                                 var12_17.c = -1;
                                 var17_21 = new Rectangle(var16_10);
-                                var17_21.xHandler += var14_14;
-                                var17_21.yHandler += var15_13;
-                                var17_21.yHandler -= 3;
+                                var17_21.x += var14_14;
+                                var17_21.y += var15_13;
+                                var17_21.y -= 3;
                                 var17_21.height += 6;
-                                if (var17_21.yHandler < 0) {
-                                    var17_21.yHandler = 0;
+                                if (var17_21.y < 0) {
+                                    var17_21.y = 0;
                                 }
-                                if (var17_21.yHandler + var17_21.height <= (var18_23 = var13_16 /* !! */ .length)) break block62;
-                                var8_18.AboutDialog.f("Possible font error or run off screen, insufficient data captured, need " + (var17_21.yHandler + var17_21.height - var18_23) + " more rows");
+                                if (var17_21.y + var17_21.height <= (var18_23 = var13_16 /* !! */ .length)) break block62;
+                                var8_18.AboutDialog.f("Possible font error or run off screen, insufficient data captured, need " + (var17_21.y + var17_21.height - var18_23) + " more rows");
                                 break block60;
                             }
                             var19_24 = new int[var17_21.height];
@@ -861,14 +864,14 @@ lbl126:
                     this.AboutDialog.f("Test of character " + com.solvitaire.app.q.b(n4) + " passed num match with score " + s_02.g + " vs " + this.s[n4]);
                 }
                 if (this.AboutDialog.d <= 1) {
-                    this.AboutDialog.f(String.format("Number result %d so trying suit %s, location %d+%d,%d+%d, height %d, partial %d, complete %b", s_02.g, com.solvitaire.app.q.b(n4), n2, n7, n3, n8, this.xHandler.height, n5, bl2));
+                    this.AboutDialog.f(String.format("Number result %d so trying suit %s, location %d+%d,%d+%d, height %d, partial %d, complete %b", s_02.g, com.solvitaire.app.q.b(n4), n2, n7, n3, n8, this.x.height, n5, bl2));
                 }
                 pY2.f = this.t[n4];
                 if (pY2.AboutDialog.e <= 5) {
                     pY2.AboutDialog = s_02;
                 }
                 s_02.e = 5;
-                this.AboutDialog(s_02, nArray, n2, n3 - s_02.n, (byte[][])object, true, u_02, u_03, pY2, this.xHandler.height, n7, n8, bl2);
+                this.AboutDialog(s_02, nArray, n2, n3 - s_02.n, (byte[][])object, true, u_02, u_03, pY2, this.x.height, n7, n8, bl2);
                 if (s_02.f >= pY2.f) {
                     int n11;
                     int n12;
@@ -887,13 +890,13 @@ lbl126:
                         this.AboutDialog.f("Suit match gave " + s_02.f + " retry for card " + com.solvitaire.app.q.b(n4));
                     }
                     s_02.f = 99999;
-                    this.AboutDialog(s_02, nArray, n10, n9, (byte[][])object, true, u_02, u_03, pY2, this.xHandler.height, n7, n8, bl2);
+                    this.AboutDialog(s_02, nArray, n10, n9, (byte[][])object, true, u_02, u_03, pY2, this.x.height, n7, n8, bl2);
                     if (s_02.f >= pY2.f) {
                         if (this.AboutDialog.d <= 2) {
                             this.AboutDialog.f("Suit retry gave " + s_02.f + " retry 2 for card " + com.solvitaire.app.q.b(n4));
                         }
                         s_02.f = 99999;
-                        this.AboutDialog(s_02, nArray, n12, n11, (byte[][])object, true, u_02, u_03, pY2, this.xHandler.height, n7, n8, bl2);
+                        this.AboutDialog(s_02, nArray, n12, n11, (byte[][])object, true, u_02, u_03, pY2, this.x.height, n7, n8, bl2);
                     }
                 }
                 if (s_02.f >= pY2.f) {
@@ -910,7 +913,7 @@ lbl126:
                 if (bl3) {
                     if (this.AboutDialog.d <= 2 && (pY2.AboutDialog.e == 9 || this.AboutDialog.d <= 1)) {
                         if (this.AboutDialog.d <= 9) {
-                            com.solvitaire.app.q.AboutDialog(this.AboutDialog, this, nArray, n2 + this.c.xHandler, n3 + this.c.yHandler, this.c.width, this.c.height, pY2.e);
+                            com.solvitaire.app.q.AboutDialog(this.AboutDialog, this, nArray, n2 + this.c.x, n3 + this.c.y, this.c.width, this.c.height, pY2.e);
                         }
                         this.AboutDialog.bu.AboutDialog(9, n5);
                     }
@@ -961,21 +964,21 @@ lbl126:
     }
 
     private void AboutDialog(s_0 s_02, int[][] nArray, int n2, int n3, byte[][] byArray, boolean bl2, u_0 u_02, u_0 u_03, pY pY2, int n4, int n5, int n6, boolean bl3) {
-        Rectangle rectangle = this.z == 9 ? (bl2 ? new Rectangle(this.c.width - this.v, 0, this.xHandler.width, n4) : new Rectangle(0, 0, this.xHandler.width, n4)) : (bl2 ? new Rectangle(0, this.yHandler.height, this.xHandler.width, n4) : new Rectangle(0, 0, this.yHandler.width, n4));
+        Rectangle rectangle = this.z == 9 ? (bl2 ? new Rectangle(this.c.width - this.v, 0, this.x.width, n4) : new Rectangle(0, 0, this.x.width, n4)) : (bl2 ? new Rectangle(0, this.y.height, this.x.width, n4) : new Rectangle(0, 0, this.y.width, n4));
         if (rectangle.height > byArray.length) {
             rectangle.height = byArray.length;
         }
-        int n7 = n2 + n5 + this.c.xHandler;
-        int n8 = n3 + n6 + this.c.yHandler;
-        if (rectangle.xHandler + n7 < 0 || rectangle.xHandler + rectangle.width + n7 > nArray[0].length) {
+        int n7 = n2 + n5 + this.c.x;
+        int n8 = n3 + n6 + this.c.y;
+        if (rectangle.x + n7 < 0 || rectangle.x + rectangle.width + n7 > nArray[0].length) {
             if (this.AboutDialog.d <= 3) {
-                this.AboutDialog.f("Exiting match because xHandler " + rectangle.xHandler + " plus shiftx " + n7 + " is less then 0 or +wHandler " + rectangle.width + " is greater than " + nArray[0].length);
+                this.AboutDialog.f("Exiting match because xHandler " + rectangle.x + " plus shiftx " + n7 + " is less then 0 or +wHandler " + rectangle.width + " is greater than " + nArray[0].length);
             }
             return;
         }
-        if (rectangle.yHandler + n8 < 0 || rectangle.yHandler + rectangle.height + n8 > nArray.length) {
+        if (rectangle.y + n8 < 0 || rectangle.y + rectangle.height + n8 > nArray.length) {
             if (this.AboutDialog.d <= 3) {
-                this.AboutDialog.f("Exiting match because yHandler " + rectangle.yHandler + " plus shifty " + n8 + " less then 0 or +h " + rectangle.height + " greater than " + nArray.length);
+                this.AboutDialog.f("Exiting match because yHandler " + rectangle.y + " plus shifty " + n8 + " less then 0 or +h " + rectangle.height + " greater than " + nArray.length);
             }
             return;
         }
@@ -989,10 +992,10 @@ lbl126:
             s_02.g = n9;
             return;
         }
-        int n11 = rectangle.yHandler;
-        while (n11 < rectangle.yHandler + rectangle.height) {
-            int n12 = rectangle.xHandler;
-            while (n12 < rectangle.xHandler + rectangle.width) {
+        int n11 = rectangle.y;
+        while (n11 < rectangle.y + rectangle.height) {
+            int n12 = rectangle.x;
+            while (n12 < rectangle.x + rectangle.width) {
                 n10 += s_02.i[n11][n12];
                 ++n12;
             }
@@ -1007,7 +1010,7 @@ lbl126:
         if (n10 < (bl2 ? s_02.f : s_02.g)) {
             boolean cfr_ignored_0 = this.AboutDialog.c;
             if (this.AboutDialog.d <= 2 && n10 < 400) {
-                this.AboutDialog.f("Card " + com.solvitaire.app.q.b(s_02.AboutDialog) + " testing with off " + this.c.xHandler + "," + this.c.yHandler + " delta " + n5 + "," + n6 + " and base " + n2 + "," + n3 + " height " + rectangle.height + " gave improved score of " + n10 + ", penalties:");
+                this.AboutDialog.f("Card " + com.solvitaire.app.q.b(s_02.AboutDialog) + " testing with off " + this.c.x + "," + this.c.y + " delta " + n5 + "," + n6 + " and base " + n2 + "," + n3 + " height " + rectangle.height + " gave improved score of " + n10 + ", penalties:");
                 this.AboutDialog(rectangle, s_02, byArray);
             }
             if (bl2) {
@@ -1019,17 +1022,17 @@ lbl126:
         }
         boolean cfr_ignored_1 = this.AboutDialog.c;
         if (this.AboutDialog.d <= 1 || bl2 && this.AboutDialog.d <= 2) {
-            this.AboutDialog.f("Index " + s_02.AboutDialog + " testing with off " + this.c.xHandler + "," + this.c.yHandler + " delta " + n5 + "," + n6 + " and base " + n2 + "," + n3 + " height " + rectangle.height + " gave worse score of " + n10);
+            this.AboutDialog.f("Index " + s_02.AboutDialog + " testing with off " + this.c.x + "," + this.c.y + " delta " + n5 + "," + n6 + " and base " + n2 + "," + n3 + " height " + rectangle.height + " gave worse score of " + n10);
         }
     }
 
     private void AboutDialog(Rectangle rectangle, s_0 s_02, byte[][] byArray) {
         Object object = "";
         Object object2 = "";
-        int n2 = rectangle.yHandler;
-        while (n2 < rectangle.yHandler + rectangle.height) {
-            int n3 = rectangle.xHandler;
-            while (n3 < rectangle.xHandler + rectangle.width) {
+        int n2 = rectangle.y;
+        while (n2 < rectangle.y + rectangle.height) {
+            int n3 = rectangle.x;
+            while (n3 < rectangle.x + rectangle.width) {
                 if (s_02 != null) {
                     object = (String)object + s_02.i[n2][n3] + ",";
                 }
@@ -1056,13 +1059,13 @@ lbl126:
         int n13 = 0;
         int n14 = 0;
         while (n14 < rectangle.height) {
-            n10 = rectangle.yHandler + n12 + n13;
+            n10 = rectangle.y + n12 + n13;
             if ((n13 = -n13) <= 0) {
                 --n13;
             }
             n9 = n10 + n4;
-            n8 = rectangle.xHandler;
-            while (n8 < rectangle.xHandler + rectangle.width) {
+            n8 = rectangle.x;
+            while (n8 < rectangle.x + rectangle.width) {
                 n7 = n8 + n3;
                 u_0 u_05 = null;
                 u_0 u_06 = null;
@@ -1093,10 +1096,10 @@ lbl126:
             }
             ++n14;
         }
-        n14 = rectangle.yHandler + 2;
-        while (n14 < rectangle.yHandler + rectangle.height) {
-            n10 = rectangle.xHandler + 2;
-            while (n10 < rectangle.xHandler + rectangle.width) {
+        n14 = rectangle.y + 2;
+        while (n14 < rectangle.y + rectangle.height) {
+            n10 = rectangle.x + 2;
+            while (n10 < rectangle.x + rectangle.width) {
                 n9 = this.R[n14][n10];
                 if (!bl3 && n9 != 0) {
                     n8 = 0;
@@ -1139,16 +1142,16 @@ lbl126:
             }
             ++n14;
         }
-        n14 = rectangle.yHandler + 1;
-        while (n14 <= rectangle.yHandler + rectangle.height) {
-            s_02.i[n14 - 1][rectangle.xHandler] = this.R[n14][rectangle.xHandler + 1];
-            s_02.i[n14 - 1][rectangle.xHandler + rectangle.width - 1] = this.R[n14][rectangle.xHandler + rectangle.width];
+        n14 = rectangle.y + 1;
+        while (n14 <= rectangle.y + rectangle.height) {
+            s_02.i[n14 - 1][rectangle.x] = this.R[n14][rectangle.x + 1];
+            s_02.i[n14 - 1][rectangle.x + rectangle.width - 1] = this.R[n14][rectangle.x + rectangle.width];
             ++n14;
         }
-        n14 = rectangle.xHandler + 1;
-        while (n14 <= rectangle.xHandler + rectangle.width) {
-            s_02.i[rectangle.yHandler][n14 - 1] = this.R[rectangle.yHandler + 1][n14];
-            s_02.i[rectangle.yHandler + rectangle.height - 1][n14 - 1] = this.R[rectangle.yHandler + rectangle.height][n14];
+        n14 = rectangle.x + 1;
+        while (n14 <= rectangle.x + rectangle.width) {
+            s_02.i[rectangle.y][n14 - 1] = this.R[rectangle.y + 1][n14];
+            s_02.i[rectangle.y + rectangle.height - 1][n14 - 1] = this.R[rectangle.y + rectangle.height][n14];
             ++n14;
         }
         return true;
@@ -1165,14 +1168,14 @@ lbl126:
         int n7 = 0;
         u_0 u_02 = new u_0();
         int n8 = 15;
-        n2 += this.c.xHandler;
-        if ((n3 += this.c.yHandler) + 15 > nArray.length) {
+        n2 += this.c.x;
+        if ((n3 += this.c.y) + 15 > nArray.length) {
             n8 = nArray.length - n3;
         }
         int n9 = n3;
         while (n9 < n3 + n8) {
             n4 = n2;
-            while (n4 < n2 + this.xHandler.width) {
+            while (n4 < n2 + this.x.width) {
                 u_02.c(nArray[n9][n4]);
                 if (u_02.AboutDialog(this.f, this.h) == 0) {
                     if (this.AboutDialog.d <= 1) {
@@ -1301,15 +1304,15 @@ lbl126:
         u_0 u_04 = this.AboutDialog(bl2);
         double d2 = 0.0;
         int n5 = 0;
-        if (rectangle.xHandler + rectangle.width > nArray[0].length) {
-            String string = "Font width mismatch, pixel width " + nArray[0].length + " but bounds give " + (rectangle.xHandler + rectangle.width);
+        if (rectangle.x + rectangle.width > nArray[0].length) {
+            String string = "Font width mismatch, pixel width " + nArray[0].length + " but bounds give " + (rectangle.x + rectangle.width);
             SolitaireGameEngine qo_02 = this.AboutDialog;
             qo_02.AboutDialog(string, false);
         }
         int n6 = n4 = rectangle.width / 2;
         int n7 = 0;
-        if (rectangle.height + rectangle.yHandler > nArray.length) {
-            rectangle.height = nArray.length - rectangle.yHandler;
+        if (rectangle.height + rectangle.y > nArray.length) {
+            rectangle.height = nArray.length - rectangle.y;
         }
         if (rectangle.height < 8) {
             if (this.AboutDialog.d <= 3) {
@@ -1321,12 +1324,12 @@ lbl126:
             return -1;
         }
         if (this.AboutDialog.d <= 2) {
-            this.AboutDialog.f("Testing suit rows from " + rectangle.yHandler + " to " + (rectangle.yHandler + rectangle.height - 1) + "inclusive");
+            this.AboutDialog.f("Testing suit rows from " + rectangle.y + " to " + (rectangle.y + rectangle.height - 1) + "inclusive");
         }
         int n8 = 0;
         int n9 = rectangle.height - 1;
         while (n9 >= 0) {
-            if ((n4 = this.c(u_02, nArray, rectangle, n4, n9, u_04, u_03)) <= rectangle.xHandler + rectangle.width) {
+            if ((n4 = this.c(u_02, nArray, rectangle, n4, n9, u_04, u_03)) <= rectangle.x + rectangle.width) {
                 ++n4;
             }
             if (this.AboutDialog.d <= 2) {
@@ -1352,7 +1355,7 @@ lbl126:
             if (n4 > n6) {
                 if (n7 != 0 && n9 < rectangle.height - 6) {
                     if (this.AboutDialog.d <= 3) {
-                        this.AboutDialog.f("End scan due to blank line at " + (rectangle.yHandler + n9));
+                        this.AboutDialog.f("End scan due to blank line at " + (rectangle.y + n9));
                     }
                     n8 = n9 + 1;
                     break;
@@ -1446,9 +1449,9 @@ lbl126:
         int n12 = 0;
         double d6 = d2 / (double)n5;
         n7 = -1;
-        if (rectangle.height + rectangle.yHandler > nArray.length) {
+        if (rectangle.height + rectangle.y > nArray.length) {
             if (this.AboutDialog.d <= 3) {
-                this.AboutDialog.f("Aborting suit identification due to image overrun, ycount " + rectangle.height + " testRect.yHandler " + rectangle.yHandler + " pixels.length " + nArray.length);
+                this.AboutDialog.f("Aborting suit identification due to image overrun, ycount " + rectangle.height + " testRect.y " + rectangle.y + " pixels.length " + nArray.length);
             }
             if (this.AboutDialog.d <= 2) {
                 com.solvitaire.app.q.AboutDialog(this.AboutDialog, this, nArray, rectangle, bl2);
@@ -1499,7 +1502,7 @@ lbl126:
             int n17 = nArray4[n3];
             while (n17 <= nArray5[n3]) {
                 boolean bl3;
-                int n18 = nArray[n3 + rectangle.yHandler][n17 + rectangle.xHandler];
+                int n18 = nArray[n3 + rectangle.y][n17 + rectangle.x];
                 u_02.c(n18);
                 boolean bl4 = u_02.AboutDialog(u_04, u_03) == 0;
                 boolean bl5 = bl3 = n17 == nArray4[n3] || n17 == nArray5[n3];
@@ -1643,27 +1646,27 @@ lbl126:
 
     private int AboutDialog(u_0 u_02, int[][] nArray, Rectangle rectangle, int n2, int n3, u_0 u_03, u_0 u_04, boolean bl2, boolean bl3) {
         block8: {
-            if (n3 + rectangle.yHandler < 0) {
+            if (n3 + rectangle.y < 0) {
                 return -1;
             }
             do {
                 boolean bl4;
-                if (n2 + rectangle.xHandler >= nArray[0].length) {
+                if (n2 + rectangle.x >= nArray[0].length) {
                     if (this.AboutDialog.d <= 1) {
-                        this.AboutDialog.f("xHandler of " + n2 + " with rect.xHandler " + rectangle.xHandler + " will overflow pixels width " + nArray[0].length);
+                        this.AboutDialog.f("xHandler of " + n2 + " with rect.x " + rectangle.x + " will overflow pixels width " + nArray[0].length);
                     }
                     return rectangle.width;
                 }
-                if (n2 + rectangle.xHandler < 0) {
+                if (n2 + rectangle.x < 0) {
                     if (this.AboutDialog.d <= 1) {
-                        this.AboutDialog.f("xHandler of " + n2 + " with rect.xHandler " + rectangle.xHandler + " is negative");
+                        this.AboutDialog.f("xHandler of " + n2 + " with rect.x " + rectangle.x + " is negative");
                     }
                     return -1;
                 }
-                u_02.c(nArray[n3 + rectangle.yHandler][n2 + rectangle.xHandler]);
+                u_02.c(nArray[n3 + rectangle.y][n2 + rectangle.x]);
                 boolean bl5 = bl3 ? u_02.AboutDialog(u_03, u_04) == 0 : (bl4 = u_02.AboutDialog(u_03, u_04) != 0);
                 if (bl3 && this.AboutDialog.d <= 1) {
-                    this.AboutDialog.f(String.format("Pixel at %d, %d (%08x) is %sbetween %08x and %08x so %s", n2, n3, nArray[n3 + rectangle.yHandler][n2 + rectangle.xHandler], bl3 ? "" : "not ", u_03.AboutDialog(), u_04.AboutDialog(), bl3 ? "matches OK" : " mismatches OK"));
+                    this.AboutDialog.f(String.format("Pixel at %d, %d (%08x) is %sbetween %08x and %08x so %s", n2, n3, nArray[n3 + rectangle.y][n2 + rectangle.x], bl3 ? "" : "not ", u_03.AboutDialog(), u_04.AboutDialog(), bl3 ? "matches OK" : " mismatches OK"));
                 }
                 if (!bl4) break block8;
                 n2 = bl2 ? n2 - 1 : n2 + 1;

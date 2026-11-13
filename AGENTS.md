@@ -16,12 +16,21 @@ Turn `solvitaire_installv5.3.3.exe` into source code. The binary is an InstallFo
 
 Project status, completed items, blockers, and next steps are tracked in `PROJECT_STATUS.md`. Confer that file before planning work; keep this file limited to standing project instructions.
 
+## Documentation — see `docs/`
+
+Reverse engineering documentation lives in `docs/`:
+- `RE_METHODOLOGY.md` — decompilation pipeline, toolchain, refactoring strategy, verification approach, gotchas
+- `FILE_FORMATS.md` — PE installer format, embedded 7z archives, Launch4j launcher, JAR overlay, DLL exports/imports, HLSL shader
+- `API_PROTOCOL.md` — stdin/stdout API command format, verified end-to-end flow, untested commands, pre-existing bugs
+
+
 ## Repo layout
 
 | Path | Description |
 |------|-------------|
 | `solvitaire_installv5.3.3.exe` | Original target (37.8 MB PE32 x86 installer) |
 | `CHANGELOG/2026-11-11.md` | Change log for this session |
+| `docs/` | Reverse engineering documentation: `RE_METHODOLOGY.md`, `FILE_FORMATS.md`, `API_PROTOCOL.md` |
 | `decompiled_installer/` | 2,826 Ghidra-decompiled installer functions (C-like pseudocode) |
 | `decompiled_game/` | 240 Ghidra-decompiled game launcher functions |
 | `java_source/com/solvitaire/solitaire/` | 1,216 CFR-decompiled Java source files (refactored) |

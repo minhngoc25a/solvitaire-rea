@@ -216,7 +216,7 @@ public final class t_0 {
         return (double)this.b < 0.1 && (double)this.c > 0.9;
     }
 
-    final boolean e(int n2) {
+    public boolean e(int n2) {
         this.AboutDialog(n2);
         return (double)this.b < 0.16 && (double)this.c > 0.68;
     }

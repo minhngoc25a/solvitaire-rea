@@ -21,7 +21,7 @@ public final class q {
     private boolean h;
     private int i;
     public pX c;
-    int d;
+    public int d;
     public double e = -10000.0;
     public double f = 10000.0;
 
@@ -35,7 +35,7 @@ public final class q {
         }
     }
 
-    final void AboutDialog(int n2) {
+    public final void AboutDialog(int n2) {
         this.i = n2;
         pX pX2 = this.c = AboutDialog[n2];
         pX2.getClass();
@@ -53,7 +53,7 @@ public final class q {
         return (n2 -= 101) / 100 * 13 + n2 % 100;
     }
 
-    final void AboutDialog(int n2, int n3) {
+    public final void AboutDialog(int n2, int n3) {
         if (this.g.d <= n2) {
             n3 = 0;
             while (n3 < 52) {

@@ -18,7 +18,7 @@ public final class so {
         this.c = true;
     }
 
-    final void AboutDialog() {
+    public final void AboutDialog() {
         if (this.AboutDialog.d <= 4) {
             this.AboutDialog.g("Invalidated cache");
         }
@@ -39,23 +39,23 @@ public final class so {
         this.c = false;
     }
 
-    final void AboutDialog(String string, boolean bl2) {
+    public final void AboutDialog(String string, boolean bl2) {
         if (this.c) {
             this.e();
         }
         this.b.AboutDialog(string, false);
     }
 
-    final int b() {
-        return this.b.e();
+    public final int b() {
+        return this.b.e;
     }
 
     final int c() {
-        return this.b.f();
+        return this.b.f;
     }
 
     final int d() {
-        return this.b.d();
+        return this.b.d;
     }
 
     final ErrorDialog AboutDialog(Card object, Rectangle object2) {

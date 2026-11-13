@@ -14,7 +14,7 @@ import java.util.Arrays;
 public final class CardRun {
     public int AboutDialog = 0;
     boolean b;
-    CardImage[] c = new CardImage[13];
+    public CardImage[] c = new CardImage[13];
     public Card d;
 
     CardRun() {

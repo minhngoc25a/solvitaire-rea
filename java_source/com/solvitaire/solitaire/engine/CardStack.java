@@ -13,15 +13,15 @@ public final class CardStack {
     int AboutDialog;
     private int k;
     public String b;
-    int c;
+    public int c;
     int d;
-    int e;
+    public int e;
     public Card[] f;
     Point2D.Double g;
     double h;
     double[] i;
 
-    CardStack(SolitaireGameEngine qo_02, String string, int n2, int n3, int n4, int n5) {
+    public CardStack(SolitaireGameEngine qo_02, String string, int n2, int n3, int n4, int n5) {
         this.j = qo_02;
         this.AboutDialog = n2;
         this.k = n4;
@@ -38,7 +38,7 @@ public final class CardStack {
         this.i = new double[6];
     }
 
-    CardStack(CardStack qv2, boolean bl2) {
+    public CardStack(CardStack qv2, boolean bl2) {
         this(qv2.j, qv2.b, qv2.AboutDialog, qv2.c, qv2.k, qv2.d);
         this.g = qv2.g;
         this.h = qv2.h;

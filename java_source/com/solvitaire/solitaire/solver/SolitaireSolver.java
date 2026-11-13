@@ -18,8 +18,8 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryUsage;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Random;
+import java.util.HashMap;
 
 public abstract class SolitaireSolver {
     SolitaireGameEngine d;
@@ -69,9 +69,9 @@ public abstract class SolitaireSolver {
     int DHandler;
     private HashMap[] aa = new HashMap[10];
     private HashMap[] ab = new HashMap[10];
-    boolean EHandler = false;
+    public boolean EHandler = false;
     boolean FPanel = true;
-    int G = -1;
+    public int G = -1;
     private int ac;
     private int ad;
     long[] H;
@@ -116,18 +116,18 @@ public abstract class SolitaireSolver {
         this.d = var1_1;
         this.d.ao = this;
         this.z = var2_4;
-        var1_1 = new Random(314159265358979323L);
-        var2_5 = var1_1.longs(256L, 1L, 1000000000000L);
-        this.H = var2_5.toArray();
-        var2_5 = var1_1.longs(256L, 1L, 1000000000000L);
-        this.ae = var2_5.toArray();
-        var1_2 = 500;
-        var1_3 = new boolean[501];
+        Random rand = new Random(314159265358979323L);
+        long[] randArray1 = rand.longs(256L, 1L, 1000000000000L).toArray();
+        this.H = randArray1;
+        long[] randArray2 = rand.longs(256L, 1L, 1000000000000L).toArray();
+        this.ae = randArray2;
+        int var1_2 = 500;
+        boolean[] var1_3 = new boolean[501];
         Arrays.fill(var1_3, true);
-        var2_6 = 2;
+        int var2_6 = 2;
         do {
             if (var1_3[var2_6]) {
-                var3_7 = var2_6 << 1;
+                int var3_7 = var2_6 << 1;
                 while (var3_7 <= 500) {
                     var1_3[var3_7] = false;
                     var3_7 += var2_6;
@@ -136,11 +136,11 @@ public abstract class SolitaireSolver {
             ++var2_6;
         } while (var2_6 * var2_6 <= 500);
         var2_6 = 3;
-        var3_7 = 1;
+        int var3_7 = 1;
         while (var3_7 < 5) {
-            var4_8 = 1;
+            int var4_8 = 1;
             do {
-                if (!var1_3[var2_6]) continue block3;
+                if (!var1_3[var2_6]) continue;
                 this.Q[var3_7 * 100 + var4_8] = var2_6++;
                 ++var4_8;
             } while (var4_8 < 14);
@@ -543,7 +543,7 @@ public abstract class SolitaireSolver {
         this.AboutDialog(n2, this.d.aZ, "Work moves");
     }
 
-    final void AboutDialog(int n2, qa qa2, String string) {
+    public final void AboutDialog(int n2, qa qa2, String string) {
         if (n2 >= this.d.d) {
             StringBuffer stringBuffer = this.AboutDialog(string, qa2.h);
             int n3 = 0;

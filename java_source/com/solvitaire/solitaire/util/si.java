@@ -40,7 +40,7 @@ public final class si {
         this.b = qo_02;
     }
 
-    final void AboutDialog() {
+    public final void AboutDialog() {
         if (this.f != null) {
             if (this.b.d <= 4) {
                 this.b.g("Expunging step dialog");

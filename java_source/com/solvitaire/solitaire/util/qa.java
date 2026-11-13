@@ -7,16 +7,16 @@ import com.solvitaire.solitaire.engine.CardStack;
 import java.util.Arrays;
 
 public final class qa {
-    CardStack[] AboutDialog = new CardStack[10];
-    int b;
-    int c;
+    public CardStack[] AboutDialog = new CardStack[10];
+    public int b;
+    public int c;
     int[] d;
     int[] e;
     int[] f;
     private int[] j;
-    int[] g;
-    int h;
-    int i;
+    public int[] g;
+    public int h;
+    public int i;
 
     public qa() {
         this.d = new int[350];
@@ -44,7 +44,7 @@ public final class qa {
         this.g = Arrays.copyOf(qa2.g, qa2.g.length);
     }
 
-    final void AboutDialog() {
+    public final void AboutDialog() {
         this.b = 0;
         this.c = 0;
         this.h = 0;
