@@ -16,7 +16,7 @@ import java.util.LinkedList;
 public final class Card {
     public SolitaireGameEngine AboutDialog;
     public CardStack b;
-    int c;
+    public int c;
     public CardRun d = null;
     public LinkedList e = new LinkedList();
     public int f;

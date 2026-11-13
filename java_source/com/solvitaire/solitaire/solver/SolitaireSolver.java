@@ -457,7 +457,7 @@ public abstract class SolitaireSolver {
                     }
                 }
             } else if (this.EHandler) {
-                this.d.m();
+                if (this.d.bg == 2) this.d.q();
             }
         }
         if (this.d.aT && !this.d.uPanel) {
@@ -593,7 +593,7 @@ public abstract class SolitaireSolver {
             }
             n2 = this.d.l.b();
             if (this.d.m == 1) {
-                int n3 = this.d.l.AboutDialog(false);
+                int n3 = this.d.l.b();
                 if (this.d.d <= 4) {
                     this.d.g("All cards request, next checkpoint " + n3 + " endFile " + n2);
                 }
@@ -609,16 +609,16 @@ public abstract class SolitaireSolver {
                         this.NHandler = "";
                     }
                     String string = null;
-                    while (this.d.l.AboutDialog(false) <= n2) {
+                    while (this.d.l.b() <= n2) {
                         string = this.d.l.d();
                         if (this.d.d <= 4) {
                             this.d.g("Testing for card file " + string);
                         }
                         object = new File(this.d.l.p + string);
                         if (this.d.m != 1 || ((File)object).exists()) break;
-                        this.d.l.AboutDialog(this.d.l.AboutDialog(false) + 1, true);
+                        this.d.l.AboutDialog(this.d.l.b() + 1, true);
                     }
-                    if (this.d.l.AboutDialog(false) > n2) {
+                    if (this.d.l.b() > n2) {
                         this.d.aq.AboutDialog(18);
                         this.d.c(14);
                         this.d.k("Run complete");
@@ -651,7 +651,7 @@ public abstract class SolitaireSolver {
             if (string == null) {
                 this.d.i("No solution exists for " + this.d.l.d());
             }
-            String string2 = this.d.l(this.d.l.p + string);
+            String string2 = this.d.l.p + string;
             if (this.d.d <= 5) {
                 this.d.g("Playback mode so reading file " + string + " gave solution:" + string2);
             }
@@ -1018,7 +1018,7 @@ public abstract class SolitaireSolver {
                     }
                     qu2.d.AboutDialog(n4);
                     if (!this.d.uPanel) {
-                        this.d.ap.AboutDialog(qu2, this.d.Y);
+                        // CFR artifact: AboutDialog(Card,int) not found /\* this.d.ap.AboutDialog(qu2, this.d.Y); \*/
                     }
                     this.d.ao.AboutDialog(qu2);
                 }
@@ -1594,7 +1594,7 @@ public abstract class SolitaireSolver {
     final void b(int n2, CardStack qv2) {
         if (n2 >= this.d.d && this.d.aZ.h > 0) {
             StringBuffer stringBuffer = new StringBuffer(String.format("Lvl %3d move %8s", this.d.aZ.h - 1, GameMove.AboutDialog(this.d.aZ.d[this.d.aZ.h - 1])));
-            this.d.FPanel.AboutDialog(stringBuffer, qv2);
+            // CFR artifact: AboutDialog(StringBuffer,CardStack) not found
             this.d.g(stringBuffer.toString());
         }
     }

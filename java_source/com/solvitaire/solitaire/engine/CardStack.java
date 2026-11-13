@@ -14,7 +14,7 @@ public final class CardStack {
     private int k;
     public String b;
     public int c;
-    int d;
+    public int d;
     public int e;
     public Card[] f;
     Point2D.Double g;
@@ -52,12 +52,12 @@ public final class CardStack {
         }
     }
 
-    final void AboutDialog(double d2, double d3) {
+    public final void AboutDialog(double d2, double d3) {
         this.g = new Point2D.Double(d2, d3);
         this.f[0].m = this.g.xHandler;
     }
 
-    final int AboutDialog(CardRun qm_02) {
+    public final int AboutDialog(CardRun qm_02) {
         if ((this.d & 0x40) == 0) {
             this.j.i("Cannot add AboutDialog run to AboutDialog stackset that is not SpiderSuits");
         }

@@ -10,9 +10,9 @@ public final class qa {
     public CardStack[] AboutDialog = new CardStack[10];
     public int b;
     public int c;
-    int[] d;
-    int[] e;
-    int[] f;
+    public int[] d;
+    public int[] e;
+    public int[] f;
     private int[] j;
     public int[] g;
     public int h;

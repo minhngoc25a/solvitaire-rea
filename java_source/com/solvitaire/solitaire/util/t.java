@@ -11,27 +11,27 @@ public final class t {
     private static String[] t = new String[]{"unknown", "unused", "boards", "ncards", "spcfic", "stacks", "target"};
     private SolitaireGameEngine uPanel;
     public boolean AboutDialog;
-    boolean b;
+    public boolean b;
     public int c;
     private boolean v = false;
-    int d;
-    int e;
+    public int d;
+    public int e;
     public int f = 1;
-    int g;
-    int h;
-    int i;
-    int j;
+    public int g;
+    public int h;
+    public int i;
+    public int j;
     public int k;
-    int l;
-    int m;
-    int n;
-    int o;
+    public int l;
+    public int m;
+    public int n;
+    public int o;
     public String p;
     public String q;
     private String wHandler;
     private int xHandler;
     public boolean rPanel;
-    boolean s;
+    public boolean s;
 
     public t(SolitaireGameEngine qo_02, int n2) {
         this.uPanel = qo_02;
@@ -72,9 +72,9 @@ public final class t {
         t2.AboutDialog(t2.uPanel.ag, true);
     }
 
-    final int b() {
+    public final int b() {
         int n2 = 0;
-        String string = this.uPanel.l(this.p + "chkpt.txt");
+        String string = null; // CFR artifact: l(String) not found
         if (string == null) {
             if (this.uPanel.d <= 5) {
                 this.uPanel.g("Did not find checkpoint file, endFile set to 0");
@@ -296,7 +296,7 @@ public final class t {
         return object;
     }
 
-    final String e() {
+    public final String e() {
         String string = this.rPanel ? "solution_cards" + this.xHandler : (this.wHandler.endsWith(".txt") ? "solution_" + this.wHandler.substring(0, this.wHandler.length() - 4) : "solution_" + this.wHandler);
         switch (this.c) {
             case 2: {
@@ -323,7 +323,7 @@ public final class t {
         return string;
     }
 
-    final String f() {
+    public final String f() {
         String string = this.rPanel ? "solution_cards" + this.xHandler : (this.wHandler.endsWith(".txt") ? "solution_" + this.wHandler.substring(0, this.wHandler.length() - 4) : "solution_" + this.wHandler);
         Object object = new File(this.uPanel.l.p);
         if ((object = ((File)object).list()) == null) {
@@ -378,7 +378,7 @@ public final class t {
         return string;
     }
 
-    final String k() {
+    public final String k() {
         String string = this.j() + ": ";
         switch (this.c) {
             case 1: {

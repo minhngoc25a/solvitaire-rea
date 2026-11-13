@@ -648,7 +648,7 @@ extends g {
         }
     }
 
-    final void f() {
+    public final void f() {
         this.aL.setText(ak[this.k.i]);
         this.aM.setText(" Seed # " + this.k.bo);
         this.aD.setText(this.k.l.p + this.k.l.d());

@@ -27,7 +27,7 @@ import javax.swing.JOptionPane;
 public abstract class BoardReader {
     private int p;
     private double q;
-    int AboutDialog = -1;
+    public int AboutDialog = -1;
     int b = 0;
     private int rPanel;
     private int s;
@@ -1118,7 +1118,7 @@ lbl309:
         return n2;
     }
 
-    final void b(GameMove pJ2, int n2) {
+    public final void b(GameMove pJ2, int n2) {
         this.m = n2 + 1;
         if (this.l[this.m] == null) {
             this.l[this.m] = new pK(this.B);
@@ -1138,7 +1138,7 @@ lbl309:
         }
     }
 
-    final void b(GameMove object) {
+    public final void b(GameMove object) {
         if (((GameMove)object).AboutDialog != this.l[this.m].AboutDialog) {
             String string = "Logic error, undo references move " + GameMove.AboutDialog(((GameMove)object).AboutDialog) + " at level " + (((GameMove)object).j + 1) + " but current state (" + this.m + ") set up with " + GameMove.AboutDialog(this.l[this.m].AboutDialog);
             object = this.f;
@@ -1550,7 +1550,7 @@ lbl309:
         }
     }
 
-    final int AboutDialog(qa qa2, Card qu2, boolean n2, boolean bl2, boolean bl3) {
+    public final int AboutDialog(qa qa2, Card qu2, boolean n2, boolean bl2, boolean bl3) {
         Object object;
         int n3;
         int n4;

@@ -98,7 +98,7 @@ public final class SolitaireGameEngine {
     static final String p;
     static final String q;
     static final String rPanel;
-    static final String s;
+    public static final String s;
     public boolean t = false;
     public boolean uPanel = false;
     volatile int v;
@@ -108,11 +108,11 @@ public final class SolitaireGameEngine {
     volatile boolean z;
     public double A = 1.0;
     j B;
-    Rectangle CHandler = new Rectangle();
+    public Rectangle CHandler = new Rectangle();
     private Rectangle bF = new Rectangle();
     int DHandler;
     int EHandler;
-    GameStats FPanel;
+    public GameStats FPanel;
     int G;
     double H;
     double I;
@@ -126,12 +126,12 @@ public final class SolitaireGameEngine {
     long Q;
     long R;
     long SPanel;
-    int T;
+    public int T;
     public int U;
-    boolean V;
+    public boolean V;
     public boolean W;
-    int X = 0;
-    int Y = 0;
+    public int X = 0;
+    public int Y = 0;
     public int Z = 0;
     public int aa = 0;
     public int ab = 1;
@@ -145,15 +145,15 @@ public final class SolitaireGameEngine {
     private long bH;
     volatile boolean ai;
     volatile boolean DesktopDuplication;
-    volatile boolean ak;
+    public volatile boolean ak;
     volatile boolean al;
-    volatile boolean am;
+    public volatile boolean am;
     public volatile boolean an;
     private Thread bI;
     public SolitaireSolver ao = null;
-    BoardReader ap = null;
+    public BoardReader ap = null;
     public MainWindow aq = null;
-    pLPanel ar = null;
+    public pLPanel ar = null;
     public String as;
     public String at;
     public String au;
@@ -165,20 +165,20 @@ public final class SolitaireGameEngine {
     public String az;
     public String aA;
     t_0 aB = new t_0(this);
-    WinUser32 aC;
-    so aD = new so(this);
+    public WinUser32 aC;
+    public so aD = new so(this);
     private qj bK = new qj();
     public int aE = 999;
-    volatile boolean aF = false;
+    public volatile boolean aF = false;
     volatile boolean aG = false;
     volatile boolean aH = false;
-    volatile int aI = 0;
+    public volatile int aI = 0;
     volatile int aJ = 0;
     volatile boolean aK;
-    volatile int aL = 0;
-    volatile boolean aM = false;
+    public volatile int aL = 0;
+    public volatile boolean aM = false;
     volatile boolean aN = false;
-    volatile boolean aO = false;
+    public volatile boolean aO = false;
     volatile boolean aP = false;
     volatile boolean aQ = false;
     volatile boolean aR = false;
@@ -189,16 +189,16 @@ public final class SolitaireGameEngine {
     public boolean aW = false;
     public boolean aX = false;
     public qa aY;
-    qa aZ;
+    public qa aZ;
     private boolean bL = false;
     public double ba = 20.0;
     public int bb;
     public boolean bc;
-    qa bd = new qa();
-    qa be = new qa();
+    public qa bd = new qa();
+    public qa be = new qa();
     public boolean bf;
     public int bg;
-    static final String[] bh;
+    public static final String[] bh;
     public boolean bi;
     public String bj;
     public String bk;
@@ -804,7 +804,7 @@ public final class SolitaireGameEngine {
         } while (l2 <= l4);
     }
 
-    final void AboutDialog(long l2, String string) {
+    public final void AboutDialog(long l2, String string) {
         if (this.d <= 5) {
             int n2;
             int n3 = l2 <= 5L ? 1 : (n2 = l2 < 50L ? 3 : 5);
@@ -1083,7 +1083,7 @@ public final class SolitaireGameEngine {
         }
     }
 
-    final void j(String string) {
+    public final void j(String string) {
         Desktop desktop = Desktop.getDesktop();
         try {
             URI uRI = new URI(string);
@@ -1203,11 +1203,11 @@ public final class SolitaireGameEngine {
         this.FPanel = new GameStats(this);
     }
 
-    final void AboutDialog(int n2) {
+    public final void AboutDialog(int n2) {
         this.b(39, 120);
     }
 
-    final void b(int n2, int n3) {
+    public final void b(int n2, int n3) {
         if (this.d <= 5) {
             this.g("Keystroke " + n2 + " delay " + n3);
         }
@@ -1216,7 +1216,7 @@ public final class SolitaireGameEngine {
         this.AboutDialog((long)(n3 - 100));
     }
 
-    final void AboutDialog(int n2, boolean bl2) {
+    public final void AboutDialog(int n2, boolean bl2) {
         if (n2 == 17) {
             if (this.bt == bl2) {
                 if (this.d <= 5) {
@@ -1244,7 +1244,7 @@ public final class SolitaireGameEngine {
         this.h(point.x, point.y);
     }
 
-    final void c(double d2, double d3) {
+    public final void c(double d2, double d3) {
         this.h(d2, d3);
     }
 
@@ -1588,11 +1588,11 @@ public final class SolitaireGameEngine {
         this.DesktopDuplication = false;
     }
 
-    final void k(String string) {
+    public final void k(String string) {
         this.b(string, false);
     }
 
-    final void b(String string, boolean bl2) {
+    public final void b(String string, boolean bl2) {
         long l2;
         if (this.e && Thread.currentThread() != this.bI) {
             this.g("Invalid call to doPause: " + SolitaireGameEngine.AboutDialog(new Exception()));
@@ -1651,7 +1651,7 @@ public final class SolitaireGameEngine {
                             this.ao.AboutDialog(0, qa2, "");
                             if (this.ao.EHandler) {
                                 this.g("Game was solved so request AboutDialog reset now");
-                                this.m();
+                                this.m_method();
                                 this.bC = 14;
                                 this.aq.AboutDialog(1);
                                 break;
@@ -1777,7 +1777,7 @@ public final class SolitaireGameEngine {
         return charBuffer.toString();
     }
 
-    final void AboutDialog(String object, String object2, boolean bl2) {
+    public final void AboutDialog(String object, String object2, boolean bl2) {
         String string;
         block13: {
             OutputStreamWriter outputStreamWriter = null;
@@ -1866,7 +1866,7 @@ public final class SolitaireGameEngine {
         return string;
     }
 
-    final void j() {
+    public final void j() {
         if (this.aS) {
             if (this.ab > 3) {
                 this.AboutDialog("Sorry, only 3 consecutive games in the trial version<br>Restart Solvitaire to run more games", true);
@@ -1876,7 +1876,7 @@ public final class SolitaireGameEngine {
         }
     }
 
-    private void q() {
+    public void q() {
         if (this.bg == 2) {
             int n2 = this.bo;
             ChallengeSolver qx_02 = this.br;
@@ -1920,7 +1920,7 @@ public final class SolitaireGameEngine {
         return false;
     }
 
-    final void l() {
+    public final void l() {
         if (this.d <= 5) {
             SolitaireGameEngine qo_02 = this;
             qo_02.g("Into termD3D, current d3d object is " + String.valueOf(qo_02.bs));
@@ -1931,7 +1931,7 @@ public final class SolitaireGameEngine {
         // CFR artifact: bs is Object, b() call removed
     }
 
-    final void m() {
+    public final void m_method() {
         if (this.bg == 2) {
             this.q();
         }

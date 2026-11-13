@@ -288,7 +288,7 @@ public final class MainWindow {
     private Properties cn = new Properties();
     Container yHandler;
     JPanel z;
-    JPanel A;
+    public JPanel A;
     JPanel B;
     public JPanel CHandler;
     private saPanel[][] co;
@@ -1958,7 +1958,7 @@ public final class MainWindow {
         this.wHandler();
     }
 
-    final synchronized void c(int n2, String string) {
+    public final synchronized void c(int n2, String string) {
         if (n2 != 16) {
             this.U = n2;
             if (string != null) {
@@ -2418,7 +2418,7 @@ public final class MainWindow {
         this.cn.setProperty(string, string2);
     }
 
-    final void t() {
+    public final void t() {
         try {
             Object object = this.d.as + File.separator + "solvitaire.properties";
             if (this.d.d <= 4) {
@@ -2551,7 +2551,7 @@ public final class MainWindow {
         JOptionPane.showOptionDialog(this.d.aq.g, "\n\n" + string2 + "\n\n", string, 0, 2, null, dj, dj[0]);
     }
 
-    final boolean d(String string, String string2) {
+    public final boolean d(String string, String string2) {
         int n2 = JOptionPane.showOptionDialog(this.d.aq.g, "\n\n" + string2 + "\n\n", string, 0, 2, null, dk, dk[0]);
         return n2 == 0;
     }
