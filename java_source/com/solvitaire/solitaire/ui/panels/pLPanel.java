@@ -109,11 +109,11 @@ extends g {
     int Y;
     private int aE;
     int Z;
-    int aa;
-    int ab;
+    public int aa;
+    public int ab;
     private int aF;
     private int aG;
-    int ac;
+    public int ac;
     private int aH;
     private int aI;
     public JPanel ad;
@@ -130,10 +130,10 @@ extends g {
     private JButton aR;
     private double aS = 1.0;
     private int[] aT;
-    boolean ag;
-    boolean ah;
+    public boolean ag;
+    public boolean ah;
     private static Dimension aU = new Dimension(100, 0);
-    int ai;
+    public int ai;
     int DesktopDuplication;
     private pM aV = new pM(this);
 

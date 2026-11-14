@@ -14,9 +14,9 @@ import java.util.List;
  */
 public final class ChallengeSolver {
     public SolitaireGameEngine AboutDialog;
-    String b;
-    String c;
-    int d;
+    public String b;
+    public String c;
+    public int d;
     private int q;
     public List e;
     public List f;
@@ -24,10 +24,10 @@ public final class ChallengeSolver {
     public List h;
     public List i;
     public qy_0 j;
-    int k = 99999999;
-    int l;
-    int m = 99999999;
-    int n;
+    public int k = 99999999;
+    public int l;
+    public int m = 99999999;
+    public int nt n;
     public String o;
     public boolean p;
 

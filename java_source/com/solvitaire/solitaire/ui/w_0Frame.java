@@ -48,7 +48,7 @@ import javax.swing.border.EmptyBorder;
 public final class w_0Frame {
     public JDialog AboutDialog;
     public SolitaireGameEngine b;
-    boolean c;
+    public boolean c;
     private int v;
     public JTextField d = new JTextField(5);
     public JTextField e = new JTextField(5);

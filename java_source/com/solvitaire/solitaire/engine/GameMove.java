@@ -12,23 +12,23 @@ import java.util.Vector;
 public final class GameMove {
     private SolitaireGameEngine s;
     int AboutDialog;
-    int b;
+    public int b;
     public CardStack c;
     public CardStack d;
     public Card e;
-    int f;
+    public int f;
     public Card g;
-    int h;
-    int i;
-    int j;
-    int k;
-    int l;
-    int m;
-    boolean n;
-    boolean o;
-    boolean p;
-    int q;
-    int rPanel;
+    public int h;
+    public int int i;
+    public int j;
+    public int k;
+    public int l;
+    public int m;
+    public boolean n n;
+    public boolean oolean o;
+    public boolean p;
+    public int q;
+    public int rPanel;
 
     GameMove(SolitaireGameEngine qo_02, int n2, int n3) {
         this.s = qo_02;

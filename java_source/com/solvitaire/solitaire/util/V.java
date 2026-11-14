@@ -11,10 +11,10 @@ public final class V {
     private int h;
     private int i;
     int AboutDialog;
-    int b;
-    float c;
-    float d;
-    float e;
+    public int b;
+    public float c;
+    public float d;
+    public float e;
 
     V(int n2, int n3, float f2, float f3, float f4, int n4) {
         this.f = n2 >> 16 & 0xFF;

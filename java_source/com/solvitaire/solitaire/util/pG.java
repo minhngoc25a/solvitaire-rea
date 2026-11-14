@@ -7,7 +7,7 @@ import com.solvitaire.solitaire.engine.GameStats;
 
 public final class pG {
     int AboutDialog;
-    int b;
+    public int b;
     private /* synthetic */ GameStats c;
 
     pG(GameStats pF2) {

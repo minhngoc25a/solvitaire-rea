@@ -57,8 +57,8 @@ public final class uPanel {
     private JButton rPanel = new JButton(">");
     private JButton s = new JButton("^");
     private JButton t = new JButton("v");
-    int e;
-    int f;
+    public int e;
+    public int f;
     private JButton uPanel = new JButton("<");
     private JButton v = new JButton(">");
     private JButton wHandler = new JButton("^");

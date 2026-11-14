@@ -60,8 +60,8 @@ extends SolitaireSolver {
     private pCBoardReader av;
     private int[][] aw;
     private int ax;
-    int[] b;
-    int[] c;
+    public int[] b;
+    public int[] c;
 
     static {
         int[] nArray = new int[5];

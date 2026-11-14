@@ -10,7 +10,7 @@ import com.solvitaire.solitaire.reader.BoardReader;
  */
 public final class f_0 {
     int AboutDialog;
-    int b;
+    public int b;
     private /* synthetic */ BoardReader c;
 
     public f_0(BoardReader e_02) {

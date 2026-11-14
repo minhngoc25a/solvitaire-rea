@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public final class CardRun {
     public int AboutDialog = 0;
-    boolean b;
+    public boolean boolean b;
     public CardImage[] c = new CardImage[13];
     public Card d;
 

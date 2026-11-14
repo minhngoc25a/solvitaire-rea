@@ -20,16 +20,16 @@ public final class Card {
     public CardRun d = null;
     public LinkedList e = new LinkedList();
     public int f;
-    boolean g;
+    public boolean g;
     public boolean h;
     private boolean q;
     public boolean i = false;
     public boolean j = false;
-    long k;
-    long l;
-    double m;
-    boolean n;
-    boolean o;
+    public long k;
+    public long long l;
+    public double m;
+    public boolean n n;
+    public boolean oolean o;
     public qw_0 p;
 
     Card(SolitaireGameEngine qo_02, CardStack qv2, int n2, boolean bl2) {

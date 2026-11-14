@@ -157,7 +157,7 @@ public final class SolitaireGameEngine {
     public String as;
     public String at;
     public String au;
-    qn av;
+    public qn av;
     private qk_0 bJ;
     public String aw;
     public boolean ax;
@@ -209,7 +209,7 @@ public final class SolitaireGameEngine {
     public int bp;
     public GameConfig bq = new GameConfig();
     public ChallengeSolver br = new ChallengeSolver(this);
-    Object bs; // CFR artifact: DesktopDuplication excluded from compilation
+    public Object bs; // CFR artifact: DesktopDuplication excluded from compilation
     public boolean bt;
     private int[][][] bM = new int[350][3][8];
     public q bu;

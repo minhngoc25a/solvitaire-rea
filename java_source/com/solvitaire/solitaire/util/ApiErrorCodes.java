@@ -12,10 +12,10 @@ import com.solvitaire.solitaire.engine.SolitaireGameEngine;
 public final class ApiErrorCodes {
     static final String[] AboutDialog = new String[]{"SUCCESS", "BADLY FORMATTED REQUEST", "NO ACCOUNT FOR THIS EMAIL ADDRESS", "MISSING OR INVALID PC ID", "MISSING OR INVALID REQUEST SIGNATURE", "INVALID PINCODE", "DATABASE LOOKUP ERROR'", "UNEXPECTED ERROR", "SOCKET TIMEOUT"};
     private SolitaireGameEngine e;
-    int b;
+    public int b;
     public String c;
     private String f;
-    boolean d;
+    public boolean d;
     private String g;
 
     public ApiErrorCodes() {

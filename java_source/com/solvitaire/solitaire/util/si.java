@@ -31,7 +31,7 @@ public final class si {
     public Container AboutDialog;
     public SolitaireGameEngine b;
     public JList c;
-    int[] d;
+    public int[] d;
     private int g;
     public int e = 0;
     private Point h = new Point();

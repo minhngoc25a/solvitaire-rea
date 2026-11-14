@@ -17,9 +17,9 @@ public final class CardStack {
     public int d;
     public int e;
     public Card[] f;
-    Point2D.Double g;
-    double h;
-    double[] i;
+    public Point2D.Double g;
+    public double h;
+    public double[] i;
 
     public CardStack(SolitaireGameEngine qo_02, String string, int n2, int n3, int n4, int n5) {
         this.j = qo_02;

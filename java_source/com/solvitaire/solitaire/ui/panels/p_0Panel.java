@@ -15,8 +15,8 @@ import javax.swing.JPanel;
 public final class p_0Panel
 extends JPanel {
     public Image AboutDialog;
-    int b;
-    int c;
+    public int b;
+    public int c;
     private /* synthetic */ k_0Panel d;
 
     p_0Panel(k_0Panel object, int n2, int n3) {

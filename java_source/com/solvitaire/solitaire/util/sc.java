@@ -15,7 +15,7 @@ public final class sc
 extends ButtonGroup {
     public sdHandler AboutDialog;
     public String b;
-    int c;
+    public int c;
     private /* synthetic */ MainWindow d;
 
     sc(MainWindow qb_02, String string, int n2) {

@@ -74,9 +74,9 @@ extends g {
     private int W = -1;
     private int X = -1;
     public double wHandler = 0.0;
-    boolean xHandler;
-    boolean yHandler;
-    boolean z;
+    public boolean xHandler;
+    public boolean yHandler;
+    public boolean z;
     private int Y;
     private int Z;
     private int aa;

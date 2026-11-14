@@ -17,8 +17,8 @@ public final class t_0 {
     static final String[] AboutDialog = new String[]{"end list", "white", "black", "gray", "red", "orange", "yellow", "green", "cyan", "blue", "magenta", "dark green", "", "", "", "", "", "", "", "", "bronze", "silver", "gold", "diamond", "menu blue", "table green"};
     private SolitaireGameEngine e;
     private float f;
-    float b;
-    float c;
+    public float b;
+    public float c;
     private float[] g;
     static final u_0 d = new u_0(255, 255, 255);
 

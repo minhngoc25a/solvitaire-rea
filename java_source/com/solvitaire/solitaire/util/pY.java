@@ -8,11 +8,11 @@ import com.solvitaire.solitaire.util.s_0;
 
 public final class pY {
     public s_0 AboutDialog;
-    s_0[] b = new s_0[52];
-    int c;
-    double d;
-    boolean e;
-    int f;
+    public s_0[] b = new s_0[52];
+    public int c;
+    public double double d;
+    public boolean ean e;
+    public int f;
     private /* synthetic */ pX g;
 
     pY(pX pX2) {

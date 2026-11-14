@@ -39,9 +39,9 @@ public final class qbFrame {
     private JButton j = new JButton("  OK  ");
     private JButton k = new JButton("Cancel");
     public JLabel e;
-    int f;
+    public int f;
     public t[] g;
-    int[] h;
+    public int[] h;
     private Font l;
     private Color m;
 

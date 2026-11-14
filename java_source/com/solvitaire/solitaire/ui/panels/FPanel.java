@@ -28,22 +28,22 @@ public final class FPanel
 extends JPanel {
     public ErrorDialog AboutDialog;
     public BufferedImage b;
-    byte[][] c;
-    int d;
+    public byte[][] c;
+    public int d;
     public u_0 e;
     public u_0 f;
     private u_0 l;
     public u_0 g;
     public u_0 h;
     private Point m;
-    int i;
+    public int int i;
     private CardStack n;
     private int o;
     private pX p;
     private qw_0 q;
     private boolean rPanel = false;
     private boolean s = true;
-    boolean j;
+    public boolean j;
     final /* synthetic */ uPanel k;
 
     FPanel(uPanel u2, pX pX2, CardStack qv2, int n2, Point point, boolean bl2) {

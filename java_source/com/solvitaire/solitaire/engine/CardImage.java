@@ -26,24 +26,24 @@ public final class CardImage {
     private static final Color uPanel = new Color(0xC0C0C0);
     private static final Color v = new Color(0xE00800);
     public SolitaireGameEngine d;
-    int e;
-    int f;
+    public int e;
+    public int f;
     public int g;
     public Point h = new Point();
     private Point wHandler = new Point();
     public pW i = null;
     public pW j = null;
     private long xHandler;
-    boolean k;
-    boolean l;
-    int m;
+    public boolean k;
+    public boolean lean l;
+    public int m;
     private Rectangle yHandler;
     private boolean z;
     private boolean A;
-    boolean n;
+    public boolean n n;
     public Card o;
     public CardRun p;
-    int q;
+    public int q;
 
     static {
         new Point(0, 0);

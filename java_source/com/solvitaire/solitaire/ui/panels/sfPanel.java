@@ -20,7 +20,7 @@ extends JPanel {
     private int f;
     private int g;
     int AboutDialog;
-    int b;
+    public int b;
     private /* synthetic */ MainWindow h;
 
     sfPanel(MainWindow qb_02, Component component, int n2) {
