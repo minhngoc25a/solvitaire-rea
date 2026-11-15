@@ -19,18 +19,18 @@ public final class GameMove {
     public int f;
     public Card g;
     public int h;
-    public int int i;
+    public int i;
     public int j;
     public int k;
     public int l;
     public int m;
-    public boolean n n;
-    public boolean oolean o;
+    public boolean n;
+    public boolean o;
     public boolean p;
     public int q;
     public int rPanel;
 
-    GameMove(SolitaireGameEngine qo_02, int n2, int n3) {
+    public GameMove(SolitaireGameEngine qo_02, int n2, int n3) {
         this.s = qo_02;
         this.j = n3;
         this.AboutDialog = n2;

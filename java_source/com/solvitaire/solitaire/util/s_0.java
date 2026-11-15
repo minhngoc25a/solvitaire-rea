@@ -20,13 +20,13 @@ public final class s_0 {
     public int f;
     public int g;
     public int h;
-    public int[][] int[][] i;
+    public int[][] i;
     public int j;
     public int k;
     public int l;
     public int m;
-    public int nt n;
-    public boolean oolean o;
+    public int n;
+    public boolean o;
 
     s_0(SolitaireGameEngine qo_02, pX pX2, int n2) {
         this.p = qo_02;

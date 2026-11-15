@@ -14,7 +14,7 @@ public final class qq_0 {
     private double d;
     private double e;
     private String f;
-    public boolean boolean b;
+    public boolean b;
     private /* synthetic */ qp_0 g;
 
     qq_0(qp_0 qp_02, double d2, int n2, String string) {

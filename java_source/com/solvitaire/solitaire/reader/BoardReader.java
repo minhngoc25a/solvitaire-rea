@@ -36,13 +36,13 @@ public abstract class BoardReader {
     public long d;
     private int uPanel;
     private int v;
-    public boolean ean e;
+    public boolean e;
     private long wHandler;
     private SolitaireSolver xHandler;
     public SolitaireGameEngine f;
     public GameStats g;
     public int h = -1;
-    public int int i = -1;
+    public int i = -1;
     public int j = -1;
     public boolean k;
     private int yHandler = -1;

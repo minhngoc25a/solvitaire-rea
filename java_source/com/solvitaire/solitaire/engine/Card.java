@@ -26,10 +26,10 @@ public final class Card {
     public boolean i = false;
     public boolean j = false;
     public long k;
-    public long long l;
+    public long l;
     public double m;
-    public boolean n n;
-    public boolean oolean o;
+    public boolean n;
+    public boolean o;
     public qw_0 p;
 
     Card(SolitaireGameEngine qo_02, CardStack qv2, int n2, boolean bl2) {

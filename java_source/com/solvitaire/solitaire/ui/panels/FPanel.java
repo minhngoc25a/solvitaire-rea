@@ -36,7 +36,7 @@ extends JPanel {
     public u_0 g;
     public u_0 h;
     private Point m;
-    public int int i;
+    public int i;
     private CardStack n;
     private int o;
     private pX p;

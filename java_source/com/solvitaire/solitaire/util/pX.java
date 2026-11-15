@@ -40,7 +40,7 @@ public final class pX {
     public int[][][] q;
     public int[] rPanel;
     public int[] s;
-    public int[] t[] t;
+    public int[] t;
     public int[] uPanel;
     public int v;
     public int wHandler;

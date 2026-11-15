@@ -27,7 +27,7 @@ public final class ChallengeSolver {
     public int k = 99999999;
     public int l;
     public int m = 99999999;
-    public int nt n;
+    public int n;
     public String o;
     public boolean p;
 

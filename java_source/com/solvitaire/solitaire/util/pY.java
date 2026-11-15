@@ -10,8 +10,8 @@ public final class pY {
     public s_0 AboutDialog;
     public s_0[] b = new s_0[52];
     public int c;
-    public double double d;
-    public boolean ean e;
+    public double d;
+    public boolean e;
     public int f;
     private /* synthetic */ pX g;
 

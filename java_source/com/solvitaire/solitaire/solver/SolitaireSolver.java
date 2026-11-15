@@ -28,13 +28,13 @@ public abstract class SolitaireSolver {
     public int f;
     public int[][] g;
     public int[] h;
-    public int[] int[] i;
+    public int[] i;
     public int j;
     public int[] k;
-    public double[] le[] l;
+    public double[] l;
     public int m;
     private int[] b;
-    public int nt n;
+    public int n;
     public int o;
     public int p;
     public int q;
@@ -51,7 +51,7 @@ public abstract class SolitaireSolver {
     private int SPanel;
     private int T;
     private int U;
-    public int[][] t[][] t;
+    public int[][] t;
     private boolean V = false;
     public int uPanel;
     public int v;
@@ -580,7 +580,7 @@ public abstract class SolitaireSolver {
         }
     }
 
-    final boolean k() {
+    public final boolean k() {
         Object object;
         int n2;
         boolean bl2 = true;

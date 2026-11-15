@@ -35,12 +35,12 @@ public final class CardImage {
     public pW j = null;
     private long xHandler;
     public boolean k;
-    public boolean lean l;
+    public boolean l;
     public int m;
     private Rectangle yHandler;
     private boolean z;
     private boolean A;
-    public boolean n n;
+    public boolean n;
     public Card o;
     public CardRun p;
     public int q;

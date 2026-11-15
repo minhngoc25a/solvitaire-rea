@@ -152,11 +152,11 @@ public final class MainWindow {
     public JFrame g;
     private String Z;
     public int h;
-    public int int i;
+    public int i;
     public int j;
     public int k;
     private int aa;
-    public boolean lean l;
+    public boolean l;
     private boolean ab;
     private boolean ac = false;
     private sc ad;
@@ -177,8 +177,8 @@ public final class MainWindow {
     private se as;
     private se at;
     private se au;
-    public JCheckBoxMenuItem m m;
-    public JCheckBoxMenuItem nuItem n;
+    public JCheckBoxMenuItem m;
+    public JCheckBoxMenuItem n;
     public JCheckBoxMenuItem o;
     public JCheckBoxMenuItem p;
     public JCheckBoxMenuItem q;
@@ -190,7 +190,7 @@ public final class MainWindow {
     private JMenuItem ay;
     private JMenuItem az;
     private JMenuItem aA;
-    public JCheckBoxMenuItem tem t;
+    public JCheckBoxMenuItem t;
     public JCheckBoxMenuItem uPanel;
     public JCheckBoxMenuItem v;
     public JCheckBoxMenuItem wHandler;
