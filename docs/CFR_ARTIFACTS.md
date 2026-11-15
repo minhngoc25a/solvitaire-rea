@@ -2,9 +2,38 @@
 
 ## Overview
 
-The Java source in `java_source/com/solvitaire/solitaire/` was recovered using CFR 0.152 from the obfuscated game JAR embedded in the InstallForge installer. CFR produced syntactically valid but semantically broken code in several places due to obfuscation and control-flow flattening. This document catalogs the artifacts that could not be mechanically fixed and require original code intent to resolve.
+The Java source in `java_source/com/solvitaire/solitaire/` was recovered using CFR 0.152 from the obfuscated game JAR embedded in the InstallForge installer. CFR produced syntactically valid but semantically broken code in several places due to obfuscation and control-flow flattening. This document catalogs the artifacts that could not be mechanically fixed and require original code intent to resolve, as well as the compilation fixes that were successfully applied.
 
-## Categories of CFR artifacts
+## Compilation Fixes Applied (Visibility)
+
+Made ~165 fields/methods public across 20+ files to resolve cross-package access errors:
+
+### Engine package (`com.solvitaire.solitaire.engine`)
+- `Card.java`: field `c` made public
+- `CardImage.java`: constructor made public; fields `e`, `f` made public
+- `CardRun.java`: field `b` made public
+- `CardStack.java`: field `d` made public; field `AboutDialog` made public; methods `AboutDialog(double,double)`, `AboutDialog(CardRun)` made public
+- `SolitaireGameEngine.java`: ~30 fields made public (`aL`, `aM`, `be`, `aO`, `aC`, `ak`, `aD`, `aI`, `X`, `Y`, `s`, `V`, `T`, `Z`, `aa`, `bf`, `bg`, `aT`, `bu`, `br`, `uPanel`, `an`, `ah`, `am`, `FPanel`, `ap`, `ar`, `bd`, `CHandler`, `n`); methods `AboutDialog(int)`, `AboutDialog(long,String)`, `AboutDialog(String,String,boolean)`, `AboutDialog(int,qa,String)`, `b(int,int)`, `b(String,boolean)`, `c(double,double)`, `j()`, `j(String)`, `k(String)`, `l()`, `q()` made public
+
+### util package (`com.solvitaire.solitaire.util`)
+- `pX.java`: fields `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k` made public
+- `pH.java`: fields made public; constructor made public
+- `s_0.java`: field `e` and copy constructor made public
+- `q.java`: field `AboutDialog` made public
+- `qy_0.java`: Fields and methods made public
+- `t.java`: fields `b`, `g`, `s`, `h`, `m`, `j`, `n`, `i`, `d`, `e`, `l`, `o` made public; methods `b()`, `e()`, `f()`, `k()` made public
+- `pK.java`: constructor made public
+
+### Engine package additional (`com.solvitaire.solitaire.engine`)
+- `GameMove.java`: constructor `(SolitaireGameEngine,int,int)` made public; method `AboutDialog(int)` made public
+
+### ui package (`com.solvitaire.solitaire.ui`)
+- `MainWindow.java`: `c(int)`, `d(String)`, `t()` methods made public; field `A` made public
+
+### ui.panels package (`com.solvitaire.solitaire.ui.panels`)
+- `pLPanel.java`: method `f()` made public
+
+## Categories of CFR artifacts (unfixable mechanically)
 
 ### 1. Invalid method signatures
 
@@ -60,32 +89,32 @@ CFR omits type declarations for local variables:
 | `var2_5` (LongStream), `var1_2` (int), `var1_3` (boolean[]), `var2_6` (int), `var3_7` (int), `var4_8` (int) | `SolitaireSolver.java:120-148` |
 | `var7_11` (ErrorDialog), `var10_17` (ErrorDialog), `var11_29` (pY), `var10_18` (Card), `var14_24` (int), `var16_28` (boolean), `var15_26` (int) | `GameStats.java:1570-1610` |
 
-### 6. Cross-package access
-
-Fields/methods are package-private but accessed from another package:
-
-| Access | From | To | Example |
-|--------|------|-----|---------|
-| `SolitaireSolver.ao` field | `solver` | `engine` | `SolitaireSolver.java:117` |
-| `SolitaireGameEngine.W`, `U`, `Z`, `aa`, `bf`, `bg`, `aT`, `bu`, `br`, `uPanel`, `an`, `ah`, `am`, `ah`, `T` fields | `solver` | `engine` | `SolitaireSolver.java:182+` |
-| `t.k` field | `solver` | `util` | `SolitaireSolver.java:214` |
-| `CardImage(SolitaireGameEngine)` constructor | `solver` | `engine` | `SolitaireSolver.java:191` |
-
-### Files with zero remaining errors (fully fixed)
+## Files with zero remaining errors (fully fixed)
 
 - `data/do_0.java`, `util/co_0.java`
 - All 779 `data/*.java` files
 - `reader/qi_0BoardReader.java`
 - `native/WinUser32.java` (renamed to `jni`)
-- `engine/GameStats.java` (~30 errors remain, mostly stubbed methods)
-- `ui/panels/uPanel.java`
 - `util/qy_0.java`, `util/q.java`, `util/pX.java`, `util/pH.java`, `util/s_0.java`, `util/t.java`
 - `engine/CardImage.java`
 - `ui/MainWindow.java`
 
+## Remaining compile errors (~94)
+
+- `engine/SolitaireGameEngine.java` (~20): cross-package field access, method signature mismatches
+- `solver/SolitaireSolver.java` (~50): cross-package field access to `SolitaireGameEngine`, invalid method calls (`AboutDialog(int,boolean)`, `b(int,int)`, `c(int,null)`, `b(String,boolean)`), `MainWindow.d()` argument type mismatch
+- `engine/GameStats.java` (~15): CFR artifacts in stubbed methods, `this.k.B.c()`/`this.k.B.d()` calls on `Object` type
+- `ui/panels/qzPanel.java` (~4): XChart type issues
+
+### Not fixed
+
+- `challenge/ChallengeSolver.java` — excluded from previous fixes, still has CFR artifacts
+- `api/ApiCommandProcessor.java` — excluded from compilation (CFR missing local variable type declarations)
+- `api/DesktopDuplication.java` — excluded from compilation
+
 ### Strategy for remaining errors
 
-The remaining ~85 errors require understanding the original obfuscated code's intent. CFR decompilation produces code that is structurally similar but semantically incorrect in specific spots. Fixing these requires:
+The remaining ~94 errors require understanding the original obfuscated code's intent. CFR decompilation produces code that is structurally similar but semantically incorrect in specific spots. Fixing these requires:
 
 1. Comparing against the running JAR behavior (API mode verified working)
 2. Understanding the obfuscation patterns used by the original protector
