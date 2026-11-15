@@ -94,7 +94,7 @@ CFR omits type declarations for local variables:
 - `data/do_0.java`, `util/co_0.java`
 - All 779 `data/*.java` files
 - `reader/qi_0BoardReader.java`
-- `native/WinUser32.java` (renamed to `jni`)
+- `native/WinUser32.java` (renamed to `jni`; compiles but **breaks JNI linkage**)
 - `util/qy_0.java`, `util/q.java`, `util/pX.java`, `util/pH.java`, `util/s_0.java`, `util/t.java`
 - `engine/CardImage.java`
 - `ui/MainWindow.java`
@@ -112,8 +112,17 @@ CFR omits type declarations for local variables:
 - `api/ApiCommandProcessor.java` — excluded from compilation (CFR missing local variable type declarations)
 - `api/DesktopDuplication.java` — excluded from compilation
 
-### Strategy for remaining errors
+### Strategy for remaining errors (superseded 2026-11-15)
 
+> [!IMPORTANT]
+> Don't continue fixing these errors in `com.solvitaire.solitaire`. Many of the categories above are **not CFR bugs**:
+> - "Invalid method signatures" and "type confusion" come from obfuscated same-name fields of different types in one class (legal in bytecode only).
+> - The `_0` names come from Windows case collisions between classes such as `qo` and `qO`.
+> - A large share of the cross-package and `AboutDialog` errors were introduced by the text-replace rename and the package split.
+>
+> Follow **`docs/RECONSTRUCTION_PLAN.md`**: golden test → bytecode remap → Vineflower/CFR decompile → per-class compile against the remapped JAR → full build that matches the golden output. Point 3 below ("re-decompiling with different settings or tools") is the right direction, but it has to start from a remapped JAR.
+
+Original notes:
 The remaining ~94 errors require understanding the original obfuscated code's intent. CFR decompilation produces code that is structurally similar but semantically incorrect in specific spots. Fixing these requires:
 
 1. Comparing against the running JAR behavior (API mode verified working)

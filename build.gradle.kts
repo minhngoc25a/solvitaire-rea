@@ -22,7 +22,13 @@ tasks.withType<JavaCompile> {
 
 sourceSets {
     main {
-        // Only the refactored com.solvitaire.solitaire package builds cleanly.
+        // FROZEN LEGACY SOURCE SET (2026-11-15). Do not fix compile errors in
+        // java_source/com/solvitaire/solitaire. It came from a text-replace
+        // rename and does not match the shipped program. Follow
+        // docs/RECONSTRUCTION_PLAN.md: at milestone M4, point srcDirs at
+        // java_source_v2/merged and drop these excludes.
+        //
+        // Historical note: the legacy tree was meant to build on its own (it never compiled).
         // com.solvitaire.app is the raw obfuscated CFR reference copy; it still
         // carries CFR artifacts and is intentionally excluded.
         // api/ApiCommandProcessor.java has CFR-declaration issues (missing local

@@ -1,5 +1,11 @@
 # PROJECT_STATUS.md — solvitaire-rea
 
+> [!IMPORTANT]
+> **Course correction (2026-11-15). Read `docs/RECONSTRUCTION_PLAN.md` first.**
+> Next step #1 below ("make the refactored source compile") is **superseded**. Do not keep hand-fixing `java_source/com/solvitaire/solitaire/`. That tree came from a text-replace rename that corrupted identifiers and string literals (e.g. `a`→`AboutDialog` in 175 string-literal lines). It also moved the JNI class out of `com.solvitaire.app`, which breaks DLL linkage, and it disabled the API thread. The obfuscator itself uses case-only class names (`qo`/`qO`), keyword class names (`do`) and same-name fields of different types. Source-level fixes can't remove those. New order: **M0** golden API test → **M1** bytecode remap → **M2** Vineflower/CFR decompile → **M3** per-class compile against the remapped JAR → **M4** full build that matches the golden output → **M5** meaningful names via mapping file.
+>
+> **Real status:** binary analysis (installer, launcher, DLL, JAR extraction) is done. **Source reconstruction is NOT done.** Treat any "Goals complete" or "Project is complete" wording below as historical.
+
 ## Completed goals (current goal)
 
 1. **Add README.md** — User-facing documentation: how to build and run, API command list, project structure. ✅ DONE
@@ -11,13 +17,13 @@
 
 Ordered by priority. Pick one slice at a time.
 
-**1. Make the refactored source compile cleanly** — In progress. Gradle build is set up (`build.gradle.kts`, `settings.gradle.kts`, `config/checkstyle/google_checks.xml`); `gradle compile-java`, `lint` (`checkstyleMain` + `spotlessJavaCheck`), and `fmt` (`spotlessApply`) tasks all resolve and run, but Checkstyle/Spotless cannot produce useful results until the source compiles (they parse source text).
+**1. ~~Make the refactored source compile cleanly~~** **SUPERSEDED 2026-11-15. Do not continue.** Follow `docs/RECONSTRUCTION_PLAN.md` (M0–M5). The log below is kept as history; the "compiles cleanly" claims are per-file, and the tree as a whole is behaviorally corrupted. Gradle build is set up (`build.gradle.kts`, `settings.gradle.kts`, `config/checkstyle/google_checks.xml`); `gradle compile-java`, `lint` (`checkstyleMain` + `spotlessJavaCheck`), and `fmt` (`spotlessApply`) tasks all resolve and run, but Checkstyle/Spotless cannot produce useful results until the source compiles (they parse source text).
 
 Fixed so far (each verified → 0 errors for that file):
 - `data/do.java` → copied to `data/do_0.java` (class `do` renamed to `do_0`; `do` is a Java keyword); original `do.java` neutralized; `util/co_0.java` updated to import/reference `do_0`. → **co_0 compiles cleanly.**
 - All 779 `data/*.java` `static final int[][] AboutDialog` fields made `public` (cross-package access from `util.co_0`).
 - `reader/qi_0BoardReader.java` — added missing closing `}` before `@Override`. → **compiles cleanly (0 errors).**
-- `native/WinUser32.java` — package `com.solvitaire.solitaire.native` renamed to `com.solvitaire.solitaire.jni` (`native` is a Java keyword, illegal as a package segment). Nothing imports `solitaire.native.WinUser32`. → **compiles cleanly.**
+- `native/WinUser32.java` — package `com.solvitaire.solitaire.native` renamed to `com.solvitaire.solitaire.jni` (`native` is a Java keyword, illegal as a package segment). Nothing imports `solitaire.native.WinUser32`. → **compiles, but breaks JNI linkage** (the DLL exports `Java_com_solvitaire_app_WinUser32_*`; the class must stay `com.solvitaire.app.WinUser32`).
 - `engine/GameStats.java` — CFR block structure fixed (closing `}` added before affected `@Override` methods); dead CFR code removed from `AboutDialog(qw_0,Card,...)` method; remaining methods stubbed out. → **~30 errors remaining (CFR artifacts in stubbed methods).**
 - `ui/panels/uPanel.java` — CFR block structure fixed (closing `}` added before `b()` method; EOF `}` added). → **compiles cleanly (0 errors).**
 - `engine/SolitaireGameEngine.java` — CFR structure fixes: `data/do`→`do_0` reference updated, `data.do` import removed; `com.solvitaire.app.ApiCommandProcessor` import removed (class excluded); `com.solvitaire.api.DesktopDuplication` import removed (class excluded); `com.solvitaire.app.ApiCommandProcessor.k` field type changed to `Thread`; `MainWindow.AboutDialog()` made public; ~30 fields/methods made public; `ErrorDialog.AboutDialog(String,boolean)` made public; `Rectangle` field names fixed; `StringBuffer`→`String` fixes; unreachable `while (bl3 && false)` block removed; `DesktopDuplication` usage stubbed out; `br` field initialized with `new ChallengeSolver(this)`; `bs` field typed as `Object`. → **~20 errors remaining (cross-package access + CFR artifacts).**
@@ -37,7 +43,7 @@ Remaining compile errors (reduced from ~200 to ~94 after extensive fixes):
 - Strategy: Remaining errors require understanding original obfuscated code intent — not mechanical fixes
 - The shipped JAR in `C:/sgame/` runs fine; compilation issues are in the recovered source only
 
-**2. Analyze the native DLL `com_solvitaire_app_winuser32.dll`** — ✅ DONE (2026-11-12). PE32+ x64, 45,056 bytes. 33 JNI exports mapped in `jini/WinUser32.java`. Imports: USER32 (window/cursor/input), ADVAPI32 (registry), KERNEL32 (memory/process), SHELL32 (notification state), GDI32 (screen capture via GDI), d3d11/dxgi/D3DCOMPILER_47 (DirectX screen capture), d2d1 (ordinal-only). Embedded HLSL tone-mapping shader (scRGB/PQ10/linear BGRA8). PDB path: `C:\Users\Phil\solitaire\solitaire\native\com_solvitaire_app_winuser32.pdb`. See docs/FILE_FORMATS.md for full details.
+**2. Analyze the native DLL `com_solvitaire_app_winuser32.dll`** — ✅ DONE (2026-11-12). PE32+ x64, 45,056 bytes. 33 JNI exports (`Java_com_solvitaire_app_WinUser32_*`), bound to `com.solvitaire.app.WinUser32`. Imports: USER32 (window/cursor/input), ADVAPI32 (registry), KERNEL32 (memory/process), SHELL32 (notification state), GDI32 (screen capture via GDI), d3d11/dxgi/D3DCOMPILER_47 (DirectX screen capture), d2d1 (ordinal-only). Embedded HLSL tone-mapping shader (scRGB/PQ10/linear BGRA8). PDB path: `C:\Users\Phil\solitaire\solitaire\native\com_solvitaire_app_winuser32.pdb`. See docs/FILE_FORMATS.md for full details.
 
 **3. Document reverse engineering methodology and file formats** — ✅ DONE (2026-11-12). Created `docs/RE_METHODOLOGY.md`, `docs/FILE_FORMATS.md`, `docs/API_PROTOCOL.md`. Added `docs/` section to AGENTS.md.
 
@@ -60,10 +66,10 @@ Remaining compile errors (reduced from ~200 to ~94 after extensive fixes):
 - `FUN_0040ba30`: parses command line (skips program name/quoted args), gets show cmd from STARTUPINFO, calls `FUN_00401803(hInstance, 0, cmd_line, show_cmd)`
 - `FUN_00401803`: calls `FUN_00404890`; on 0xb7 shows existing window (return 2); on 1 runs message loop + logs exit code
 - `FUN_00404890`: initial check `FUN_00401c58` → path buffer setup → `FUN_004025a0` → `FUN_00401d3a`(core launch) → on success: `FUN_00403001` → `FUN_00402a7b`(launch JVM with args, 32768-char arg buffer) → `FUN_004034b3` → `FUN_00403903` → return 1
-- JAR overlay at PE offset 0x001b75fc; Main-Class: com.solvitaire.solitaire.Main; depends on XChart 3.8.1
+- JAR overlay at PE offset 0x001b75fc; Main-Class: com.solvitaire.app.Main (verified from MANIFEST.MF); depends on XChart 3.8.1 (bundled)
 
 
-**7. Add tests** — Test skeletons created (blocked by compilation errors):
+**7. Add tests**. The skeletons below target the frozen legacy tree. Rewrite them against `java_source_v2` after M4. The real regression test is the M0 golden API test.
    - `test/java/com/solvitaire/solitaire/engine/CardStackTest.java` — CardStack push/pop/peek/LIFO/canAccept
    - `test/java/com/solvitaire/solitaire/engine/CardRunTest.java` — CardRun add/remove/validate
    - `test/java/com/solvitaire/solitaire/engine/GameMoveTest.java` — GameMove construction/equality
@@ -78,7 +84,13 @@ Remaining compile errors (reduced from ~200 to ~94 after extensive fixes):
 
 ## Project status
 
-**Goals complete.** README added, CFR `** GOTO`/`** break` artifacts removed, API mode verified end-to-end on Java 25, GitHub pushed. The game was verified end-to-end via API mode on 2026-11-12 (fresh launch → `mode play` → `version klondike 1` → `difficulty easy` → `deal` → `status` STARTSOLVE → `solve` → `wait` → `list` (84-move solution) → `step 3` → `status` SOLVED → `exit`).
+**Binary analysis complete; source reconstruction NOT complete.** What is done:
+- README added and CFR `** GOTO`/`** break` artifacts removed from the legacy tree.
+- GitHub pushed.
+- The **shipped JAR** was verified end-to-end via API mode on Java 25 on 2026-11-12: fresh launch → `mode play` → `version klondike 1` → `difficulty easy` → `deal` → `status` STARTSOLVE → `solve` → `wait` → `list` (84-move solution) → `step 3` → `status` SOLVED → `exit`.
+- No JAR rebuilt from source has been verified yet. That is M4 in `docs/RECONSTRUCTION_PLAN.md`.
+
+**Next action:** M0, the golden API test harness (`docs/RECONSTRUCTION_PLAN.md`).
 
 **Compilation status (2026-11-13):** ~85 errors remain across SolitaireGameEngine (~20), SolitaireSolver (~50), GameStats (~15), qzPanel (~4), and other files. The remaining errors are CFR decompilation artifacts — method signature mismatches, cross-package field access, and type inconsistencies that require understanding the original obfuscated code intent. ~120 errors were fixed across 15+ files. The shipped JAR in `C:/sgame/` runs fine; compilation issues are in the recovered source only.
 

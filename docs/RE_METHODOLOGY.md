@@ -15,7 +15,7 @@ solvitaire_installv5.3.3.exe
 │
 └─ Launch4j wrapper (native EXE)
     └─ PE overlay at offset 0x001b75fc  →  solvitaire_game_from_pe.jar
-        └─ Main-Class: com.solvitaire.solitaire.Main
+        └─ Main-Class: com.solvitaire.app.Main
             └─ JNI dependency: com_solvitaire_app_winuser32.dll
 ```
 
@@ -54,11 +54,18 @@ java -jar cfr-decompiler.jar <input.jar> --outputdir <output_dir>
 ```
 1,216 Java source files recovered from `solvitaire_game_from_pe.jar`. Class names were obfuscated; all were manually renamed (see AGENTS.md "Key renamed classes"). CFR 0.152 from `https://www.benf.org/other/cfr/cfr-0.152.jar`. **Do not use Procyon** — its Bitbucket download returned an HTML page, not a valid JAR.
 
-## Refactoring Strategy
+## Refactoring Strategy (legacy, superseded 2026-11-15)
+
+> [!WARNING]
+> This strategy produced the frozen `com.solvitaire.solitaire` tree and **did not work**:
+> - Step 1 was done as a text find-and-replace, which corrupted identifiers and string literals.
+> - Steps 3–5 moved the JNI class, which breaks DLL linkage, and turned off API mode.
+>
+> The current strategy is **`docs/RECONSTRUCTION_PLAN.md`**: golden test → bytecode remap → Vineflower/CFR decompile → per-class compile → full build that matches the golden output.
 
 1. **Rename obfuscated classes** to meaningful names based on usage analysis (e.g., `qo_0` → `SolitaireGameEngine`, `qv` → `CardStack`).
 2. **Fix CFR artifacts** — remove `** GOTO` / `** break` markers, fix block structure (missing closing braces), correct type mismatches from CFR's type inference.
-3. **Resolve Java keyword conflicts** — `do.java` → `do_0.java` (`do` is a keyword); package `solitaire.native` → `solitaire.jini` (`native` is a keyword).
+3. **Resolve Java keyword conflicts** — `do.java` → `do_0.java` (`do` is a keyword); package `solitaire.native` → `solitaire.jni` (`native` is a keyword). *(Moving `WinUser32` out of `com.solvitaire.app` breaks JNI, because the DLL exports `Java_com_solvitaire_app_WinUser32_*`.)*
 4. **Make cross-package fields/methods public** where CFR left them package-private but they're accessed from other packages.
 5. **Exclude uncompilable files** — `api/ApiCommandProcessor.java` and `api/DesktopDuplication.java` have CFR missing-local-variable-type errors and are excluded from the Gradle build; `Main.java` updated to not instantiate `ApiCommandProcessor`.
 

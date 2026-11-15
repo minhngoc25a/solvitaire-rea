@@ -14,6 +14,8 @@ The game is **not a native binary** — it's a Java application wrapped by Launc
 
 ## Repository structure
 
+Legacy refactored tree (frozen, does not compile):
+
 ```
 java_source/com/solvitaire/solitaire/
 ├── Main.java                    # Entry point
@@ -45,7 +47,7 @@ java_source/com/solvitaire/solitaire/
 │   ├── ApiCommandProcessor.java
 │   └── DesktopDuplication.java
 ├── challenge/                   # Challenge management (1 file)
-├── native/                      # JNI native declarations (1 file)
+├── native/                      # JNI declarations; package renamed to ...solitaire.jni (breaks JNI linkage, see docs/RECONSTRUCTION_PLAN.md)
 │   └── WinUser32.java
 ├── config/                      # Game configuration (1 file)
 ├── util/                        # Utilities (71 files)
@@ -54,11 +56,8 @@ java_source/com/solvitaire/solitaire/
 
 ## How to build
 
-The Java source was decompiled with CFR 0.152. Some files contain CFR artifacts (`** GOTO`, `** break` markers) that prevent direct compilation. See [Known issues](#known-issues).
-
-```bash
-javac -d build/classes -sourcepath java_source java_source/com/solvitaire/solitaire/Main.java
-```
+> [!WARNING]
+> **The recovered source does not build yet.** `java_source/com/solvitaire/solitaire/` is a frozen legacy tree. Its renames were text replacements that corrupted identifiers and string literals, it moved the JNI class, and it stubbed methods. The reconstruction is being redone from a bytecode-remapped JAR; see [docs/RECONSTRUCTION_PLAN.md](docs/RECONSTRUCTION_PLAN.md). Until milestone M4 of that plan passes, the shipped JAR below is the only runnable build.
 
 ## How to run
 
@@ -104,7 +103,7 @@ Supported API commands:
 
 ## Known issues
 
-CFR decompiler artifacts (`** GOTO`, `** break`) have been removed from the refactored `com.solvitaire.solitaire` package (grep returns no matches there). The parallel `com.solvitaire.app/` package is the raw obfuscated CFR output kept for reference; it still contains artifacts and is **not** part of the refactored build.
+The refactored `com.solvitaire.solitaire` package no longer has CFR `** GOTO` / `** break` markers, but it **doesn't compile** and is frozen (see the warning under [How to build](#how-to-build)). The parallel `com.solvitaire.app/` package is the raw CFR output, kept for reference. The obfuscator used case-only class names, keyword class names and duplicate field names, so neither tree can compile without a bytecode remap first.
 
 Two pre-existing bugs in the shipped build (documented, not fixed):
 - `reset` before `mode play` crashes the mode-selector dialog (native UI code, `com.solvitaire.app.G.g`).

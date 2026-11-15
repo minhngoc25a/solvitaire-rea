@@ -19,7 +19,7 @@ Decoded names include: `Commands.dat`, `Desktop.dat`, `TS.dat`, `Registry.dat`, 
 
 ### Archive2 files
 
-Decoded names include: `Uninstall.exe`, `com_solivitaire_app_winuser32.dll`, `solivitaire.exe`, `solivitaire.ico`, `solivitairejc.exe`, `solivitairejr.exe`, etc.
+Decoded names include `Uninstall.exe`, `com_solvitaire_app_winuser32.dll`, `solvitaire.exe`, `solvitairec.exe`, `solvitaire.ico` and the bundled JRE dir `solvjre`. *(Spelling re-verified 2026-11-15 by base64/UTF-16LE decoding the file names in `extracted_archive2/`; an earlier version said "solivitaire".)*
 
 ### Installer Execution Flow
 
@@ -103,7 +103,7 @@ Decoded names include: `Uninstall.exe`, `com_solivitaire_app_winuser32.dll`, `so
 - **Format:** PE32 x86 native EXE.
 - **Entry chain:** `entry` (0x00401590) → `__set_app_type(2)` → `FUN_00401180` (CRT main) → `FUN_0040ba30` (cmd-line parse) → `FUN_00401803` (Launch4j WinMain) → `FUN_00404890` (JNI/Java launch).
 - **JAR overlay:** PE offset `0x001b75fc` — `solvitaire_game_from_pe.jar` embedded as PE overlay.
-- **Main-Class:** `com.solvitaire.solitaire.Main` (refactored from obfuscated `com.solvitaire.app.Main`).
+- **Main-Class:** `com.solvitaire.app.Main` (verified from `META-INF/MANIFEST.MF`; `Class-Path: .`). `com.solvitaire.solitaire.Main` exists only in the frozen legacy refactored source.
 
 ### Launch chain detail
 
@@ -153,7 +153,7 @@ Decoded names include: `Uninstall.exe`, `com_solivitaire_app_winuser32.dll`, `so
 | `ui.handlers` | 108 | ActionListener/button handler classes |
 | `api` | 2 | `ApiCommandProcessor`, `DesktopDuplication` (excluded from build) |
 | `challenge` | 1 | `ChallengeSolver` |
-| `jini` | 1 | `WinUser32` (JNI native wrapper; package renamed from `native`) |
+| `native/` dir, package `jni` | 1 | `WinUser32` (JNI native wrapper; legacy tree renamed the package from `native`, which breaks JNI linkage. The original is `com.solvitaire.app.WinUser32`) |
 | `config` | 1 | `GameConfig` |
 | `util` | 71 | `ErrorDialog`, `ApiErrorCodes`, utilities |
 | `data` | 779 | Datatable classes (`int[][]` arrays) |
@@ -180,7 +180,7 @@ Decoded names include: `Uninstall.exe`, `com_solivitaire_app_winuser32.dll`, `so
 
 ### JNI Exported Functions (33)
 
-All `Java_com_solivitaire_app_WinUser32_*` functions mapped in `jini/WinUser32.java`:
+All `Java_com_solvitaire_app_WinUser32_*` functions. They bind only to the class `com.solvitaire.app.WinUser32`, declared in the original JAR. (The legacy refactored copy at `native/WinUser32.java`, package `com.solvitaire.solitaire.jni`, would not link.)
 - Window: `GetForegroundWindow`, `SetForegroundWindow`, `IsIconic`, `SetFocus`, `SetActiveWindow`, `ShowWindow`, `SetWindowPos`, `GetWindowRect`, `GetClientRect`, `ClientToScreenY`, `WindowFromPoint`, `GetParent`
 - Input: `GetCursorPos`, `GetWindowTextA`, `getHwnd`, `getTitleHwnd`, `mouseMoveAbsolute`, `mouseClickDownUp`, `mouseClickDown`, `mouseClickUp`, `mouseLocation`, `keyEvent`
 - Metrics: `GetSystemMetrics`
