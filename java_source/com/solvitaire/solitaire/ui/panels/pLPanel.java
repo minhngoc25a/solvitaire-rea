@@ -1061,7 +1061,7 @@ extends g {
         this.am = null;
     }
 
-    final void h() {
+    public final void h() {
         if (this.k.d <= 5) {
             this.k.g("dropAllSelectedAndDragging");
         }

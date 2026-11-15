@@ -73,7 +73,7 @@ public final class GameMove {
         return this.i + " cards, source " + String.valueOf(this.g) + " dest " + String.valueOf(this.e) + " auto:" + this.o + " split:" + this.p;
     }
 
-    static String AboutDialog(int n2) {
+    public static String AboutDialog(int n2) {
         int n3 = n2;
         if ((n3 >>= 24) == 0) {
             Object[] objectArray = new Object[3];

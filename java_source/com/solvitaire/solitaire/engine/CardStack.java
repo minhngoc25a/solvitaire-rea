@@ -10,7 +10,7 @@ import java.awt.geom.Point2D;
 
 public final class CardStack {
     private SolitaireGameEngine j;
-    int AboutDialog;
+    public int AboutDialog;
     private int k;
     public String b;
     public int c;
